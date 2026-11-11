@@ -18,8 +18,8 @@
         "Verify SHA-256 identities and notices; reject an absent or mismatched required artifact."
       ],
       "completion_gate": "A complete versioned code/model/asset ledger exists and all required distribution inputs meet the accepted policy. Research metadata alone does not close this issue.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 1,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/1"
     },
     {
       "step": 2,
@@ -40,8 +40,8 @@
         "Allow no more than a 0.5 percentage-point fixed-metric loss from an optimized runtime relative to the pinned reference."
       ],
       "completion_gate": "Native recognition is reproducible and its numerical/event, memory and timing report is available. Failure blocks dependent integration; no cloud/external-app substitution is allowed.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 2,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/2"
     },
     {
       "step": 3,
@@ -62,8 +62,8 @@
         "Verify first launch without another MuseScore installation or a network connection."
       ],
       "completion_gate": "The branded editor builds and core local symbolic workflows pass focused checks; transcription is not claimed until its later integration.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 3,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/3"
     },
     {
       "step": 4,
@@ -83,8 +83,8 @@
         "Restart after a finalized chunk/stage and verify source media and edited score remain intact."
       ],
       "completion_gate": "Media/jobs remain bounded and responsive; completed work survives interruption without corrupting project state.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 4,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/4"
     },
     {
       "step": 5,
@@ -106,8 +106,8 @@
         "Compare Basic Pitch window/bend decoding with the pinned source implementation."
       ],
       "completion_gate": "Both engines run locally through the same contracts with validated results and explicit capabilities; no separately installed interpreter/app is required.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 5,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/5"
     },
     {
       "step": 6,
@@ -127,8 +127,8 @@
         "Verify valid measure durations and that tempo/grid corrections reuse recognition without destroying source timing."
       ],
       "completion_gate": "Recognized events become editable valid notation with inspectable timing assumptions and reproducible source/score alignment.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 6,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/6"
     },
     {
       "step": 7,
@@ -148,8 +148,8 @@
         "Save/reopen, undo/redo and recover after a worker failure while checking alignment and identity links."
       ],
       "completion_gate": "A musician can review and correct an automatic result with synchronized playback and safely compare retranscription alternatives.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 7,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/7"
     },
     {
       "step": 8,
@@ -171,8 +171,8 @@
         "Measure whether detailed processing improves or harms specific fixed-corpus cases instead of asserting universal benefit."
       ],
       "completion_gate": "Separation is a validated optional local stage with coherent stems, bounded resources and reviewable downstream takes.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 8,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/8"
     },
     {
       "step": 9,
@@ -195,8 +195,8 @@
         "Use chord, meter and fretted-instrument fixtures with manual correction and save/reopen."
       ],
       "completion_gate": "All auxiliary results are locally generated, editable and auditable; no perfect lyric/voice/chord accuracy is implied.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 9,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/9"
     },
     {
       "step": 10,
@@ -218,8 +218,8 @@
         "Inspect affected PDF/part layout and validate the supported LilyPond subset in release tooling."
       ],
       "completion_gate": "The documented modern export set is integrated and supported content survives round trips; unsupported content is reported rather than silently dropped.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 10,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/10"
     },
     {
       "step": 11,
@@ -242,8 +242,8 @@
         "Check app-owned required network traffic remains absent."
       ],
       "completion_gate": "A reproducible quality/performance/recovery report exists; regressions or unmet budgets are documented blockers rather than hidden downloads or unsupported speed claims.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 11,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/11"
     },
     {
       "step": 12,
@@ -264,8 +264,8 @@
         "Check source/checksum/notice artifacts and publish measured hardware/performance conditions."
       ],
       "completion_gate": "The self-contained offline installer and release records satisfy all accepted gates. No public working-release claim is made before this issue completes.",
-      "issue_number": null,
-      "issue_url": null
+      "issue_number": 12,
+      "issue_url": "https://github.com/smpl-works/SMPL-Tones/issues/12"
     }
   ]
 }
