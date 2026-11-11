@@ -1,0 +1,58 @@
+{
+  "sources": [
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "version.cmake",
+      "url": "https://github.com/musescore/MuseScore/blob/96480d58445e3b24b230a3fe7d4725d639aa2eb3/version.cmake",
+      "git_blob_sha1": "f8c8e1e5e4e7c5bac3aaf0411fa44475f80bfd9c",
+      "content_object_url": "https://api.github.com/repos/MuseScore/MuseScore/git/blobs/f8c8e1e5e4e7c5bac3aaf0411fa44475f80bfd9c",
+      "observed_on": "2026-11-11",
+      "review_depth": "Targeted supplementary primary-source inspection; not a full runtime/implementation audit."
+    },
+    {
+      "repository": "CPJKU/beat_this",
+      "path": "README.md",
+      "url": "https://github.com/CPJKU/beat_this/blob/b95c8ab0c58c2d9fcfd40508ae8dffbc05ac4f5c/README.md",
+      "git_blob_sha1": "955931cf33881364dc0fa27e30825d1c83d25adb",
+      "content_object_url": "https://api.github.com/repos/CPJKU/beat_this/git/blobs/955931cf33881364dc0fa27e30825d1c83d25adb",
+      "observed_on": "2026-11-11",
+      "review_depth": "Targeted supplementary primary-source inspection; not a full runtime/implementation audit."
+    },
+    {
+      "repository": "ggml-org/whisper.cpp",
+      "path": "README.md",
+      "url": "https://github.com/ggml-org/whisper.cpp/blob/v1.9.5/README.md",
+      "git_blob_sha1": "e58c4ba1061221bd295e08eea5a021dd7178189f",
+      "content_object_url": "https://api.github.com/repos/ggml-org/whisper.cpp/git/blobs/e58c4ba1061221bd295e08eea5a021dd7178189f",
+      "observed_on": "2026-11-11",
+      "review_depth": "Targeted supplementary primary-source inspection; not a full runtime/implementation audit."
+    },
+    {
+      "repository": "openai/whisper",
+      "path": "README.md",
+      "url": "https://github.com/openai/whisper/blob/main/README.md",
+      "git_blob_sha1": "196b48f62d3b6f0b77bac2b7dbc2df5e4cfb070b",
+      "content_object_url": "https://api.github.com/repos/openai/whisper/git/blobs/196b48f62d3b6f0b77bac2b7dbc2df5e4cfb070b",
+      "observed_on": "2026-11-11",
+      "review_depth": "Targeted supplementary primary-source inspection; not a full runtime/implementation audit."
+    },
+    {
+      "repository": "sevagh/demucs.cpp",
+      "path": "README.md",
+      "url": "https://github.com/sevagh/demucs.cpp/blob/4edae497a114de1ccb17ac9b4a2b8fc0144714d7/README.md",
+      "git_blob_sha1": "1d8969de9c777319af67b2fb5a79b106f39e4c08",
+      "content_object_url": "https://api.github.com/repos/sevagh/demucs.cpp/git/blobs/1d8969de9c777319af67b2fb5a79b106f39e4c08",
+      "observed_on": "2026-11-11",
+      "review_depth": "Targeted supplementary primary-source inspection; not a full runtime/implementation audit."
+    },
+    {
+      "repository": "facebookresearch/demucs",
+      "path": "README.md",
+      "url": "https://github.com/facebookresearch/demucs/blob/main/README.md",
+      "git_blob_sha1": "fe7e77b992b7918eba9491119d313abf5bc3eff1",
+      "content_object_url": "https://api.github.com/repos/facebookresearch/demucs/git/blobs/fe7e77b992b7918eba9491119d313abf5bc3eff1",
+      "observed_on": "2026-11-11",
+      "review_depth": "Targeted supplementary primary-source inspection; not a full runtime/implementation audit."
+    }
+  ]
+}

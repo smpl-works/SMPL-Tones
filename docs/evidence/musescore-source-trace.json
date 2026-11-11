@@ -1,0 +1,44 @@
+[
+  {
+    "file": "notationmidireader.cpp",
+    "url": "https://github.com/musescore/MuseScore/blob/701d557996fb0da981bc20e567d4c8efbe2433c7/src/importexport/midi/internal/notationmidireader.cpp",
+    "blob_sha": "e5a92013a73831d3920638c5d0aa42a60765aeb5",
+    "commit": "701d557996fb0da981bc20e567d4c8efbe2433c7",
+    "evidence_type": "upstream-source-not-contained-in-installer"
+  },
+  {
+    "file": "midimodule.cpp",
+    "url": "https://github.com/musescore/MuseScore/blob/701d557996fb0da981bc20e567d4c8efbe2433c7/src/importexport/midi/midimodule.cpp",
+    "blob_sha": "911ba365120fc162d858d6b52d6eabd1cc6c4dd9",
+    "commit": "701d557996fb0da981bc20e567d4c8efbe2433c7",
+    "evidence_type": "upstream-source-not-contained-in-installer"
+  },
+  {
+    "file": "importmidi.cpp",
+    "url": "https://github.com/musescore/MuseScore/blob/701d557996fb0da981bc20e567d4c8efbe2433c7/src/importexport/midi/internal/midiimport/importmidi.cpp",
+    "blob_sha": "ae25793cbf5b5f7ccae7f53267c72e3ed215f1f5",
+    "commit": "701d557996fb0da981bc20e567d4c8efbe2433c7",
+    "evidence_type": "upstream-source-not-contained-in-installer"
+  },
+  {
+    "file": "pdfwriter.cpp",
+    "url": "https://github.com/musescore/MuseScore/blob/701d557996fb0da981bc20e567d4c8efbe2433c7/src/importexport/imagesexport/internal/pdfwriter.cpp",
+    "blob_sha": "551333fe0655d4d3ebf9679744721b897ed79952",
+    "commit": "701d557996fb0da981bc20e567d4c8efbe2433c7",
+    "evidence_type": "upstream-source-not-contained-in-installer"
+  },
+  {
+    "file": "audioexportmodule.cpp",
+    "url": "https://github.com/musescore/MuseScore/blob/701d557996fb0da981bc20e567d4c8efbe2433c7/src/importexport/audioexport/audioexportmodule.cpp",
+    "blob_sha": "08bba8e321947e056cb57194a9e11e21d3769f0a",
+    "commit": "701d557996fb0da981bc20e567d4c8efbe2433c7",
+    "evidence_type": "upstream-source-not-contained-in-installer"
+  },
+  {
+    "file": "musicxmlmodule.cpp",
+    "url": "https://github.com/musescore/MuseScore/blob/701d557996fb0da981bc20e567d4c8efbe2433c7/src/importexport/musicxml/musicxmlmodule.cpp",
+    "blob_sha": "61b9b43d2fb789eede0f3f74479224f79a7f54c5",
+    "commit": "701d557996fb0da981bc20e567d4c8efbe2433c7",
+    "evidence_type": "upstream-source-not-contained-in-installer"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-11",
+  "scope": "Supplementary primary-source inspection during planning; no weights downloaded, exports produced or inference performed.",
+  "sources": [
+    {
+      "id": "yourmt3-model-metadata",
+      "url": "https://huggingface.co/api/models/mimbres/YourMT3/revision/e45ebd70398682d54b7bb1901a5216e18f3b1824",
+      "observed_on": "2026-11-11",
+      "bytes": 1373,
+      "sha256": "787328c55de319b10f6966d2ad61c2053561ccaba3a4825b16d5a6832470fc88",
+      "copied_source_in_archive": false,
+      "repository_revision": "e45ebd70398682d54b7bb1901a5216e18f3b1824",
+      "published_license_label": "apache-2.0"
+    },
+    {
+      "id": "yourmt3-model-card",
+      "url": "https://huggingface.co/mimbres/YourMT3/raw/e45ebd70398682d54b7bb1901a5216e18f3b1824/README.md",
+      "observed_on": "2026-11-11",
+      "bytes": 291,
+      "sha256": "b66c7743f197a0424b05185b353bfad714a26af90551b8a9306a1a7c4dc3d1bd",
+      "copied_source_in_archive": false
+    },
+    {
+      "id": "yourmt3-author-space-card",
+      "url": "https://huggingface.co/spaces/mimbres/YourMT3/raw/5e66c1ea173a8186e0d20432b841d3180cc015b5/README.md",
+      "observed_on": "2026-11-11",
+      "bytes": 301,
+      "sha256": "9a8468bd685eb0e9084566c5b6cca230481ea4e1c0a6212b4388c4b4618400b4",
+      "copied_source_in_archive": false
+    },
+    {
+      "id": "yourmt3-author-app",
+      "url": "https://huggingface.co/spaces/mimbres/YourMT3/raw/5e66c1ea173a8186e0d20432b841d3180cc015b5/app.py",
+      "observed_on": "2026-11-11",
+      "bytes": 12989,
+      "sha256": "16d46c61399723079ce9606d28b50720336c51475e6a36cbaca861a41fd274e2",
+      "copied_source_in_archive": false
+    },
+    {
+      "id": "yourmt3-author-config",
+      "url": "https://huggingface.co/spaces/mimbres/YourMT3/raw/5e66c1ea173a8186e0d20432b841d3180cc015b5/amt/src/config/config.py",
+      "observed_on": "2026-11-11",
+      "bytes": 13602,
+      "sha256": "6803e1479c77a9c5f5ddec145291ee9b17cd9a15fbcd5f1bcf7ba39297218838",
+      "copied_source_in_archive": false
+    },
+    {
+      "id": "yourmt3-author-inference",
+      "url": "https://huggingface.co/spaces/mimbres/YourMT3/raw/5e66c1ea173a8186e0d20432b841d3180cc015b5/model_helper.py",
+      "observed_on": "2026-11-11",
+      "bytes": 14446,
+      "sha256": "47706291e10a0d25aef768ef276de3bfcdf98175141d57802b571917c6de4d3a",
+      "copied_source_in_archive": false
+    },
+    {
+      "id": "tsumugi-discovery-readme",
+      "url": "https://raw.githubusercontent.com/anime-song/tsumugi/main/README.md",
+      "observed_on": "2026-11-11",
+      "bytes": 20111,
+      "sha256": "b41f9179da6bb0faa02df35d535dbe742d205e08e52a23525a60abb4676fffdb",
+      "copied_source_in_archive": false
+    },
+    {
+      "id": "tuxguitar-formats",
+      "url": "https://www.tuxguitar.app/files/1.6.0/desktop/help/file_formats.html",
+      "observed_on": "2026-11-11",
+      "bytes": 4285,
+      "sha256": "f8a34ce507d63c1c3a28509fbe461a92784c2273fcaa3ec467a1a416f3b45e3c",
+      "copied_source_in_archive": false
+    },
+    {
+      "id": "directml-runtime",
+      "url": "https://onnxruntime.ai/docs/execution-providers/DirectML-ExecutionProvider.html",
+      "observed_on": "2026-11-11",
+      "bytes": 54164,
+      "sha256": "bcb90fa28ebc2b01ddf0db09c19d2e2499c592fe7a64f646572b06adac96e0c1",
+      "copied_source_in_archive": false
+    }
+  ],
+  "selected_model": {
+    "repository": "mimbres/YourMT3",
+    "revision": "e45ebd70398682d54b7bb1901a5216e18f3b1824",
+    "variant": "YPTF+Multi (PS)",
+    "path": "logs/2024/mc13_256_all_cross_v6_xk5_amp0811_edr005_attend_c_full_plus_2psn_nl26_sb_b26r_800k/checkpoints/model.ckpt",
+    "bytes": 541553263,
+    "sha256_lfs_oid": "f7ed46a7c61244bd35485143a791b3cf46515ef96239793845ae8e4084865130",
+    "source_space_revision": "5e66c1ea173a8186e0d20432b841d3180cc015b5",
+    "published_license_label": "apache-2.0",
+    "architecture_selection": "perceiver-tf encoder; multi-t5 decoder; mc13_full_plus_256 task; 26 latents; spec frontend; hop 300; attention-to-channel enabled",
+    "native_deployment_status": "Unimplemented and unbenchmarked. The first development gate is numerical and event-decoding parity."
+  }
+}

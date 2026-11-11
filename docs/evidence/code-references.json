@@ -1,0 +1,418 @@
+{
+  "scope": "59 selected pinned code references from the eight-project review and one dependency review.",
+  "references": [
+    {
+      "project": "MuScriptor",
+      "label": "Audio/model entry",
+      "path": "muscriptor/transcription_model.py",
+      "line": 93,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/transcription_model.py#L93"
+    },
+    {
+      "project": "MuScriptor",
+      "label": "Decoder-only transformer",
+      "path": "muscriptor/models/lm.py",
+      "line": 88,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/models/lm.py#L88"
+    },
+    {
+      "project": "MuScriptor",
+      "label": "Event vocabulary",
+      "path": "muscriptor/tokenizer/notes.py",
+      "line": 118,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/tokenizer/notes.py#L118"
+    },
+    {
+      "project": "MuScriptor",
+      "label": "Independent beat detector",
+      "path": "muscriptor/utils/beats.py",
+      "line": 367,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/beats.py#L367"
+    },
+    {
+      "project": "MuScriptor",
+      "label": "MIDI cleanup",
+      "path": "muscriptor/utils/midi.py",
+      "line": 27,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/midi.py#L27"
+    },
+    {
+      "project": "MuScriptor",
+      "label": "External engraving",
+      "path": "muscriptor/utils/sheets.py",
+      "line": 333,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/sheets.py#L333"
+    },
+    {
+      "project": "MuScriptor",
+      "label": "Streaming API",
+      "path": "muscriptor/server.py",
+      "line": 284,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/server.py#L284"
+    },
+    {
+      "project": "MuScriptor",
+      "label": "License split",
+      "path": "README.md",
+      "line": 203,
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/README.md#L203"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "Model migration",
+      "path": "README.md",
+      "line": 12,
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/README.md#L12"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "JUCE",
+      "path": "CMakeLists.txt",
+      "line": 64,
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/CMakeLists.txt#L64"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "Inference dependency",
+      "path": "CMakeLists.txt",
+      "line": 96,
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/CMakeLists.txt#L96"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "Native inference call",
+      "path": "Lib/Model/MuscriptorEngine.cpp",
+      "line": 211,
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/Lib/Model/MuscriptorEngine.cpp#L211"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "Download verification",
+      "path": "Lib/Model/ModelDownloader.cpp",
+      "line": 187,
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/Lib/Model/ModelDownloader.cpp#L187"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "Meter limitation",
+      "path": "NeuralNote/Source/MidiFile/MidiFileWriter.cpp",
+      "line": 108,
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/NeuralNote/Source/MidiFile/MidiFileWriter.cpp#L108"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "Native model/output contract",
+      "path": "docs/MODEL.md",
+      "line": 37,
+      "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/docs/MODEL.md#L37"
+    },
+    {
+      "project": "NeuralNote v2",
+      "label": "Pinned native implementation",
+      "path": "cpp/src/transcriber.cpp",
+      "line": 505,
+      "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/cpp/src/transcriber.cpp#L505"
+    },
+    {
+      "project": "Basic Pitch",
+      "label": "CNN architecture",
+      "path": "basic_pitch/models.py",
+      "line": 193,
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/models.py#L193"
+    },
+    {
+      "project": "Basic Pitch",
+      "label": "Audio constants",
+      "path": "basic_pitch/constants.py",
+      "line": 33,
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/constants.py#L33"
+    },
+    {
+      "project": "Basic Pitch",
+      "label": "Windowed inference",
+      "path": "basic_pitch/inference.py",
+      "line": 282,
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/inference.py#L282"
+    },
+    {
+      "project": "Basic Pitch",
+      "label": "Activation-to-note rules",
+      "path": "basic_pitch/note_creation.py",
+      "line": 360,
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/note_creation.py#L360"
+    },
+    {
+      "project": "Basic Pitch",
+      "label": "No instrument classification",
+      "path": "basic_pitch/note_creation.py",
+      "line": 244,
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/note_creation.py#L244"
+    },
+    {
+      "project": "Basic Pitch",
+      "label": "Intended use",
+      "path": "README.md",
+      "line": 14,
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/README.md#L14"
+    },
+    {
+      "project": "MT3",
+      "label": "Encoder-decoder implementation",
+      "path": "mt3/network.py",
+      "line": 265,
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/network.py#L265"
+    },
+    {
+      "project": "MT3",
+      "label": "Model preset",
+      "path": "mt3/gin/model.gin",
+      "line": 53,
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/gin/model.gin#L53"
+    },
+    {
+      "project": "MT3",
+      "label": "Multitrack preset",
+      "path": "mt3/gin/mt3.gin",
+      "line": 4,
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/gin/mt3.gin#L4"
+    },
+    {
+      "project": "MT3",
+      "label": "Audio features",
+      "path": "mt3/spectrograms.py",
+      "line": 23,
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/spectrograms.py#L23"
+    },
+    {
+      "project": "MT3",
+      "label": "Instrument-aware note data",
+      "path": "mt3/note_sequences.py",
+      "line": 42,
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/note_sequences.py#L42"
+    },
+    {
+      "project": "MT3",
+      "label": "Notebook export",
+      "path": "mt3/colab/music_transcription_with_transformers.ipynb",
+      "line": 469,
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/colab/music_transcription_with_transformers.ipynb#L469"
+    },
+    {
+      "project": "MT3",
+      "label": "Training boundary",
+      "path": "README.md",
+      "line": 18,
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/README.md#L18"
+    },
+    {
+      "project": "Omnizart",
+      "label": "Music pipeline",
+      "path": "omnizart/music/app.py",
+      "line": 97,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/music/app.py#L97"
+    },
+    {
+      "project": "Omnizart",
+      "label": "Segmentation model",
+      "path": "omnizart/models/u_net.py",
+      "line": 65,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/models/u_net.py#L65"
+    },
+    {
+      "project": "Omnizart",
+      "label": "Instrument/note decoding",
+      "path": "omnizart/music/inference.py",
+      "line": 372,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/music/inference.py#L372"
+    },
+    {
+      "project": "Omnizart",
+      "label": "Vocal separation",
+      "path": "omnizart/vocal/app.py",
+      "line": 62,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/vocal/app.py#L62"
+    },
+    {
+      "project": "Omnizart",
+      "label": "Drum output boundary",
+      "path": "omnizart/drum/app.py",
+      "line": 39,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/drum/app.py#L39"
+    },
+    {
+      "project": "Omnizart",
+      "label": "MIDI beat input",
+      "path": "omnizart/beat/app.py",
+      "line": 66,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/beat/app.py#L66"
+    },
+    {
+      "project": "Omnizart",
+      "label": "Combined command stub",
+      "path": "omnizart/transcribe_all.py",
+      "line": 8,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/transcribe_all.py#L8"
+    },
+    {
+      "project": "Omnizart",
+      "label": "Combined CLI",
+      "path": "omnizart/cli/transcribe.py",
+      "line": 15,
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/cli/transcribe.py#L15"
+    },
+    {
+      "project": "MuseScore Studio",
+      "label": "MIDI entry",
+      "path": "src/importexport/midi/internal/notationmidireader.cpp",
+      "line": 31,
+      "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/notationmidireader.cpp#L31"
+    },
+    {
+      "project": "MuseScore Studio",
+      "label": "MIDI-to-score conversion",
+      "path": "src/importexport/midi/internal/midiimport/importmidi.cpp",
+      "line": 1133,
+      "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/midiimport/importmidi.cpp#L1133"
+    },
+    {
+      "project": "MuseScore Studio",
+      "label": "Rhythm quantization",
+      "path": "src/importexport/midi/internal/midiimport/importmidi_quant.cpp",
+      "line": 1487,
+      "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/midiimport/importmidi_quant.cpp#L1487"
+    },
+    {
+      "project": "MuseScore Studio",
+      "label": "MusicXML serialization",
+      "path": "src/importexport/musicxml/internal/musicxmlwriter.cpp",
+      "line": 59,
+      "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/musicxml/internal/musicxmlwriter.cpp#L59"
+    },
+    {
+      "project": "MuseScore Studio",
+      "label": "PDF output",
+      "path": "src/importexport/imagesexport/internal/pdfwriter.cpp",
+      "line": 61,
+      "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/imagesexport/internal/pdfwriter.cpp#L61"
+    },
+    {
+      "project": "MuseScore Studio",
+      "label": "Audio export",
+      "path": "src/importexport/audioexport/audioexportmodule.cpp",
+      "line": 59,
+      "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/audioexport/audioexportmodule.cpp#L59"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Default features",
+      "path": "sheetsage/representations/handcrafted.py",
+      "line": 10,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/representations/handcrafted.py#L10"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Optional learned features",
+      "path": "sheetsage/representations/jukebox.py",
+      "line": 79,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/representations/jukebox.py#L79"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Beat tracking",
+      "path": "sheetsage/beat_track.py",
+      "line": 9,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/beat_track.py#L9"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Model configurations",
+      "path": "sheetsage/infer.py",
+      "line": 94,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L94"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Output vocabularies",
+      "path": "sheetsage/infer.py",
+      "line": 78,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L78"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Meter assumption",
+      "path": "sheetsage/infer.py",
+      "line": 206,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L206"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Notation output",
+      "path": "sheetsage/infer.py",
+      "line": 863,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L863"
+    },
+    {
+      "project": "Sheet Sage",
+      "label": "Model terms",
+      "path": "README.md",
+      "line": 61,
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/README.md#L61"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "MDX",
+      "path": "separate.py",
+      "line": 472,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L472"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "MDX-C",
+      "path": "separate.py",
+      "line": 639,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L639"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "Demucs",
+      "path": "separate.py",
+      "line": 797,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L797"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "VR",
+      "path": "separate.py",
+      "line": 1023,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L1023"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "VR architecture",
+      "path": "lib_v5/vr_network/nets_new.py",
+      "line": 41,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/lib_v5/vr_network/nets_new.py#L41"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "Hybrid transformer",
+      "path": "demucs/htdemucs.py",
+      "line": 27,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/demucs/htdemucs.py#L27"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "Audio output",
+      "path": "separate.py",
+      "line": 386,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L386"
+    },
+    {
+      "project": "Ultimate Vocal Remover (UVR)",
+      "label": "License statement",
+      "path": "README.md",
+      "line": 272,
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/README.md#L272"
+    }
+  ]
+}

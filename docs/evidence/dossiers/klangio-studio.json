@@ -1,0 +1,326 @@
+{
+  "investigation": "Klangio Transcription Studio: existing-browser UI inspection and focused REA analysis of its delivered public frontend",
+  "date": "2026-11-11",
+  "scope": {
+    "requested_page": "https://studio.klang.io/en/",
+    "browser_observed": true,
+    "source": "Public versioned JavaScript asset URL observed in that tab",
+    "api_endpoints_invoked": false,
+    "audio_uploaded": false,
+    "transcription_run": false,
+    "server_access_or_source_recovered": false,
+    "rea_cli": "6.8.0",
+    "selected_source_bytes": 31649
+  },
+  "identity": {
+    "application_title": "Songbook - Transcription Studio",
+    "frontend_asset_url": "https://studio.klang.io/assets/index-DIr4Mtaw.js",
+    "frontend_sha256": "7e641e9db38279872fa665dd85c8897fd33f8cec5916b86ad290d2465c5b8142",
+    "frontend_bytes": 4450311,
+    "public_asset_last_modified": "2026-11-09T19:44:01Z",
+    "declared_backend": "https://ai2notes.klang.io"
+  },
+  "questions": [
+    {
+      "question": "What did the open browser expose?",
+      "status": "answered-by-UI-observation",
+      "answer": "The Songbook page and a New Transcription dialog accepting files, social/video links or microphone recording. The original Songbook view was restored.",
+      "evidence": [
+        "browser-observations.json"
+      ]
+    },
+    {
+      "question": "Where is audio transcription performed?",
+      "status": "answered-as-client-server-contract",
+      "answer": "The visible client collects the file and settings. Its transcribeFile helper builds multipart FormData, POSTs to the ai2notes API and reads jobId from the response. It later polls the job state and retrieves its results. This is evidence of a server-backed transcription workflow, not a recovered implementation of the server model.",
+      "evidence": [
+        "selected-workflow/At.js",
+        "selected-workflow/ZFe.js",
+        "selected-workflow/dollarr.js",
+        "selected-workflow/yme.js",
+        "selected-workflow/ddollare.js",
+        "additional-source-context.json"
+      ]
+    },
+    {
+      "question": "What does submission send?",
+      "status": "answered-from-static-code",
+      "answer": "The upload helper appends file, usecredits, usetickets, source, type, JSON params, and title. Params include settings and apriori metadata. The video-link route POSTs url, useTickets, params and type to /api/Transcription/social. Browser auth-token values were not read.",
+      "evidence": [
+        "selected-workflow/dollarr.js",
+        "selected-workflow/yme.js",
+        "selected-workflow/qn.js"
+      ]
+    },
+    {
+      "question": "How does progress work?",
+      "status": "answered-from-static-code",
+      "answer": "A React job provider uses a one-second setInterval to fetch /api/Transcription/get by job ID until state is ok, error or refunded. Declared states also include enqueued and processing. Actual job execution was not observed.",
+      "evidence": [
+        "selected-workflow/ddollare.js",
+        "selected-workflow/Xt_initialization.js"
+      ]
+    },
+    {
+      "question": "What settings does the client support?",
+      "status": "answered-as-declared-client-configuration",
+      "answer": "Mode identifiers include universal, classic, rock, solo, arrangement, multi and chorale. Wizard code conditionally includes instrument selection, difficulty, piano style/pedal, vocals/lyrics/language, guitar/bass/ukulele tuning and capo, drum-note selection, and advanced settings. Availability depends on the mode and UI conditions; not every enum value was verified as visible in this session.",
+      "evidence": [
+        "selected-workflow/Re_initialization.js",
+        "selected-workflow/yme.js",
+        "selected-workflow/Wt.js"
+      ]
+    },
+    {
+      "question": "How does the score editor work?",
+      "status": "answered-from-static-code",
+      "answer": "The file page fetches MusicJSON via /api/Transcription/musj. The editor initializes stores for score data, playback, selection, settings and rendering. The rendering store names and initializes a VexFlow renderer and can rerender affected measures. Saving edits uploads JSON as a file with a transcription ID to /api/Transcription/musj. Retranscription uses a separate endpoint.",
+      "evidence": [
+        "selected-workflow/aDt.js",
+        "selected-workflow/dollarM.js",
+        "selected-workflow/rh.js",
+        "selected-workflow/V9e.js",
+        "selected-workflow/wdollar.js",
+        "selected-workflow/qn.js"
+      ],
+      "limitation": "The renderer was read as additional exact source context outside the REA-selected aggregate. No saved song or editor session was opened in the UI."
+    },
+    {
+      "question": "Which result formats are declared?",
+      "status": "answered-as-client-contract",
+      "answer": "The API service declares PDF, MIDI, unquantized MIDI, MusicXML, Guitar Pro, LilyPond, MP3/synth and MusicJSON result routes. The frontend download helpers request these by job/transcription ID. These endpoints and the resulting files were not exercised.",
+      "evidence": [
+        "declared-transcription-api.json",
+        "selected-workflow/qn.js",
+        "selected-workflow/Gze.js",
+        "selected-workflow/Uze.js",
+        "selected-workflow/dollarze.js",
+        "selected-workflow/qze.js",
+        "selected-workflow/Wze.js",
+        "selected-workflow/Kze.js",
+        "selected-workflow/Xze.js"
+      ]
+    },
+    {
+      "question": "Can the actual AI models be recovered from this inspection?",
+      "status": "unresolved-server-boundary",
+      "answer": "No server model code or weights were obtained. The inspected source establishes the uploader, settings, job protocol, editor and download contracts. It does not establish the model architecture, source separation technique, training data, quality, server programming language, storage provider, or internal export renderer."
+    }
+  ],
+  "workflow": [
+    "File / social link / recording",
+    "Mode and instrument settings",
+    "Multipart upload or link request to ai2notes.klang.io",
+    "jobId returned; client polls processing state",
+    "MusicJSON fetched",
+    "Browser VexFlow editor and playback",
+    "Edited MusicJSON saved; export files requested from API"
+  ],
+  "main_declared_api_routes": [
+    {
+      "method": "POST",
+      "path": "/api/transcription/upload",
+      "purpose": "Upload file and create transcription request"
+    },
+    {
+      "method": "POST",
+      "path": "/api/Transcription/social",
+      "purpose": "Submit supported video/social URL"
+    },
+    {
+      "method": "GET",
+      "path": "/api/Transcription/get",
+      "purpose": "Read transcription state/results metadata"
+    },
+    {
+      "method": "GET",
+      "path": "/api/Transcription/musj",
+      "purpose": "Fetch editable structured score"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/Transcription/musj",
+      "purpose": "Save edited structured score"
+    },
+    {
+      "method": "POST",
+      "path": "/api/Transcription/retranscribe",
+      "purpose": "Request new transcription processing"
+    }
+  ],
+  "client_api_inventory": {
+    "file": "declared-transcription-api.json",
+    "route_count": 30,
+    "scope": "Declaration inventory only; no API probing."
+  },
+  "source_provenance": {
+    "acquisition": "frontend-acquisition.json",
+    "selection": "selected-workflow-provenance.json",
+    "selected_declarations": 25,
+    "additional_context": "additional-source-context.json",
+    "method": "Babel parsed the public bundle as inert text; exact declaration ranges were copied with recorded UTF-16/UTF-8 offsets and SHA-256. Variable declaration keywords and semicolons were restored where needed. All selected slices were verified against their parent. Original source-map URL returned HTML, so no original source-map recovery is claimed."
+  },
+  "rea_evidence": {
+    "summary_id": "ev_4259c11a8a6d74f1e40efb43050d618d99659673bde253f23f2d7ec9bad8bd30",
+    "parent_id": "ev_c3605ed04940d6ebe319ee8a7c647b7dd4e2e1befa69ba905d38c1a3ac976d4a",
+    "summary_file": "rea-workflow-summary.json",
+    "complete_retained_bundle": "rea-workflow.bundle.json",
+    "artifact_sha256": "769fb0a00659da6a9b14416cd17ad83fa13dfb4b6cfe7fee2fb44eb2dcb3f243",
+    "statistics": {
+      "relevant_files": 1,
+      "nested_asar_containers": 0,
+      "text_bytes_read": 31649,
+      "invalid_utf8_files": 0,
+      "parsed_javascript_files": 1,
+      "skipped_javascript_files": 0,
+      "visited_ast_nodes": 7878,
+      "findings": 64,
+      "modules": 0,
+      "parse_failures": 0
+    },
+    "coverage": {
+      "static_sources": {
+        "sources": 1,
+        "unmeasured_sources": 0,
+        "syntax": {
+          "complete": 1,
+          "recovered": 0,
+          "failed": 0,
+          "not-examined": 0
+        },
+        "semantics": {
+          "unknown_sources": 1,
+          "unexamined_sources": 0
+        },
+        "examination": {
+          "complete": 1,
+          "limited": 0,
+          "not-examined": 0
+        },
+        "electron_applicability": {
+          "observed": 0,
+          "unknown": 1
+        }
+      },
+      "application": {
+        "status": "partial",
+        "truncated": false,
+        "omitted_count": null,
+        "limits": []
+      },
+      "semantic": {
+        "status": "unknown",
+        "truncated": false,
+        "omitted_nodes": 0,
+        "omitted_relations": 0,
+        "limits": [],
+        "families": [
+          {
+            "family": "boundary",
+            "status": "partial",
+            "retained_relations": 4,
+            "omitted_relations": 0,
+            "unknown_count": 0
+          },
+          {
+            "family": "call-flow",
+            "status": "partial",
+            "retained_relations": 143,
+            "omitted_relations": 0,
+            "unknown_count": 605
+          },
+          {
+            "family": "child-process",
+            "status": "partial",
+            "retained_relations": 0,
+            "omitted_relations": 0,
+            "unknown_count": 0
+          },
+          {
+            "family": "closure",
+            "status": "partial",
+            "retained_relations": 459,
+            "omitted_relations": 0,
+            "unknown_count": 0
+          },
+          {
+            "family": "configuration",
+            "status": "partial",
+            "retained_relations": 0,
+            "omitted_relations": 0,
+            "unknown_count": 0
+          },
+          {
+            "family": "data-flow",
+            "status": "partial",
+            "retained_relations": 5632,
+            "omitted_relations": 0,
+            "unknown_count": 489
+          },
+          {
+            "family": "event",
+            "status": "partial",
+            "retained_relations": 0,
+            "omitted_relations": 0,
+            "unknown_count": 0
+          },
+          {
+            "family": "object-flow",
+            "status": "partial",
+            "retained_relations": 330,
+            "omitted_relations": 0,
+            "unknown_count": 766
+          },
+          {
+            "family": "promise-ownership",
+            "status": "partial",
+            "retained_relations": 63,
+            "omitted_relations": 0,
+            "unknown_count": 28
+          },
+          {
+            "family": "request",
+            "status": "partial",
+            "retained_relations": 0,
+            "omitted_relations": 0,
+            "unknown_count": 0
+          },
+          {
+            "family": "resource-lifecycle",
+            "status": "partial",
+            "retained_relations": 0,
+            "omitted_relations": 0,
+            "unknown_count": 0
+          },
+          {
+            "family": "timer",
+            "status": "partial",
+            "retained_relations": 1,
+            "omitted_relations": 0,
+            "unknown_count": 4
+          }
+        ]
+      },
+      "application_unknowns": 0,
+      "semantic_unknowns": 1892
+    },
+    "scope": "Focused derived workflow source, not the entire 4.45 MB production bundle or a live CDP capture."
+  },
+  "limitations": [
+    "Live UI observation used the browser extension. REA passive CDP capture was unavailable because no existing debugging endpoint was exposed. Browser configuration was left unchanged.",
+    "Public source was fetched from the exact asset URL observed in the tab. The fetched source SHA-256 was retained, but no runtime script-source digest was collected to independently authenticate byte identity with the tab cache.",
+    "The advertised source map returned the SPA HTML shell instead of a JSON source map; no alternate map URLs were guessed or probed.",
+    "REA parsed the selected 31.6 KB workflow aggregate. Its source syntax was completely examined, but application semantics and cross-boundary relationships remain partial/unknown because dependencies were intentionally excluded.",
+    "Client-side request declarations establish expected contracts, not verified server implementation, authorization enforcement, processing quality, or latency.",
+    "No audio file or recording was uploaded, no transcription/job was started, no download result was requested, and no purchase/account setting was changed.",
+    "No cookies, session tokens or storage values were extracted. Only public script source and visible UI were inspected.",
+    "VexFlow client rendering does not identify the server renderer that generates downloadable PDFs or other formats."
+  ],
+  "_archive_context": {
+    "archived_on": "2026-11-11",
+    "status": "Historical research, not executed SMPL Tones functionality.",
+    "original_filenames": "Unlinked original evidence filenames are historical labels. The readable dossier and these normalized conclusions do not require those local files.",
+    "selection_policy": "Current SMPL Tones component choices are in DEVELOPMENT_PLAN.md and decision-ledger.json; earlier MuScriptor recommendations are historical.",
+    "payload_policy": "No proprietary binaries, weights, full manuals, production JavaScript or copied source snapshots are included."
+  }
+}

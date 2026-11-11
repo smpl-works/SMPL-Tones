@@ -1,0 +1,280 @@
+{
+  "investigation": "AudioScore Ultimate 2020 Demo: static package, binary, managed-call, and bundled-manual analysis",
+  "date": "2026-11-11",
+  "scope": {
+    "input": "AudioScoreUltimateDemo.EXE",
+    "target_executed": false,
+    "installed": false,
+    "configuration_changed": false,
+    "rea_cli_version": "6.8.0",
+    "analysis": "Execution-free PE/resource/CLR/CIL inspection, raw-DEFLATE extraction and document reading"
+  },
+  "identity": {
+    "bytes": 16972520,
+    "sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e",
+    "publisher": "Neuratron Limited",
+    "authenticode": "Valid signature, observed with PowerShell Get-AuthenticodeSignature",
+    "installer_version": "9.0.0",
+    "installer_title": "Neuratron AudioScore Ultimate 2020 Demo",
+    "installer_architecture": "x86",
+    "requires_administrator": "Declared in the outer PE manifest"
+  },
+  "questions": [
+    {
+      "question": "Is this just a downloader or does it include the application?",
+      "status": "answered",
+      "answer": "It includes the application and dependencies in a Wise installer. Recovered stream 21 is Neuratron AudioScore.exe, 9,872,896 bytes, version 9.0.0.0. The Wise script explicitly names its installation destination.",
+      "evidence": [
+        "wise-streams.json",
+        "installer-script.wse",
+        "app-inspect-pe-resources.json"
+      ]
+    },
+    {
+      "question": "What components perform the work?",
+      "status": "answered-to-static-boundary",
+      "answer": "The main AudioScore editor is native x86. Infinity Ripper.exe is an x64 .NET Framework WPF helper (assembly 4.2.0.0). HitnMixLibCLR.x64.dll is an x64 mixed C++/CLI bridge. Static CIL call edges connect helper window-load, background work, stop and close handlers to managed initialization/status/stop/deinitialization wrappers. Those wrappers call native HitnMixLib functions.",
+      "evidence": [
+        "app-inspect-managed-artifact.json",
+        "helper-29-managed.json",
+        "helper-30-managed.json",
+        "helper-29-inspect-managed-members.json",
+        "helper-30-inspect-managed-members.json",
+        "helper-29-inspect-managed-native-boundaries.json"
+      ],
+      "limitation": "The native DSP implementation was not decompiled. This does not establish an exact spectral model, neural architecture, runtime IPC protocol or benchmarked recognition accuracy."
+    },
+    {
+      "question": "How does audio become a score?",
+      "status": "answered-from-packaged-documentation-and-UI-resources",
+      "answer": "Open CD/MP3/WAV audio; Hit’n’Mix Ripper identifies notes. AudioScore estimates barlines and instrument assignments. The user checks note sensitivity, time signature, barlines, assignments and note splits/joins. Transcribe & Edit creates instrument tracks and a score preview. Corrections update that preview. Create Score produces a formatted score or the result can be exported.",
+      "evidence": [
+        "bundled-user-manual.pdf, PDF pages 15-19",
+        "bundled-quick-guide.pdf, PDF pages 2-4",
+        "app-resource-strings.json: IDs 258, 11613, 11912"
+      ]
+    },
+    {
+      "question": "What are the important full-song limitations?",
+      "status": "answered-from-packaged-documentation",
+      "answer": "The manual describes up to 16 simultaneous notes, not guaranteed isolation of 16 instruments. It says AudioScore is not designed for percussion, cannot distinguish instruments playing the same note simultaneously, and has more difficulty with heavy sustain/reverb. It emphasizes correcting barlines, instrument assignments and note timing/durations.",
+      "evidence": [
+        "bundled-user-manual.pdf, PDF page 13",
+        "bundled-quick-guide.pdf, PDF page 1"
+      ]
+    },
+    {
+      "question": "What input/output formats are documented?",
+      "status": "answered-as-documented-capabilities",
+      "answer": "The full product manual describes CD/MP3/WAV/MIDI input, microphone and MIDI-keyboard entry, and MusicXML/NIFF/MIDI/PDF output plus Sibelius integration. Windows PDF export is documented for the full edition. These are not runtime-tested demo entitlements.",
+      "evidence": [
+        "bundled-user-manual.pdf, PDF pages 10 and 68",
+        "app-resource-strings.json: IDs 186, 230, 245"
+      ]
+    },
+    {
+      "question": "Are the recognition algorithm and demo restrictions fully understood?",
+      "status": "partially-answered",
+      "answer": "The native/managed component boundary, helper lifecycle calls, UI messages and documented workflow are established. Native algorithm internals, real recognition quality and exactly which exports this demo enables remain unverified.",
+      "evidence": [
+        "helper-29-inspect-managed-native-boundaries.json",
+        "helper-30-inspect-managed-members.json",
+        "app-resource-strings.json: ID 10490"
+      ]
+    }
+  ],
+  "workflow": [
+    "Audio file or recording",
+    "Hit’n’Mix note analysis",
+    "Note/instrument/time-signature/barline review",
+    "Transcribe & Edit",
+    "Editable score preview",
+    "Create Score / export"
+  ],
+  "helper_call_edges": [
+    {
+      "caller_token": "0x06000005",
+      "il_offset": 20,
+      "target_identity_sha256": "b8ac2c6b15ed09d599815c5875e3634ab87d6dcc043938e6520a8b5b309f5cbf",
+      "caller": "Hit_n_Mix_Ripper.MainWindow.worker_DoWork",
+      "opcode": "call",
+      "target_token": "0x0a00001c",
+      "target_kind": "member-ref",
+      "target_name": "Managed_HMCheckRipperStatus",
+      "target_declaring_type": "HitnMixLibCLR.HitnMixLibCLRClass"
+    },
+    {
+      "caller_token": "0x06000007",
+      "il_offset": 19,
+      "target_identity_sha256": "4a6933500aaf403fb42befbc7507adb078e9e6965d75f9e6228b558733324078",
+      "caller": "Hit_n_Mix_Ripper.MainWindow.Window_Loaded",
+      "opcode": "call",
+      "target_token": "0x0a00002b",
+      "target_kind": "member-ref",
+      "target_name": "Managed_HitnMixLib_Initialise",
+      "target_declaring_type": "HitnMixLibCLR.HitnMixLibCLRClass"
+    },
+    {
+      "caller_token": "0x06000008",
+      "il_offset": 7,
+      "target_identity_sha256": "b8ac2c6b15ed09d599815c5875e3634ab87d6dcc043938e6520a8b5b309f5cbf",
+      "caller": "Hit_n_Mix_Ripper.MainWindow.StopClicked",
+      "opcode": "call",
+      "target_token": "0x0a00001c",
+      "target_kind": "member-ref",
+      "target_name": "Managed_HMCheckRipperStatus",
+      "target_declaring_type": "HitnMixLibCLR.HitnMixLibCLRClass"
+    },
+    {
+      "caller_token": "0x06000008",
+      "il_offset": 20,
+      "target_identity_sha256": "b8ac2c6b15ed09d599815c5875e3634ab87d6dcc043938e6520a8b5b309f5cbf",
+      "caller": "Hit_n_Mix_Ripper.MainWindow.StopClicked",
+      "opcode": "call",
+      "target_token": "0x0a00001c",
+      "target_kind": "member-ref",
+      "target_name": "Managed_HMCheckRipperStatus",
+      "target_declaring_type": "HitnMixLibCLR.HitnMixLibCLRClass"
+    },
+    {
+      "caller_token": "0x06000008",
+      "il_offset": 54,
+      "target_identity_sha256": "4fa85c8ff72b9a3748b8b311ef17940277528d2fa1ae20f60eafa34f812bb5b2",
+      "caller": "Hit_n_Mix_Ripper.MainWindow.StopClicked",
+      "opcode": "call",
+      "target_token": "0x0a000033",
+      "target_kind": "member-ref",
+      "target_name": "Managed_HMRipperStop",
+      "target_declaring_type": "HitnMixLibCLR.HitnMixLibCLRClass"
+    },
+    {
+      "caller_token": "0x06000009",
+      "il_offset": 0,
+      "target_identity_sha256": "ccafa4f942cc1433703fa7b4daf3313b0a2210436d32b0296554c1684eb1d0f6",
+      "caller": "Hit_n_Mix_Ripper.MainWindow.Window_Closing",
+      "opcode": "call",
+      "target_token": "0x0a000034",
+      "target_kind": "member-ref",
+      "target_name": "Managed_HMRipperRipping",
+      "target_declaring_type": "HitnMixLibCLR.HitnMixLibCLRClass"
+    },
+    {
+      "caller_token": "0x0600000a",
+      "il_offset": 0,
+      "target_identity_sha256": "3cbd5c7ac52d944ed7df8edbcf39380f9e6c1e31f4f3430fe412a4fe83bdb6d0",
+      "caller": "Hit_n_Mix_Ripper.MainWindow.Window_Closed",
+      "opcode": "call",
+      "target_token": "0x0a000036",
+      "target_kind": "member-ref",
+      "target_name": "Managed_HitnMixLib_Deinitialise",
+      "target_declaring_type": "HitnMixLibCLR.HitnMixLibCLRClass"
+    }
+  ],
+  "application_resources": {
+    "rea_resource_count": 702,
+    "decoded_rt_string_count": 1872,
+    "resource_inventory": "app-inspect-pe-resources.json",
+    "decoded_strings": "app-resource-strings.json"
+  },
+  "extraction": {
+    "tool": "Python standard-library raw DEFLATE decoder; not REA Evidence",
+    "verified_stream_count": 102,
+    "total_uncompressed_bytes": 29813905,
+    "every_retained_stream_crc32_verified": true,
+    "provenance": "wise-streams.json",
+    "terminal_boundary": {
+      "offset": 16964687,
+      "reason": "Error -3 while decompressing data: invalid stored block lengths"
+    },
+    "coverage": "Contiguous verified streams only. Stream count is not an installed-file count. Final metadata/padding/certificate tail was not interpreted."
+  },
+  "manuals": [
+    {
+      "file": "bundled-user-manual.pdf",
+      "source_stream": 84,
+      "pages": 81
+    },
+    {
+      "file": "bundled-quick-guide.pdf",
+      "source_stream": 81,
+      "pages": 7
+    }
+  ],
+  "rea_evidence": [
+    {
+      "id": "ev_ecf5c729dfe4f279a994773eb1d0989f49fe637729a8b6e983c9fbc94ca04af5",
+      "file": "inspect-managed-artifact.json",
+      "operation": "inspect_managed_artifact",
+      "subject_sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e"
+    },
+    {
+      "id": "ev_7b899945e0e9b2cb63bcefb0101712406358b0f75fdcf47004559dd8ea7952f0",
+      "file": "inspect-pe-resources.json",
+      "operation": "inspect_pe_resources",
+      "subject_sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e"
+    },
+    {
+      "id": "ev_247596ce90b2c428377f9792830e3506ab82c4dc714ec2d8f2648a8a61d45289",
+      "file": "inspect-artifact.json",
+      "operation": "inspect_artifact",
+      "subject_sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e"
+    },
+    {
+      "id": "ev_96fddb439c91a354a33c5f0943d71278046440ce30d8591cb4e13689d9777cab",
+      "file": "app-inspect-pe-resources.json",
+      "operation": "inspect_pe_resources",
+      "subject_sha256": "b39f97ac262c51527cbbd19b9000c469a7637ca1ab4855fdc5aae00697dcd533"
+    },
+    {
+      "id": "ev_1eddb48e91a8a7705eff22604896bcac891ac37a23783b6b5da8081a6e853dcf",
+      "file": "app-inspect-managed-artifact.json",
+      "operation": "inspect_managed_artifact",
+      "subject_sha256": "b39f97ac262c51527cbbd19b9000c469a7637ca1ab4855fdc5aae00697dcd533"
+    },
+    {
+      "id": "ev_60d3126e8fdf573e3bd4a1cb776c0b892e2b2a8caeb6652134d052d5af136c26",
+      "file": "helper-29-managed.json",
+      "operation": "inspect_managed_artifact",
+      "subject_sha256": "ea5476a86a06e6bdfac319caea04250ba32259a2ed9556c0bda0fd660eadb037"
+    },
+    {
+      "id": "ev_d4cba294f6ede0b18d4051d5489cfc952e59e4c4337f437a22c0460cb32decf7",
+      "file": "helper-30-managed.json",
+      "operation": "inspect_managed_artifact",
+      "subject_sha256": "f217c3fcdb2db87f2c60428c223b87e483a9e84fd3e72cd69abdedf61dce024c"
+    },
+    {
+      "id": "ev_c9b58fb566c3d19f3c2f36011c15f2ef14a766c985da5d70af636d0fc3d682f5",
+      "file": "helper-29-inspect-managed-members.json",
+      "operation": "inspect_managed_members",
+      "subject_sha256": "ea5476a86a06e6bdfac319caea04250ba32259a2ed9556c0bda0fd660eadb037"
+    },
+    {
+      "id": "ev_bc195346e11baf1bb2c6829fe31ee7257623cd82e578e85ffd5d23075e8ec6eb",
+      "file": "helper-30-inspect-managed-members.json",
+      "operation": "inspect_managed_members",
+      "subject_sha256": "f217c3fcdb2db87f2c60428c223b87e483a9e84fd3e72cd69abdedf61dce024c"
+    },
+    {
+      "id": "ev_8fec990fc375f991835682ee87d40b398674e8003a459ce83bed3feb088f53af",
+      "file": "helper-29-inspect-managed-native-boundaries.json",
+      "operation": "inspect_managed_native_boundaries",
+      "subject_sha256": "ea5476a86a06e6bdfac319caea04250ba32259a2ed9556c0bda0fd660eadb037"
+    }
+  ],
+  "limitations": [
+    "Nothing in the supplied installer or recovered payload was executed. No runtime, installation, audio conversion, printing or export behavior was observed.",
+    "No native disassembler/decompiler provider was installed or configured. Native pitch detection, instrument classification and engraving internals were not recovered.",
+    "Static CIL call edges prove encoded call references, not execution of those calls in this session.",
+    "Shared resources contain PhotoScore, Lite and Infinity strings. Their presence alone does not establish availability in this AudioScore demo; generic Infinity 45-second messages were not treated as a verified AudioScore demo limit.",
+    "Bundled manuals cover multiple editions. Full-product export descriptions do not prove those functions are enabled in this demo.",
+    "No original proprietary source code was recovered; the recovered Wise installation script is separate from the transcription engine."
+  ],
+  "_archive_context": {
+    "archived_on": "2026-11-11",
+    "status": "Historical research, not executed SMPL Tones functionality.",
+    "original_filenames": "Unlinked original evidence filenames are historical labels. The readable dossier and these normalized conclusions do not require those local files.",
+    "selection_policy": "Current SMPL Tones component choices are in DEVELOPMENT_PLAN.md and decision-ledger.json; earlier MuScriptor recommendations are historical.",
+    "payload_policy": "No proprietary binaries, weights, full manuals, production JavaScript or copied source snapshots are included."
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "investigation": "AnthemScore online installer and declared repository payload: static component/model/viewer analysis",
+  "date": "2026-11-11",
+  "scope": {
+    "input": "AnthemScore_installer_windows_x86_64.exe",
+    "target_executed": false,
+    "installed": false,
+    "configuration_changed": false,
+    "rea_cli_version": "6.8.0",
+    "native_decompiler_available": false
+  },
+  "identity": {
+    "installer_bytes": 33189600,
+    "installer_sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9",
+    "installer_signature": "Valid, Lunaverus LLC",
+    "installer_framework_version": "4.8.1.0 (PE fixed-version data; not the AnthemScore application version)",
+    "bootstrap_config_version": "1.0.5",
+    "repository_package_version": "6.3.100",
+    "application_file_version": "6.3.0.0",
+    "application_product": "AnthemScore",
+    "application_bytes": 37151008,
+    "application_sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716",
+    "application_signature": "Valid, Lunaverus LLC"
+  },
+  "questions": [
+    {
+      "question": "What is the supplied EXE?",
+      "status": "answered",
+      "answer": "An x64 native Qt Installer Framework online bootstrapper. The appended QResource configuration selects the AnthemScore repository and installs to @ApplicationsDirX64@/AnthemScore. It is not a self-contained copy of the music application.",
+      "evidence": [
+        "inspect-managed-artifact.json",
+        "installer-config.xml",
+        "config-internal.ini",
+        "bootstrap-provenance.json"
+      ]
+    },
+    {
+      "question": "Which actual application was inspected?",
+      "status": "answered",
+      "answer": "The live repository explicitly declared by the bootstrapper served package 6.3.100, release date 2026-09-30. Its AnthemScore.exe reports file/product version 6.3.0.0. Package metadata and content/resources were downloaded, hashed and extracted without running them.",
+      "evidence": [
+        "repository-Updates.xml",
+        "repository-packages.json",
+        "package-downloads.json",
+        "core-members.json"
+      ],
+      "limitation": "This is the live repository payload at retrieval time, not application code embedded in the original installer. Repository and PE version numbers identify different layers."
+    },
+    {
+      "question": "What components are used?",
+      "status": "answered-as-static-architecture",
+      "answer": "Native x64 C++/Qt 6 desktop app; Qt Multimedia and packaged FFmpeg audio libraries; packaged ONNX Runtime and embedded ONNX models; MusicXML generation; a Qt WebEngine viewer carrying OpenSheetMusicDisplay; Qt PrintSupport/WebEngine PDF printing; FluidLite and a General MIDI soundfont for synthesized playback.",
+      "evidence": [
+        "app-imports.json",
+        "app-selected-literals.json",
+        "workflow-literals.json",
+        "core-members.json",
+        "resources-members.json",
+        "payload/resources/AS_resources/viewer/index.html",
+        "viewer-key-snippets.json"
+      ],
+      "limitation": "Imports, assets, model contracts and literals establish static references. Native orchestration and live file/network behavior were not traced."
+    },
+    {
+      "question": "How are musical notes and timing found?",
+      "status": "partially-answered",
+      "answer": "Six distinct length-prefixed ONNX ModelProto graphs were decoded from the executable. Their contracts include onset, beat/downbeat, chord/bass, instrument/percussion and volume predictions. Native labels also identify a hand tagger. Spectrogram/MultiQ/FFT references indicate spectral preprocessing. RhythmQuantize diagnostics reference beat repair, swing, triplets and rolled notes.",
+      "evidence": [
+        "embedded-models.json",
+        "onnx-schema-reference.json",
+        "app-selected-literals.json",
+        "workflow-literals.json"
+      ],
+      "limitation": "The precise preprocessing parameters, model-selection logic, thresholds, full data flow, training data and recognition accuracy are not established."
+    },
+    {
+      "question": "How does recognition become printable sheet music?",
+      "status": "answered-as-static-pipeline",
+      "answer": "The native image contains MusicXML score-partwise templates and exports. Its packaged HTML sets xmlInputFile to a generated MusicXML path and loads OpenSheetMusicDisplay. The JavaScript contains XML load/render logic and PDF/MIDI/MusicXML export actions. Native imports include QWebEnginePage::printToPdf. Static evidence supports MusicXML -> browser-based engraving/viewing -> PDF.",
+      "evidence": [
+        "app-selected-literals.json",
+        "app-imports.json",
+        "payload/resources/AS_resources/viewer/index.html",
+        "viewer-key-snippets.json"
+      ],
+      "limitation": "No score was rendered or exported. REA viewer semantics remain partial after a heap-budget exhaustion; manually inspected snippets and declared imports provide the bounded evidence."
+    },
+    {
+      "question": "What matters for full mixed songs?",
+      "status": "answered-from-packaged-UI-and-model-contracts",
+      "answer": "The app has explicit auto instrument detection and percussion detection. Its help text states that instrument detection assigns notes to their played instrument; when unchecked all notes are written to piano. The percussion tooltip specifically mentions drum and cymbal hits. The trial message states a 30-second limit.",
+      "evidence": [
+        "embedded-english.json: AUTO_INSTRUMENT_DETECTION, GUI_TIP_INSTRUMENT_DETECTION, PERCUSSION_DETECTION, TRIAL_LIMITATION",
+        "workflow-literals.json at offset 2716824",
+        "embedded-models.json"
+      ],
+      "limitation": "The state of the checkbox by default, exact edition entitlements, recognition quality, and runtime enforcement were not tested."
+    }
+  ],
+  "supported_pipeline_inference": [
+    "Audio decoding",
+    "Spectral features",
+    "ONNX note/onset, instrument/percussion, beat/downbeat and chord estimates",
+    "Rhythm cleanup and editable notes/parts",
+    "MusicXML",
+    "OpenSheetMusicDisplay in Qt WebEngine",
+    "PDF / MIDI / MusicXML export paths"
+  ],
+  "model_summary": {
+    "count": 6,
+    "distinct_sha256_count": 6,
+    "metadata_file": "embedded-models.json",
+    "roles": [
+      {
+        "model_index": 0,
+        "role": "Chord/bass estimates",
+        "evidence": "Outputs chord_logp and bass_logp",
+        "classification": "inferred from decoded graph contract and chord-net initialization literal"
+      },
+      {
+        "model_index": 1,
+        "role": "Note onsets",
+        "evidence": "Output onsets",
+        "classification": "inferred from decoded graph contract"
+      },
+      {
+        "model_index": 2,
+        "role": "Beat/downbeat estimates",
+        "evidence": "Input logmel; outputs beat and downbeat",
+        "classification": "inferred from decoded graph contract and beat-tracker initialization literal"
+      },
+      {
+        "model_index": 3,
+        "role": "Instrument/percussion/volume estimates",
+        "evidence": "Outputs inst_logp, perc_prob, vol_logp",
+        "classification": "inferred from decoded graph contract"
+      },
+      {
+        "model_index": 4,
+        "role": "Second instrument/percussion/volume model variant",
+        "evidence": "Same declared graph interfaces as model 3, distinct SHA-256",
+        "classification": "Variant selection and purpose difference unresolved"
+      },
+      {
+        "model_index": 5,
+        "role": "Candidate left/right hand tagger",
+        "evidence": "Note-feature and pad-mask inputs, per-note logits; matching native HandTagger messages and UI action",
+        "classification": "inferred; native binding to this exact graph was not decompiled"
+      }
+    ],
+    "tool": "Ordinary Python format-aware protobuf metadata parser, not REA Evidence; no inference and no standalone weight files exported"
+  },
+  "key_ui_evidence": {
+    "auto_instrument_detection": "UI exposes automatic assignment of detected notes to instrument parts.",
+    "unchecked_behavior": "Packaged help says disabling instrument detection initially assigns notes to piano; a later tool can assign selected instruments.",
+    "percussion_detection": "UI exposes percussion recognition, including drum and cymbal events.",
+    "trial_limit": "A specific English resource describes a 30-second trial limit; actual enforcement was not tested.",
+    "hand_assignment": "UI exposes automatic left/right hand assignment.",
+    "musicxml_export": "UI names MusicXML sheet-music export."
+  },
+  "package_acquisition": {
+    "repository": "https://lunaverus.com/static/AnthemScore_repository_windows_x86_64",
+    "provenance": "bootstrap-provenance.json",
+    "downloaded_archives": [
+      {
+        "file": "6.3.100meta.7z",
+        "bytes": 15009,
+        "sha1": "bb867cb793fa401f131528c0eed9c205069363d3",
+        "sha256": "591e39dfb4b6e3a529ccd6d98a66be31d63e0c5f6053aed05c579e0bba221671",
+        "repository_sha1_verified": true
+      },
+      {
+        "file": "6.3.100content.7z",
+        "bytes": 47438827,
+        "sha1": "7ec2823e87c22c000330fcd326883ae22644c7a6",
+        "sha256": "f3754e539cc04d6f2e88a4a6034eebaaded97df437150cc26b0e4e00c0b083c0",
+        "sidecar_sha1_verified": true
+      },
+      {
+        "file": "6.3.100AS_resources.7z",
+        "bytes": 13819215,
+        "sha1": "16474f1878e4b68750780c12ff6f3e6aea57ad0f",
+        "sha256": "c2193ad62518d1ff1ea291982ec7071f0b3d5a8e62d260701cf81a636b82a021",
+        "sidecar_sha1_verified": true
+      }
+    ],
+    "checks": "Metadata archive SHA-1 matched Updates.xml. Core/resource archive SHA-1 values matched their published sidecars. 7-Zip extraction completed successfully. Absolute paths, traversal and link entries were rejected before extraction."
+  },
+  "rea_evidence": [
+    {
+      "id": "ev_e728ac8f3c6e2b57ef4c992f5cc0accd7ec9c996025264d2a1a694fd5ae4eafa",
+      "file": "inspect-managed-artifact.json",
+      "operation": "inspect_managed_artifact",
+      "subject_sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9"
+    },
+    {
+      "id": "ev_77779d38d7a5e8ffe77d393eeaada2a58be0282d346adea51d61664a07dadd70",
+      "file": "inspect-pe-resources.json",
+      "operation": "inspect_pe_resources",
+      "subject_sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9"
+    },
+    {
+      "id": "ev_2ae87b2709a2fdd8328e470b28c721e15d88678d2ff9cdb3fed4ade8a454fd63",
+      "file": "inspect-artifact.json",
+      "operation": "inspect_artifact",
+      "subject_sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9"
+    },
+    {
+      "id": "ev_f621c32686f371333241a7311b7fcca54ce2d1f8a41fdde649a5f9a0f6fc46aa",
+      "file": "app-inspect-managed-artifact.json",
+      "operation": "inspect_managed_artifact",
+      "subject_sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716"
+    },
+    {
+      "id": "ev_b86aec20e4c984e2d5a2758d24b4de62ad2f4c1f9d7ca2b902510a0a05ecea4b",
+      "file": "app-inspect-pe-resources.json",
+      "operation": "inspect_pe_resources",
+      "subject_sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716"
+    },
+    {
+      "id": "ev_34f4483316a03bd42f88311214049c002d441d8e964177bd27b64aee15cc81a0",
+      "parent_id": "ev_6d9a7d027d135fde66fb8b2ab4559d2215df098cce5ebe1afea50067ebc236f1",
+      "file": "viewer-analysis-summary.json",
+      "bundle": "viewer-evidence.bundle.json",
+      "coverage": "Partial: selected minified source exceeded 512 MiB analysis heap; no complete viewer semantic graph was established."
+    }
+  ],
+  "limitations": [
+    "The supplied installer, application, native DLLs, JavaScript viewer and models were not executed. No installation or benchmark was performed.",
+    "The actual app was acquired from the repository URL embedded in the supplied bootstrapper. Live repository contents can change; URLs, response headers, timestamps, archive hashes and executable identity were retained.",
+    "Qt framework/translation dependency archives were not downloaded because they were not needed for static component inspection. The extracted payload is not claimed to be a runnable installation.",
+    "No native function-level decompilation was available. Spectral preprocessing, orchestration and model role mapping remain partly inferred from declared contracts, names, imports and help strings.",
+    "The REA JavaScript worker exhausted its explicitly bounded 512 MiB heap on the minified bundle. Partial Evidence is retained in viewer-evidence.bundle.json; no retry or complete semantic graph is claimed.",
+    "Model tensor shapes are graph interfaces, not verified user-facing limits on instrument counts or musical range.",
+    "Embedded English resources include older/shared licensing messages. Only the explicit 30-second trial message is reported; exact trial and edition behavior was not tested.",
+    "No guarantee of perfect instrument separation, faithful reconstruction of all parts, or absence of network activity can be derived from this static inspection."
+  ],
+  "_archive_context": {
+    "archived_on": "2026-11-11",
+    "status": "Historical research, not executed SMPL Tones functionality.",
+    "original_filenames": "Unlinked original evidence filenames are historical labels. The readable dossier and these normalized conclusions do not require those local files.",
+    "selection_policy": "Current SMPL Tones component choices are in DEVELOPMENT_PLAN.md and decision-ledger.json; earlier MuScriptor recommendations are historical.",
+    "payload_policy": "No proprietary binaries, weights, full manuals, production JavaScript or copied source snapshots are included."
+  }
+}

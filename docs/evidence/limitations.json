@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-11",
+  "global": [
+    "No supplied music application or installer was executed.",
+    "No transcription quality, speed or native-model-conversion benchmark was run.",
+    "No native DSP decompiler was available; graph contracts and static references have narrower evidentiary scope.",
+    "Browser observation did not include an uploaded song or a completed transcription.",
+    "Source pinning does not establish equivalence to released prebuilt binaries.",
+    "Source-code license labels do not automatically determine model, dataset or dependency terms.",
+    "This archive preserves analytical conclusions and selected metadata; replaying binary analysis requires original artifacts."
+  ],
+  "per_investigation": {
+    "musehub-installer": [
+      "No installer, bundled executable, service or editor was executed.",
+      "No function-level native decompiler provider was configured; native call order, branches, registry writes and networking were not dynamically verified.",
+      "REA and Python zipfile did not support ZIP compression method 95. A format-aware stdlib XZ decoder materialized selected members and verified CRC32 plus the package manifest SHA-256.",
+      "Only the selected six archive members were materialized; the complete 108-entry member index was retained.",
+      "Common installed MuseScore paths and uninstall entries were checked without finding an editor executable. This was not an exhaustive whole-disk search.",
+      "Studio source findings are separate from the supplied MuseHub binary and do not establish the editor release that MuseHub would download.",
+      "Persistent MCP registration was missing. The CLI supplied static analysis without editing Codex configuration or installing a native decompiler."
+    ],
+    "audioscore-demo": [
+      "Nothing in the supplied installer or recovered payload was executed. No runtime, installation, audio conversion, printing or export behavior was observed.",
+      "No native disassembler/decompiler provider was installed or configured. Native pitch detection, instrument classification and engraving internals were not recovered.",
+      "Static CIL call edges prove encoded call references, not execution of those calls in this session.",
+      "Shared resources contain PhotoScore, Lite and Infinity strings. Their presence alone does not establish availability in this AudioScore demo; generic Infinity 45-second messages were not treated as a verified AudioScore demo limit.",
+      "Bundled manuals cover multiple editions. Full-product export descriptions do not prove those functions are enabled in this demo.",
+      "No original proprietary source code was recovered; the recovered Wise installation script is separate from the transcription engine."
+    ],
+    "anthemscore": [
+      "The supplied installer, application, native DLLs, JavaScript viewer and models were not executed. No installation or benchmark was performed.",
+      "The actual app was acquired from the repository URL embedded in the supplied bootstrapper. Live repository contents can change; URLs, response headers, timestamps, archive hashes and executable identity were retained.",
+      "Qt framework/translation dependency archives were not downloaded because they were not needed for static component inspection. The extracted payload is not claimed to be a runnable installation.",
+      "No native function-level decompilation was available. Spectral preprocessing, orchestration and model role mapping remain partly inferred from declared contracts, names, imports and help strings.",
+      "The REA JavaScript worker exhausted its explicitly bounded 512 MiB heap on the minified bundle. Partial Evidence is retained in viewer-evidence.bundle.json; no retry or complete semantic graph is claimed.",
+      "Model tensor shapes are graph interfaces, not verified user-facing limits on instrument counts or musical range.",
+      "Embedded English resources include older/shared licensing messages. Only the explicit 30-second trial message is reported; exact trial and edition behavior was not tested.",
+      "No guarantee of perfect instrument separation, faithful reconstruction of all parts, or absence of network activity can be derived from this static inspection."
+    ],
+    "klangio-studio": [
+      "Live UI observation used the browser extension. REA passive CDP capture was unavailable because no existing debugging endpoint was exposed. Browser configuration was left unchanged.",
+      "Public source was fetched from the exact asset URL observed in the tab. The fetched source SHA-256 was retained, but no runtime script-source digest was collected to independently authenticate byte identity with the tab cache.",
+      "The advertised source map returned the SPA HTML shell instead of a JSON source map; no alternate map URLs were guessed or probed.",
+      "REA parsed the selected 31.6 KB workflow aggregate. Its source syntax was completely examined, but application semantics and cross-boundary relationships remain partial/unknown because dependencies were intentionally excluded.",
+      "Client-side request declarations establish expected contracts, not verified server implementation, authorization enforcement, processing quality, or latency.",
+      "No audio file or recording was uploaded, no transcription/job was started, no download result was requested, and no purchase/account setting was changed.",
+      "No cookies, session tokens or storage values were extracted. Only public script source and visible UI were inspected.",
+      "VexFlow client rendering does not identify the server renderer that generates downloadable PDFs or other formats."
+    ],
+    "github-review": "Selected source paths establish the described implementations at pinned commits. This is not exhaustive repository coverage, an audit of all checkpoint licenses or proof that prebuilt binaries exactly match these sources."
+  }
+}

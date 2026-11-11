@@ -1,0 +1,197 @@
+{
+  "baseUrl": "https://ai2notes.klang.io",
+  "routes": [
+    {
+      "clientMethod": "transcriptionGetMyFilesGet",
+      "method": "GET",
+      "url": "/api/Transcription/my_files",
+      "query": "{type:e}"
+    },
+    {
+      "clientMethod": "transcriptionGetMyFilesPost",
+      "method": "POST",
+      "url": "/api/Transcription/my_files",
+      "query": "{type:e}"
+    },
+    {
+      "clientMethod": "transcriptionGetGet",
+      "method": "GET",
+      "url": "/api/Transcription/get",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionGetPost",
+      "method": "POST",
+      "url": "/api/Transcription/get",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionDelete",
+      "method": "DELETE",
+      "url": "/api/Transcription/delete",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionUpdateTranscription",
+      "method": "PUT",
+      "url": "/api/Transcription/update",
+      "body": "e",
+      "mediaType": "application/json"
+    },
+    {
+      "clientMethod": "transcriptionGetTranscriptionUpdate",
+      "method": "GET",
+      "url": "/api/Transcription/transcriptionProgress",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionUnlock",
+      "method": "POST",
+      "url": "/api/Transcription/unlock",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionRetranscribeSheet",
+      "method": "POST",
+      "url": "/api/Transcription/retranscribe",
+      "query": "{useTickets:n}",
+      "body": "e",
+      "mediaType": "application/json"
+    },
+    {
+      "clientMethod": "transcriptionAccept",
+      "method": "POST",
+      "url": "/api/Transcription/accept",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionRefund",
+      "method": "POST",
+      "url": "/api/Transcription/refund",
+      "query": "{id:e}",
+      "body": "n",
+      "mediaType": "application/json"
+    },
+    {
+      "clientMethod": "transcriptionYouTube",
+      "method": "POST",
+      "url": "/api/Transcription/youtube",
+      "body": "e",
+      "mediaType": "application/json"
+    },
+    {
+      "clientMethod": "transcriptionSocial",
+      "method": "POST",
+      "url": "/api/Transcription/social",
+      "body": "e",
+      "mediaType": "application/json"
+    },
+    {
+      "clientMethod": "transcriptionUpload",
+      "method": "POST",
+      "url": "/api/Transcription/upload",
+      "formData": "e",
+      "mediaType": "multipart/form-data"
+    },
+    {
+      "clientMethod": "transcriptionMove",
+      "method": "PATCH",
+      "url": "/api/Transcription/{id}",
+      "path": "{id:e}",
+      "body": "n",
+      "mediaType": "application/json"
+    },
+    {
+      "clientMethod": "transcriptionMidi",
+      "method": "GET",
+      "url": "/api/Transcription/midi",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionUnquantizedMidi",
+      "method": "GET",
+      "url": "/api/Transcription/midi_unquantized",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionMp3",
+      "method": "GET",
+      "url": "/api/Transcription/mp3",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionSynth",
+      "method": "GET",
+      "url": "/api/Transcription/synth",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionPdf",
+      "method": "GET",
+      "url": "/api/Transcription/pdf",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionMusicXml",
+      "method": "GET",
+      "url": "/api/Transcription/xml",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionLilypond",
+      "method": "GET",
+      "url": "/api/Transcription/lilypond",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionMusicJson",
+      "method": "GET",
+      "url": "/api/Transcription/musj",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionUpdateMusicJson",
+      "method": "PUT",
+      "url": "/api/Transcription/musj",
+      "formData": "e",
+      "mediaType": "multipart/form-data"
+    },
+    {
+      "clientMethod": "transcriptionMusicJsonPlain",
+      "method": "GET",
+      "url": "/api/Transcription/music_json",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionOmrXml",
+      "method": "GET",
+      "url": "/api/Transcription/omr_xml",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionOmr",
+      "method": "GET",
+      "url": "/api/Transcription/omr",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionGuitarPro",
+      "method": "GET",
+      "url": "/api/Transcription/gp",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionClaimTranscription",
+      "method": "POST",
+      "url": "/api/Transcription/claim",
+      "query": "{id:e}"
+    },
+    {
+      "clientMethod": "transcriptionGetPopularSongs",
+      "method": "GET",
+      "url": "/api/Transcription/popular",
+      "query": "{appName:e}"
+    }
+  ],
+  "scope": "Declared client contracts only. No API endpoint was invoked."
+}

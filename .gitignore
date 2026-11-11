@@ -1,0 +1,19 @@
+# Generated local state; the documentation/evidence packet is intentionally tracked.
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+.cache/
+*.log
+# Model weights and binary analysis payloads never belong in this documentation release.
+*.ckpt
+*.safetensors
+*.gguf
+*.onnx
+*.exe
+*.dll
+*.msi
+*.7z
+*.zip
+*.pdf

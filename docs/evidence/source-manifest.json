@@ -1,0 +1,1013 @@
+{
+  "scope": "84 acquired source/documentation files, with targeted reading; not whole-repository verification. Source text is not copied into this archive.",
+  "files": [
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "README.md",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "eb6cd7cba6495096ebe71ab7728de38f3357603d",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/README.md",
+      "inspected_text_sha256": "04f55b589244b399c0dd5645739c1f2386708b963b17482fc771f0316d161ac3",
+      "inspected_text_bytes": 8165,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "pyproject.toml",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "e5e144441a2971326ac83601da7ddb15305d858d",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/pyproject.toml",
+      "inspected_text_sha256": "0ecf3e42baad4a21f3df956c05b08b09d2f443d93bf77a526320983422c73978",
+      "inspected_text_bytes": 2634,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/transcription_model.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "1ac031e95a0cefeae9cee750a1920e45c2592035",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/transcription_model.py",
+      "inspected_text_sha256": "e9150a72fc9517c508cbf7e2895d93b8a53265734116f638b5328429cee0a15a",
+      "inspected_text_bytes": 32738,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/models/lm.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "7ece36255786fa087a37f56919f256cbefb38058",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/models/lm.py",
+      "inspected_text_sha256": "a2a48a29da4cde94ab85711819161b69d6feaee48d17e6b5622abe1424588b6c",
+      "inspected_text_bytes": 20243,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/modules/conditioners.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "8efb5c3d294a9e418e07ea239bd86bbf6cebc71a",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/modules/conditioners.py",
+      "inspected_text_sha256": "646539ce12191cf55223efbd2d5f6f7eee92eed5ba0901d6e1fdbe32f23d1aa5",
+      "inspected_text_bytes": 10694,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/tokenizer/mt3.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "c056a483e652759cefd96d393ebe9171a65d2793",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/tokenizer/mt3.py",
+      "inspected_text_sha256": "4e76a325c637a6ef5cb56432f274b10fc12d86f433911c05e807963f3c99dea9",
+      "inspected_text_bytes": 10570,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/utils/beats.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "02359cc8d4dda65e17200cdfda2c612c6f61cb03",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/beats.py",
+      "inspected_text_sha256": "29219c65b58e5a6d3249c6284a96d0ee2a451b7f3bd796bf66c846437b5b9367",
+      "inspected_text_bytes": 16437,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/utils/sheets.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "4aa0925677ad3a2507e2dd2e98eb4eb18495fc82",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/sheets.py",
+      "inspected_text_sha256": "381250b5d3718aeddbd77bde16ec45f04cc3f640c3b59be512a12f94f929d6f7",
+      "inspected_text_bytes": 17547,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/server.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "fc7dba612b07f9dfbb8262d1688a581f8093e5fa",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/server.py",
+      "inspected_text_sha256": "10da8b17e7732432ee188b09b984bbccd94264a14ac421cdec9b5f3cbcd4f243",
+      "inspected_text_bytes": 27171,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/main.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "5f3237eca784c052a65ddf4febb024decd990b4e",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/main.py",
+      "inspected_text_sha256": "147c8fe9b0131ea8e44f305b2ab226911741a2e686c2e432a913a28136b773b2",
+      "inspected_text_bytes": 20120,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "README.md",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "86c28390061c51a196b38b6538293741f1af0095",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/README.md",
+      "inspected_text_sha256": "8982a3a9612ff130b1635e7c6cc0245288b285c5146fdf9319afddfe7a3ab18c",
+      "inspected_text_bytes": 12710,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "CMakeLists.txt",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "3d360690389c5f933be3b73beeff5287075ee64b",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/CMakeLists.txt",
+      "inspected_text_sha256": "c70e99864039c793eec7e3e165eb2032fcca8ada217c7bd7dfba7b255558dcdc",
+      "inspected_text_bytes": 10469,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "Lib/Model/MuscriptorEngine.cpp",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "bc0bdf29c4cc9ac005cdc34a1f3e670a1abfbb27",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/Lib/Model/MuscriptorEngine.cpp",
+      "inspected_text_sha256": "f0c50e2a6760c4bd31539257e6cb270fa3d584248ff61a82854df31881c923c0",
+      "inspected_text_bytes": 12721,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "Lib/Model/ModelManifest.h",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "b2da2a825f619cdd6a98ae497353ac7fff6e0a62",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/Lib/Model/ModelManifest.h",
+      "inspected_text_sha256": "4ab39c99fc804f2894440d21ca05b7860a114710b247327068b1fd05531114e8",
+      "inspected_text_bytes": 1723,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "NeuralNote/Source/TranscriptionManager.cpp",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "5bb5cd9004d83fccc2526cd735a1211cedb1f05c",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/NeuralNote/Source/TranscriptionManager.cpp",
+      "inspected_text_sha256": "da51b77e71e03ceaf92e868a632101745d55b72c60d7a3034e985497fa406a12",
+      "inspected_text_bytes": 22450,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "NeuralNote/Source/MidiFile/MidiFileWriter.cpp",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "ed4e7e66407cb5cecdcc6276d6a02eaddbdc5e19",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/NeuralNote/Source/MidiFile/MidiFileWriter.cpp",
+      "inspected_text_sha256": "20d98400374ea2b0b8dcf0f950989acb60d6c11524f09fd9ba9879d34fa60772",
+      "inspected_text_bytes": 6537,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "spotify/basic-pitch",
+      "path": "README.md",
+      "commit": "fa5997af0a8210982619003269994a1be25eddf3",
+      "git_blob_sha1": "97f122a9a1d27417553f7c25c6dd4683b0172e30",
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/README.md",
+      "inspected_text_sha256": "607502e6c1ed3e61971aeb1370baa3f66a4f83f5a27eb5cf9b4141c0ed2e2dea",
+      "inspected_text_bytes": 10298,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "spotify/basic-pitch",
+      "path": "basic_pitch/models.py",
+      "commit": "fa5997af0a8210982619003269994a1be25eddf3",
+      "git_blob_sha1": "867d9b3ca2cdb52f3fad35d43b87d1fd3bcd583c",
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/models.py",
+      "inspected_text_sha256": "69b9407fc60fb9ce74030a304f176e5dba4fd9b0883b5b9971cabf1cf7b83431",
+      "inspected_text_bytes": 10624,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "spotify/basic-pitch",
+      "path": "basic_pitch/inference.py",
+      "commit": "fa5997af0a8210982619003269994a1be25eddf3",
+      "git_blob_sha1": "06fa54f0c3e1bdda4fa60bca1374d81c57cd7b84",
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/inference.py",
+      "inspected_text_sha256": "272a19cb1f6e5a68215cd18588a4832ef39d30992b2ce1c3e8dbff383c2a3054",
+      "inspected_text_bytes": 23347,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "spotify/basic-pitch",
+      "path": "basic_pitch/note_creation.py",
+      "commit": "fa5997af0a8210982619003269994a1be25eddf3",
+      "git_blob_sha1": "753f5a18aa616012372c5e4cc641d47b023c2a9e",
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/note_creation.py",
+      "inspected_text_sha256": "b6f92ec996e70a3d5f3b8571e8ec647d7ac6d45743ae745e754e07ae4a33b9dd",
+      "inspected_text_bytes": 19122,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "spotify/basic-pitch",
+      "path": "basic_pitch/constants.py",
+      "commit": "fa5997af0a8210982619003269994a1be25eddf3",
+      "git_blob_sha1": "c2b717aa14ffa4e5cfa463dd8879b12e13a6f3e8",
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/constants.py",
+      "inspected_text_sha256": "9bc2f39a288dccad644434a0a33d8b20c0bd3bcb39eef31008714f96b23ef7aa",
+      "inspected_text_bytes": 2416,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "spotify/basic-pitch",
+      "path": "setup.py",
+      "commit": "fa5997af0a8210982619003269994a1be25eddf3",
+      "git_blob_sha1": "005210bf3e2a888b9e53ec9967525eddc5486b2e",
+      "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/setup.py",
+      "inspected_text_sha256": "89db852e20bbbbf9fd9cf9017fd013032699d6f8535932a25b32df3da147bd48",
+      "inspected_text_bytes": 687,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "README.md",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "b839ffe1015e025414f0528d640f86cd9f16497e",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/README.md",
+      "inspected_text_sha256": "444c704056eb061ea0dc8042a0952a48e321fb248f321a654b18297e5694d537",
+      "inspected_text_bytes": 999,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/inference.py",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "0e8bf2c9f8b59adfb0bef858d1cadd8b5ac76139",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/inference.py",
+      "inspected_text_sha256": "e91b9f1db2f34b87e04eac3bf839267963f19cd9df57680c9888c9d353c7f1d2",
+      "inspected_text_bytes": 4387,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/network.py",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "55a6a94a779b8e717f28569b8e610617ff477e2a",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/network.py",
+      "inspected_text_sha256": "e3521c3f240c18887551f0515751f1bc9e33b706edb37dcd4e325b9bd15a530d",
+      "inspected_text_bytes": 13913,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/note_sequences.py",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "b5ec8624a224643c30bbd0873bdf36f1ea3e99b6",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/note_sequences.py",
+      "inspected_text_sha256": "8a25cc720f85c54f6b5b2c0bf5673a4e818e9680956e6a50dc7e41a86ce0f4c8",
+      "inspected_text_bytes": 17429,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/spectrograms.py",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "06e179d1a1ec6d7a8a9cfc7d05b21b5a02ec9bb1",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/spectrograms.py",
+      "inspected_text_sha256": "dfc832905cf7ac1da5d404903e7a2b23908250a81c6143ca77d0cba6307cf75d",
+      "inspected_text_bytes": 2331,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/vocabularies.py",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "8a787c0a685db30d042099ad28aab19bbaa306a7",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/vocabularies.py",
+      "inspected_text_sha256": "7370d53f5fb6c57861b821d17b7b66e33de169dec834370f63521b4709388fc6",
+      "inspected_text_bytes": 9176,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/gin/mt3.gin",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "e7b44f4913a5c4a51310ab2c208e311d8639f1f2",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/gin/mt3.gin",
+      "inspected_text_sha256": "0432d5c20c712560fb189600949de392dd7ad0912db9160e67294b48d907a86e",
+      "inspected_text_bytes": 252,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "setup.py",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "ac1c17dab0721bc5aaa8c8f10ec4f968e6585148",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/setup.py",
+      "inspected_text_sha256": "2423dc683bd6c075f73299fba05848df0167599b0dffe20fcdcb1e34781fca1a",
+      "inspected_text_bytes": 2209,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "README.md",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "4ef28a6d1f900324b917c3e0f473af3d41f7460f",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/README.md",
+      "inspected_text_sha256": "ad67a4884cab355d93dd3cb1096d497298d68d8e14d62f00dc6df8aee824240b",
+      "inspected_text_bytes": 4593,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "pyproject.toml",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "510c1a679e07611f6c9597080f84ddb1639b002e",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/pyproject.toml",
+      "inspected_text_sha256": "8418dadcd01b58c00c270e15662f741255fbe9a3f97f0c68b16f4842d73fa928",
+      "inspected_text_bytes": 2230,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/music/app.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "6e896791388c237be970f1d333811d592e71b838",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/music/app.py",
+      "inspected_text_sha256": "ed701387f280a6d7506f9562b6bd2a84162848b3c24b6a70b64906b2080c4754",
+      "inspected_text_bytes": 22272,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/music/inference.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "bfb71869a498b3db4cd43178e0ecdb8c3fdffbf5",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/music/inference.py",
+      "inspected_text_sha256": "7852adff8bbb9a113d3c2a50c7f6142a738e453003471a297c815568f7a57b0e",
+      "inspected_text_bytes": 16302,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/models/u_net.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "0b7a1db32d2e876f85a6a339a2a50c33ceb8ada0",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/models/u_net.py",
+      "inspected_text_sha256": "52f0e8fa0906be3d7b67fbb3a441b52aebdd6fa9c25c1f3e3abb4d1ec71e3b58",
+      "inspected_text_bytes": 12257,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/transcribe_all.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "1dc1bc8a26238d0ed03f995b269f6232955a068f",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/transcribe_all.py",
+      "inspected_text_sha256": "0435cb56c63f8f7709c014f0eaab297cd300888876009faf96a4723c0ec4dda7",
+      "inspected_text_bytes": 226,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/cli/transcribe.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "14ea852cbeca36c9fb95f1969352b773d6c97f0a",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/cli/transcribe.py",
+      "inspected_text_sha256": "cd9d85b66f41f21fefc9483883a709c5b32829ee7dfac3c71b13eca1722eed9c",
+      "inspected_text_bytes": 685,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/feature/hcfp.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "cfd5d318799a7c14d55d91a92d2b0b50e2dab8c5",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/feature/hcfp.py",
+      "inspected_text_sha256": "52c4edf5ea77153214bfef095286f94124cc63f408fe71f809ec30fa78fbf682",
+      "inspected_text_bytes": 1973,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "README.md",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "a6384192b3a8607b423a183b363506265f65a7d7",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/README.md",
+      "inspected_text_sha256": "eb533f5fd35fa02f17a6a9a4aa9837c9f4bf57cfd0bdabcd8ef5d2c367db69df",
+      "inspected_text_bytes": 3748,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "LICENSE.txt",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "6d802f72be583b9df9102f85815f5c1e6cac2222",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/LICENSE.txt",
+      "inspected_text_sha256": "c29f2097671fbcbea4ebe9af05359c36f0e48ed9a1dc8dd9d1d9b92e75cdda44",
+      "inspected_text_bytes": 36494,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "README.md",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "bffff8ac5fe81bb9e5f029edd62e061325103349",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/README.md",
+      "inspected_text_sha256": "dae6a05826f41ff8a61bafc724b1dd7ff80bdc04d43cc9dff6de577c57866cf0",
+      "inspected_text_bytes": 11573,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "LICENSE",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "b5d6b5b79fe1e642bb3cf5e7d4ff45228d3d8e53",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/LICENSE",
+      "inspected_text_sha256": "fee8e128d4af9081b16c8e71af2e953556fa394512c63a35af98eae4d342732e",
+      "inspected_text_bytes": 1334,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/infer.py",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "ef0bb17ac98fdaa5b1f029611f460ebf03078b58",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py",
+      "inspected_text_sha256": "9ca0a6e9639113cd6b70a4066869f7fd87e2da1d8df4664c9c3d129096660637",
+      "inspected_text_bytes": 30879,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/beat_track.py",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "c4ffc4eb40dbde3b940351e0f6d0867fe5581400",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/beat_track.py",
+      "inspected_text_sha256": "36857eba68f5202b198232e217ed1a704a9e4271409229199dae801435a1f2c6",
+      "inspected_text_bytes": 3256,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/representations/jukebox.py",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "135ded93ad7ae7a8ceb671a48dbf9c7c1e869e7a",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/representations/jukebox.py",
+      "inspected_text_sha256": "ddc61095aa15e9f9177514f7ff2f4affcc2269abf8b890a6b56accf4abcb87ac",
+      "inspected_text_bytes": 8951,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/theory/lead_sheet.py",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "8a60628ad3448d2e97dae903e1c97144a1e66ea6",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/theory/lead_sheet.py",
+      "inspected_text_sha256": "9c60f1f622090cac9a5fe13fac902306ab739de00fef43654bb408c8f8dc0e12",
+      "inspected_text_bytes": 16390,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Anjok07/ultimatevocalremovergui",
+      "path": "README.md",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "git_blob_sha1": "93746d4b4f06f301257c1ee5045e914fee23c974",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/README.md",
+      "inspected_text_sha256": "09c5f944979bde05833c597592ec85c96bc21721c9d486d5883cd2dc3ea66eec",
+      "inspected_text_bytes": 13628,
+      "git_blob_normalization_matches": [
+        "crlf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Anjok07/ultimatevocalremovergui",
+      "path": "requirements.txt",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "git_blob_sha1": "49c235c12f75d6c5d9c4ac8d3e3c9506e37e9770",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/requirements.txt",
+      "inspected_text_sha256": "ab99e3fe74fa98d8e8c48fb6371ce287c800d629d03ac0d45c96dc3e95586df5",
+      "inspected_text_bytes": 695,
+      "git_blob_normalization_matches": [
+        "crlf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Anjok07/ultimatevocalremovergui",
+      "path": "separate.py",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "git_blob_sha1": "864473e638306c83d9e3eafd5b448f477e66f869",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py",
+      "inspected_text_sha256": "652477bb89713557a52c2ff795b97628ed3e5d526fa6b60928fd64eef5d0e6d1",
+      "inspected_text_bytes": 72575,
+      "git_blob_normalization_matches": [
+        "crlf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Anjok07/ultimatevocalremovergui",
+      "path": "demucs/htdemucs.py",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "git_blob_sha1": "bad6b113102c959c72d4c47387c2cc2f48a17e85",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/demucs/htdemucs.py",
+      "inspected_text_sha256": "7d3f6d052e1ad95e4b038e5f58398d889367bfbda25361e7dafef72fc91a097e",
+      "inspected_text_bytes": 26765,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Anjok07/ultimatevocalremovergui",
+      "path": "lib_v5/tfc_tdf_v3.py",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "git_blob_sha1": "eba006c98249c1730c50fae2ac8dcd42a9be3453",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/lib_v5/tfc_tdf_v3.py",
+      "inspected_text_sha256": "0e7a460074070684f4f85245f1d415999e518548fda0038649931e4584fb7fad",
+      "inspected_text_bytes": 7514,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/utils/midi.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "3504218fc8ee5d849eb944be7e21967d641ab760",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/midi.py",
+      "inspected_text_sha256": "25f2ebec33fadf35aefac6f83841f6318c9aaab5d682f91e819332fa6db40c7c",
+      "inspected_text_bytes": 19160,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/tokenizer/notes.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "77061b68e6df0d1a8d517616ba5dc40eb3e1313f",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/tokenizer/notes.py",
+      "inspected_text_sha256": "26ed58a7b2481da8a67e3e1ae8557fbece9c504d6bfe195eaf3165be5fea4d84",
+      "inspected_text_bytes": 14552,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "muscriptor/muscriptor",
+      "path": "muscriptor/modules/transformer.py",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "git_blob_sha1": "c119422b8a78f64c7e9c087dfc86362e31912a41",
+      "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/modules/transformer.py",
+      "inspected_text_sha256": "ee0927917a06613d728c0b0c7b742dfde96cca87314a9c43543d00578886746e",
+      "inspected_text_bytes": 7854,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": ".gitmodules",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "e9ab252a26db80edfd018b28df6c8c55dbedd07c",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/.gitmodules",
+      "inspected_text_sha256": "ebe8ca7de8f33674c0b982b8062e84764a1c84e5169e9dd3bea2d980f8b688a2",
+      "inspected_text_bytes": 224,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "NeuralNote/Source/SourceAudioManager.cpp",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "181afe3db7d69963408707f134b4fbb98fb18d39",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/NeuralNote/Source/SourceAudioManager.cpp",
+      "inspected_text_sha256": "bc3c90b3e18a2f09a256cabe5732bafde25b346c923522aa7d9abcd74c463681",
+      "inspected_text_bytes": 17729,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/NeuralNote",
+      "path": "Lib/Model/ModelDownloader.cpp",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "git_blob_sha1": "559817a141ec1f08106ad8b9434f73a9b2f1e668",
+      "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/Lib/Model/ModelDownloader.cpp",
+      "inspected_text_sha256": "271712b926b2a6b952117f9211caaf4de036379fc0bf2cdbc876bfc379aaf77f",
+      "inspected_text_bytes": 12204,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/muscriptor.cpp",
+      "path": "README.md",
+      "commit": "8589219cc3b584bce970f95aec2ec4a04e53b280",
+      "git_blob_sha1": "ce9317d66fa8a1511d422578bc1b8e109bdf4330",
+      "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/README.md",
+      "inspected_text_sha256": "dccc93a350a8e73c95bfb44c1c7da432635ce07de594cc497f57d686bd5455be",
+      "inspected_text_bytes": 5330,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/muscriptor.cpp",
+      "path": "docs/MODEL.md",
+      "commit": "8589219cc3b584bce970f95aec2ec4a04e53b280",
+      "git_blob_sha1": "fd2ab45016c1c42471ceb0746282cd6a66706983",
+      "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/docs/MODEL.md",
+      "inspected_text_sha256": "bf78f623897374ac2ba4bd23403c3595a878b240a306062f2d500737455a6335",
+      "inspected_text_bytes": 7058,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/muscriptor.cpp",
+      "path": "docs/TOKENIZER.md",
+      "commit": "8589219cc3b584bce970f95aec2ec4a04e53b280",
+      "git_blob_sha1": "049812e7ae309a84ed89151b06e27ab1ebb7fa56",
+      "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/docs/TOKENIZER.md",
+      "inspected_text_sha256": "59b7f344a4a6c18e97b67e75bd3ff172733f3016ea9d259385b035b228e18d21",
+      "inspected_text_bytes": 10344,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/muscriptor.cpp",
+      "path": "cpp/src/transcriber.cpp",
+      "commit": "8589219cc3b584bce970f95aec2ec4a04e53b280",
+      "git_blob_sha1": "7aaf2600808207e2472bf27d56eb88adc2bb3251",
+      "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/cpp/src/transcriber.cpp",
+      "inspected_text_sha256": "9d1c42b1b54325019359c9ad2e1e1a47391ca24416c00adaeeef33f06a47d2bc",
+      "inspected_text_bytes": 23200,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "DamRsn/muscriptor.cpp",
+      "path": "cpp/CMakeLists.txt",
+      "commit": "8589219cc3b584bce970f95aec2ec4a04e53b280",
+      "git_blob_sha1": "55aaa6ffc045ca2e85e0ddcb459d71e56cdcbe3e",
+      "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/cpp/CMakeLists.txt",
+      "inspected_text_sha256": "20b5bed7d5f706027b1c6713768cd1f01aca1af18cfd15d00034e1e6f80e35ef",
+      "inspected_text_bytes": 18090,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/gin/model.gin",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "e5d18efdadb2f4c61a5ae28650eb86eca4d282c2",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/gin/model.gin",
+      "inspected_text_sha256": "cfc95f830127ae0d9cd2c73e2f78157566fa6629c82d4232818d3d31c0f50a52",
+      "inspected_text_bytes": 2090,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/datasets.py",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "039c8fc8f1b3aa34f91e136be6b2871f0d57bb9f",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/datasets.py",
+      "inspected_text_sha256": "b24b528d00ad3a7c07ee20cd63dd2197a0567c0c9d4130b17ba68f65ef55210a",
+      "inspected_text_bytes": 14019,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "magenta/mt3",
+      "path": "mt3/colab/music_transcription_with_transformers.ipynb",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "git_blob_sha1": "4e71a7da504d178fc1ca51e3a18705317fc9b3ca",
+      "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/colab/music_transcription_with_transformers.ipynb",
+      "inspected_text_sha256": "1384cab3b4085dc3f3fe3b84741ba0c6df647085e2da5c4d1314fb19e4def36d",
+      "inspected_text_bytes": 21849,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/feature/wrapper_func.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "94a97935a62826ef27907918d80d6d812a42531a",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/feature/wrapper_func.py",
+      "inspected_text_sha256": "8ee843b19fd36a4b6aab38cbfc8824406c70e7a58ab890194d96039c5048e38d",
+      "inspected_text_bytes": 3894,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/drum/app.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "aed3da3056256358ea8b3fac4772da6ae8a3bc98",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/drum/app.py",
+      "inspected_text_sha256": "aa0aa8fd7ba04d81ecc1c0ab309f403ad5c2935fd90845819f677da1555461ea",
+      "inspected_text_bytes": 15913,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/vocal/app.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "99bda3867f0189b1193d16fc42922d6992efbae0",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/vocal/app.py",
+      "inspected_text_sha256": "11e58c118c2ca1e0218785b53e0936e97eddae075f0c1e0eb2df85378a86cc36",
+      "inspected_text_bytes": 22158,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/chord/app.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "0514c1a589d07b2810464bd83a07bc6a61ce6f4d",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/chord/app.py",
+      "inspected_text_sha256": "a6e52a48f6168f014209c9f31bcb837507430a9fbe1d288ebe8a8171b432a387",
+      "inspected_text_bytes": 13379,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/beat/app.py",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "8f850b81319d368674f3620d20d35c3a40c12a4b",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/beat/app.py",
+      "inspected_text_sha256": "184bb0c6f1ae9f685a3b8dafa0dd8bd2c2077fe4fe0b10cae40d74f196a782cd",
+      "inspected_text_bytes": 15508,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/defaults/music.yaml",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "572612b301f28cec987fb08aa48c227e89de4c02",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/defaults/music.yaml",
+      "inspected_text_sha256": "cd786086950afd5d6d611050cbaa44772143354bffcde686517c361473e878ea",
+      "inspected_text_bytes": 6433,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Music-and-Culture-Technology-Lab/omnizart",
+      "path": "omnizart/checkpoints/music/music_pop/configurations.yaml",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "git_blob_sha1": "7f504c5ca64634c89926d54b1e35ed308f95dbdb",
+      "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/checkpoints/music/music_pop/configurations.yaml",
+      "inspected_text_sha256": "31d4f7cfb7bbb4a9f805e332f8f986c76db575ea3cf76af2ba24b26d5f0fd51f",
+      "inspected_text_bytes": 1619,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "src/importexport/midi/internal/notationmidireader.cpp",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "e5a92013a73831d3920638c5d0aa42a60765aeb5",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/notationmidireader.cpp",
+      "inspected_text_sha256": "45a3557a21153e82cdd34cf3b1fbf382400867ca7f61965a7deb4fad46a2f0df",
+      "inspected_text_bytes": 1219,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "src/importexport/midi/internal/midiimport/importmidi.cpp",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "ae25793cbf5b5f7ccae7f53267c72e3ed215f1f5",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/midiimport/importmidi.cpp",
+      "inspected_text_sha256": "b2ab1976fea9bd7792f54e2cf6e7e0de76b2b86f6b81c91771c4764a7608d1a6",
+      "inspected_text_bytes": 45769,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "src/importexport/midi/internal/midiimport/importmidi_quant.cpp",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "d7958c1c721e036d3ec7f615f2c87a1027b27d5c",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/midiimport/importmidi_quant.cpp",
+      "inspected_text_sha256": "54d5cbe1d3aaa813adff1e487b97de4b19c060d028b632b23b495c6589d2aa0f",
+      "inspected_text_bytes": 54151,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "src/importexport/imagesexport/internal/pdfwriter.cpp",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "551333fe0655d4d3ebf9679744721b897ed79952",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/imagesexport/internal/pdfwriter.cpp",
+      "inspected_text_sha256": "d44d1f64d71bc926d12a7527015c15fc70c4d448f2892ac6b678bebba9202ff9",
+      "inspected_text_bytes": 5345,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "src/importexport/musicxml/internal/musicxmlwriter.cpp",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "f69d847b078bf0ff5112e128f44169524748539c",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/musicxml/internal/musicxmlwriter.cpp",
+      "inspected_text_sha256": "3a34dc1cfe70af7c4c45213f5796558fc6abd68aaf0f8d8c14021abcb2a588c9",
+      "inspected_text_bytes": 2022,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "MuseScore/MuseScore",
+      "path": "src/importexport/audioexport/audioexportmodule.cpp",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "git_blob_sha1": "08bba8e321947e056cb57194a9e11e21d3769f0a",
+      "url": "https://github.com/musescore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/audioexport/audioexportmodule.cpp",
+      "inspected_text_sha256": "f6d4af5c6a4c6f36f8d21396758729c138567a6726f6300da586500720ca4d9c",
+      "inspected_text_bytes": 2150,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/modules/modules.py",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "ba35c529191bdf5f8312ddd8ad1e7e2793e907a1",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/modules/modules.py",
+      "inspected_text_sha256": "2e87131b9b277ce04316f6db8a993d2ed5286c708bc1b2df1a1611cf1cad7a4d",
+      "inspected_text_bytes": 12564,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/representations/handcrafted.py",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "495272b39b4d08dd9299ff8f99c95e82c83226e9",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/representations/handcrafted.py",
+      "inspected_text_sha256": "05455819cfdcc48c267ad319c1d2e81d0d2bbd6db34580475865c882771a1ccf",
+      "inspected_text_bytes": 1343,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/theory/utils.py",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "0fa654b60a93eb6eb9e817bb94894c0a966fea25",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/theory/utils.py",
+      "inspected_text_sha256": "7deac492d11ff4c403df553976ad3d7e44d06693f39896126e22b6bb60fce8e5",
+      "inspected_text_bytes": 3885,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "chrisdonahue/sheetsage",
+      "path": "sheetsage/assets/sheetsage.json",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "git_blob_sha1": "42f8c2ccb25e1902dee18db3a27f95ac6589c403",
+      "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/assets/sheetsage.json",
+      "inspected_text_sha256": "80432d248e9b09eac775389179b4ac4e8b2e535ff2d98d15f4ac1fb889143fca",
+      "inspected_text_bytes": 4063,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Anjok07/ultimatevocalremovergui",
+      "path": "lib_v5/vr_network/nets_new.py",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "git_blob_sha1": "67772745126d05ade18fb713282469352c5bdd30",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/lib_v5/vr_network/nets_new.py",
+      "inspected_text_sha256": "a6a9d0e5d698fc432173a721be89ecaf16b20c2ec75c86a6711855bde6ada70e",
+      "inspected_text_bytes": 4185,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    },
+    {
+      "repository": "Anjok07/ultimatevocalremovergui",
+      "path": "demucs/apply.py",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "git_blob_sha1": "be6d930035a4748192b96d7baee6e80772a02f6e",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/demucs/apply.py",
+      "inspected_text_sha256": "2164bf5590ef1322cca5bad5ea34e20b904cdfc8e67c46c0770c291e4ec3c3ec",
+      "inspected_text_bytes": 11296,
+      "git_blob_normalization_matches": [
+        "lf_trim_one_newline"
+      ]
+    }
+  ]
+}

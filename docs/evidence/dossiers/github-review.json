@@ -1,0 +1,573 @@
+{
+  "reviewed_on": "2026-11-11",
+  "scope": "Focused architecture and workflow review of the eight previously recommended repositories, plus NeuralNote's pinned muscriptor.cpp dependency. Source inspection, not inference benchmarking.",
+  "user_target": "Full songs with multiple instruments and/or vocals; Windows preferred; complete sheet music from audio or existing MIDI.",
+  "method": {
+    "identity": "Default-branch commits pinned before source acquisition; submodule pinned to the SHA used by NeuralNote.",
+    "acquired_files": 84,
+    "evidence_references": 59,
+    "approach": "Read entry points, inference/model definitions, event decoding, rhythm/quantization and output paths. Source repositories were reviewed directly as directed by the REA skill.",
+    "provenance": "source-manifest.json records GitHub blob SHA, commit, source URL, local SHA-256, byte count and newline-normalization match. repositories.json contains metadata and path inventories.",
+    "execution": "No project code, installation scripts, models or transcription jobs were executed. No weights were downloaded. No software builds, test suites or accuracy/speed benchmarks were run.",
+    "boundary": "Selected source paths establish the described implementations at pinned commits. This is not exhaustive repository coverage, an audit of all checkpoint licenses or proof that prebuilt binaries exactly match these sources."
+  },
+  "main_conclusions": [
+    "Audio recognition, musical timing/quantization and score engraving are separate engineering stages. MIDI timestamps alone do not establish readable notation.",
+    "MuScriptor is the closest reviewed implementation to a complete multi-instrument audio-to-score workflow because it integrates recognition, a separate beat detector, MIDI cleanup and external MuseScore engraving.",
+    "NeuralNote v2 uses MuScriptor through a native C++ runtime; its reviewed MIDI writer uses one supplied BPM and placeholder 4/4, unlike MuScriptor's optional detected beat grid/tempo map.",
+    "Omnizart's individual modules are implemented, but the combined transcribe_all.process entry point is a pass stub at the pinned commit.",
+    "Basic Pitch detects polyphonic pitches but does not identify separate source instruments. Its extra pitch-bend tracks are not inferred instrument parts.",
+    "Sheet Sage produces a melody/chord lead sheet; UVR produces stems; MuseScore interprets/edits/engraves symbolic music. These outputs solve different parts of the original task."
+  ],
+  "recommended_paths": [
+    {
+      "input": "Full mixed song, complete score",
+      "path": "MuScriptor → detected/corrected beat grid → quantized MIDI → MuseScore → MusicXML/PDF → manual corrections",
+      "reason": "Most complete reviewed workflow; model weight terms restrict non-commercial use."
+    },
+    {
+      "input": "Convenient downloadable Windows app",
+      "path": "NeuralNote v2 → multitrack MIDI → rhythm cleanup and notation in MuseScore",
+      "reason": "Native application with the same recognition-model family; extra score-preparation work remains."
+    },
+    {
+      "input": "Existing MIDI",
+      "path": "MuseScore import → adjust meter/quantization/voices → PDF/MusicXML",
+      "reason": "No audio-recognition model is necessary for already symbolic note data."
+    },
+    {
+      "input": "One difficult isolated instrument or vocal stem",
+      "path": "Optional UVR stem separation → Basic Pitch or a selected task-specific transcriber → timing/notation processing",
+      "reason": "A fallback experiment; separation may help or harm and was not benchmarked."
+    },
+    {
+      "input": "Melody plus chord names",
+      "path": "Sheet Sage → lead-sheet PDF",
+      "reason": "Designed for a reduced lead sheet rather than every instrumental part."
+    }
+  ],
+  "projects": [
+    {
+      "name": "MuScriptor",
+      "repo": "muscriptor/muscriptor",
+      "role": "Full-mix audio transcription with score export",
+      "pipeline": "16 kHz mono audio → 5-second chunks → 512-bin log-mel features → decoder-only transformer → timed instrument/note/drum events → beat grid and MIDI cleanup → MuseScore engraving",
+      "architecture": [
+        "Python/PyTorch. Audio features and optional instrument conditioning are prepended to the note-token sequence. Published small/medium/large configurations are approximately 103M/307M/1.4B parameters, with 14/24/48 layers; these are documented sizes, not measurements made from downloaded weights.",
+        "The MT3-style vocabulary encodes time shifts, pitch, instrument programs, binary note-on/off, drums and ties. Default prelude forcing carries notes still sounding at a chunk boundary into the next chunk's prompt. Instrument selection can mask forbidden output tokens.",
+        "Beat This is a separate neural beat/downbeat detector. Export logic builds tempo maps and meter, snaps notes to a grid, fills short gaps and trims leading empty bars. The note model itself does not supply beats, meter or expressive dynamics.",
+        "write_sheets invokes a separately installed MuseScore 4+ executable: MIDI → MSCX → MusicXML, full-score PDF and per-part PDFs. Suitable guitar/bass parts get tablature PDFs from a modified score copy.",
+        "FastAPI streams recognized events with SSE. /export changes MIDI options without rerunning the note model; /sheets accepts MIDI for engraving. Self-hosting runs inference on the host machine."
+      ],
+      "outputs": "MIDI, MusicXML, full-score PDF, instrument PDFs, suitable tablature PDFs",
+      "windows": "Documented Python/uv route and local browser UI. Windows CUDA needs the selected PyTorch backend; score export needs MuseScore 4+.",
+      "assessment": "Closest match to your full-song-to-complete-sheet workflow among the inspected projects. This is a workflow judgment, not a measured accuracy ranking. Beat errors, wrong instrument labels and rubato can degrade notation.",
+      "license": "MIT code; CC BY-NC 4.0 model weights. Code is permissive, while supplied weights have a non-commercial restriction.",
+      "commit": "8a1ef88672cc23c26619adaff37ec48d82c0b906",
+      "evidence": [
+        {
+          "label": "Audio/model entry",
+          "path": "muscriptor/transcription_model.py",
+          "line": 93,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/transcription_model.py#L93"
+        },
+        {
+          "label": "Decoder-only transformer",
+          "path": "muscriptor/models/lm.py",
+          "line": 88,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/models/lm.py#L88"
+        },
+        {
+          "label": "Event vocabulary",
+          "path": "muscriptor/tokenizer/notes.py",
+          "line": 118,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/tokenizer/notes.py#L118"
+        },
+        {
+          "label": "Independent beat detector",
+          "path": "muscriptor/utils/beats.py",
+          "line": 367,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/beats.py#L367"
+        },
+        {
+          "label": "MIDI cleanup",
+          "path": "muscriptor/utils/midi.py",
+          "line": 27,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/midi.py#L27"
+        },
+        {
+          "label": "External engraving",
+          "path": "muscriptor/utils/sheets.py",
+          "line": 333,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/utils/sheets.py#L333"
+        },
+        {
+          "label": "Streaming API",
+          "path": "muscriptor/server.py",
+          "line": 284,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/muscriptor/server.py#L284"
+        },
+        {
+          "label": "License split",
+          "path": "README.md",
+          "line": 203,
+          "url": "https://github.com/muscriptor/muscriptor/blob/8a1ef88672cc23c26619adaff37ec48d82c0b906/README.md#L203"
+        }
+      ]
+    },
+    {
+      "name": "NeuralNote v2",
+      "repo": "DamRsn/NeuralNote",
+      "role": "Desktop and DAW interface for full-mix audio-to-MIDI",
+      "pipeline": "Record/drop audio → mono resampling → background MuScriptor inference → staged instrument notes → piano roll and soundfont playback → multitrack MIDI",
+      "architecture": [
+        "C++/JUCE application and plugin. Version 2 replaces Basic Pitch with MuScriptor, so it is another runtime/interface for the same model family, not a second independent recognition model.",
+        "The pinned muscriptor.cpp submodule uses ggml and GGUF weights. It runs with CPU, Metal on macOS or Vulkan on Windows/Linux; Python is not needed by the application at runtime.",
+        "Model downloads are approximately 210 MB, 620 MB and 2.7 GB. The manifest includes expected sizes and SHA-256 digests; ModelDownloader verifies the digest. Transcription runs in the background with chunk callbacks, cancellation and saved pause/resume state.",
+        "The engine generates note onsets, offsets, pitches and instruments in five-second chunks. Its documentation explicitly excludes tempo, meter, key, velocity/dynamics, pitch bends and per-note confidence from the model's output.",
+        "MidiFileWriter creates a conductor track and one track per instrument. It uses a single supplied export BPM and explicitly writes placeholder 4/4. No automatic beat/meter/tempo-map stage is present in this reviewed export path."
+      ],
+      "outputs": "Multitrack MIDI, piano-roll visualization and synthesized preview",
+      "windows": "README supplies x64 Standalone and VST3 installer. Models download separately; CPU or Vulkan GPU handles inference.",
+      "assessment": "Convenient downloadable Windows route to recognized MIDI. Readable notation needs a separate editor/engraver and potentially substantial rhythm cleanup. Equivalent recognition quality to the Python implementation was not benchmarked.",
+      "license": "Apache-2.0 application code; MuScriptor weights retain CC BY-NC 4.0. Dependencies have their own terms.",
+      "commit": "ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed",
+      "evidence": [
+        {
+          "label": "Model migration",
+          "path": "README.md",
+          "line": 12,
+          "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/README.md#L12"
+        },
+        {
+          "label": "JUCE",
+          "path": "CMakeLists.txt",
+          "line": 64,
+          "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/CMakeLists.txt#L64"
+        },
+        {
+          "label": "Inference dependency",
+          "path": "CMakeLists.txt",
+          "line": 96,
+          "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/CMakeLists.txt#L96"
+        },
+        {
+          "label": "Native inference call",
+          "path": "Lib/Model/MuscriptorEngine.cpp",
+          "line": 211,
+          "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/Lib/Model/MuscriptorEngine.cpp#L211"
+        },
+        {
+          "label": "Download verification",
+          "path": "Lib/Model/ModelDownloader.cpp",
+          "line": 187,
+          "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/Lib/Model/ModelDownloader.cpp#L187"
+        },
+        {
+          "label": "Meter limitation",
+          "path": "NeuralNote/Source/MidiFile/MidiFileWriter.cpp",
+          "line": 108,
+          "url": "https://github.com/DamRsn/NeuralNote/blob/ae7fd808d2879a5ca32f93bf9666310ceeb6a9ed/NeuralNote/Source/MidiFile/MidiFileWriter.cpp#L108"
+        },
+        {
+          "label": "Native model/output contract",
+          "path": "docs/MODEL.md",
+          "line": 37,
+          "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/docs/MODEL.md#L37"
+        },
+        {
+          "label": "Pinned native implementation",
+          "path": "cpp/src/transcriber.cpp",
+          "line": 505,
+          "url": "https://github.com/DamRsn/muscriptor.cpp/blob/8589219cc3b584bce970f95aec2ec4a04e53b280/cpp/src/transcriber.cpp#L505"
+        }
+      ]
+    },
+    {
+      "name": "Basic Pitch",
+      "repo": "spotify/basic-pitch",
+      "role": "Lightweight polyphonic pitch/note recognition",
+      "pipeline": "22.05 kHz mono → overlapping roughly 2-second windows → constant-Q transform and harmonic stacking → convolutional activation maps → thresholded notes and optional pitch bends → MIDI",
+      "architecture": [
+        "The model is defined in TensorFlow/Keras. It is a small convolutional network with separate onset, note and fine pitch-contour outputs, unlike the large token-generating transformers.",
+        "Released serializations support TensorFlow, CoreML, TensorFlow Lite and ONNX. Actual runtime selection depends on installed packages; the README documents Windows ONNX support.",
+        "Inference trims overlapping frame margins and concatenates activations. Decoding finds onset peaks, follows frame activity, removes short notes and optionally extracts leftover note energy. Pitch bends come from local contour peaks.",
+        "It does not identify source instruments: the MIDI writer assigns Electric Piano 1. Optional multiple-pitch-bends mode separates output by pitch for MIDI bend handling, not by real instrument.",
+        "The MIDI tempo is supplied/default, without audio-derived beat tracking or notation engraving in the reviewed pipeline."
+      ],
+      "outputs": "MIDI with optional bends, note-event CSV, model activations and optional synthesized audio",
+      "windows": "Windows Python package; it is not a native score editor.",
+      "assessment": "Best used for an isolated instrument or separated stem; its README explicitly says one instrument at a time works best. Polyphony means simultaneous pitches, not reliable full-band part assignment.",
+      "license": "Apache-2.0 repository code. Runtime/dependency and dataset terms were not exhaustively audited.",
+      "commit": "fa5997af0a8210982619003269994a1be25eddf3",
+      "evidence": [
+        {
+          "label": "CNN architecture",
+          "path": "basic_pitch/models.py",
+          "line": 193,
+          "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/models.py#L193"
+        },
+        {
+          "label": "Audio constants",
+          "path": "basic_pitch/constants.py",
+          "line": 33,
+          "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/constants.py#L33"
+        },
+        {
+          "label": "Windowed inference",
+          "path": "basic_pitch/inference.py",
+          "line": 282,
+          "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/inference.py#L282"
+        },
+        {
+          "label": "Activation-to-note rules",
+          "path": "basic_pitch/note_creation.py",
+          "line": 360,
+          "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/note_creation.py#L360"
+        },
+        {
+          "label": "No instrument classification",
+          "path": "basic_pitch/note_creation.py",
+          "line": 244,
+          "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/basic_pitch/note_creation.py#L244"
+        },
+        {
+          "label": "Intended use",
+          "path": "README.md",
+          "line": 14,
+          "url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/README.md#L14"
+        }
+      ]
+    },
+    {
+      "name": "MT3",
+      "repo": "magenta/mt3",
+      "role": "Research implementation of direct multitrack transcription",
+      "pipeline": "16 kHz audio → 512-bin log-mel spectrogram → T5-style encoder/decoder → event tokens → stateful segment/tie reconstruction → NoteSequence → MIDI",
+      "architecture": [
+        "JAX/Flax and T5X implement the transformer; TensorFlow/SeqIO support preprocessing. The supplied inference flow transcribes the mixture directly without requiring stem separation.",
+        "The reviewed preset has eight encoder layers and eight decoder layers, 512-dimensional embeddings and six attention heads. Audio configuration uses a 2048 FFT and hop 128; MT3 gin uses 256 input frames and 1024 output tokens.",
+        "Time shifts, pitches, instrument programs, drum hits and ties form the symbolic output. Ties carry active notes across segment boundaries. The MT3 preset has one nonzero velocity bin, so it does not recover detailed expressive dynamics.",
+        "The Colab restores a checkpoint, predicts tokens, combines NoteSequences and exports MIDI. Dataset configurations include MAESTRO, GuitarSet, URMP, MusicNet, Cerberus and Slakh.",
+        "It provides a recognition/event-decoding framework rather than score engraving. The README says training is not easily supported out of the box."
+      ],
+      "outputs": "NoteSequence, note-event JSON in tooling, MIDI from notebook",
+      "windows": "Colab is the documented user path; local integration needs the research stack rather than a supplied Windows application.",
+      "assessment": "Valuable for studying and developing multitrack models. A beat/rhythm interpretation stage and notation engraver are still needed for readable sheet music.",
+      "license": "Apache-2.0 code. This review did not establish one permissive license covering all checkpoints, datasets and dependencies.",
+      "commit": "7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9",
+      "evidence": [
+        {
+          "label": "Encoder-decoder implementation",
+          "path": "mt3/network.py",
+          "line": 265,
+          "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/network.py#L265"
+        },
+        {
+          "label": "Model preset",
+          "path": "mt3/gin/model.gin",
+          "line": 53,
+          "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/gin/model.gin#L53"
+        },
+        {
+          "label": "Multitrack preset",
+          "path": "mt3/gin/mt3.gin",
+          "line": 4,
+          "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/gin/mt3.gin#L4"
+        },
+        {
+          "label": "Audio features",
+          "path": "mt3/spectrograms.py",
+          "line": 23,
+          "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/spectrograms.py#L23"
+        },
+        {
+          "label": "Instrument-aware note data",
+          "path": "mt3/note_sequences.py",
+          "line": 42,
+          "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/note_sequences.py#L42"
+        },
+        {
+          "label": "Notebook export",
+          "path": "mt3/colab/music_transcription_with_transformers.ipynb",
+          "line": 469,
+          "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/mt3/colab/music_transcription_with_transformers.ipynb#L469"
+        },
+        {
+          "label": "Training boundary",
+          "path": "README.md",
+          "line": 18,
+          "url": "https://github.com/magenta/mt3/blob/7ecf19d75f5d5863ef46c5b47aceba0ab3bcbff9/README.md#L18"
+        }
+      ]
+    },
+    {
+      "name": "Omnizart",
+      "repo": "Music-and-Culture-Technology-Lab/omnizart",
+      "role": "Separate task-specific transcription and analysis modules",
+      "pipeline": "Select task/checkpoint → extract task-specific features → predict activations → decode notes/chords/beats → separate MIDI/CSV results → external integration and engraving",
+      "architecture": [
+        "The pitched-music path extracts CFP-family spectrum, cepstrum and generalized-cepstrum features. Its TensorFlow/Keras models use U-Net-style convolutional semantic segmentation; the checked Pop checkpoint selects an attention variant.",
+        "Instrument-specific onset/duration channels are normalized and decoded with configured thresholds. A statistical instrument-presence filter controls which channels become MIDI programs and notes.",
+        "The vocal path separates vocals with a Spleeter two-stem ONNX model through sherpa-onnx, predicts note intervals and combines them with the vocal-contour pitch result. It produces notes/contours rather than recognized lyrics.",
+        "Drum transcription uses CQT patches and a dedicated spectral-normalized model. Its docstring says 13 classes are predicted and three written to MIDI. Chord recognition separately uses chroma and returns chord CSV plus rendered MIDI.",
+        "The beat module expects MIDI as input and extracts symbolic features. It is not the same audio beat tracker used in MuScriptor.",
+        "Critical gap: the combined CLI calls omnizart.transcribe_all.process, whose body is pass. The separate task modules have implementations, but the promised combined automatic flow is unimplemented at this commit."
+      ],
+      "outputs": "Task-specific MIDI, chord/beat CSV and vocal F0/contour audio",
+      "windows": "Python toolkit with TensorFlow, native audio/plugin and model dependencies; no supplied polished Windows full-score application was established.",
+      "assessment": "Useful components for experimenting with notes, vocals, drums and chords. Building one complete score requires orchestration, alignment and notation export; the all-in-one command is a stub.",
+      "license": "MIT repository code/metadata. Downloaded model and dependency terms were not all audited.",
+      "commit": "bcd8cb44d4da66ce87df10b6abee5c35a8cc2886",
+      "evidence": [
+        {
+          "label": "Music pipeline",
+          "path": "omnizart/music/app.py",
+          "line": 97,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/music/app.py#L97"
+        },
+        {
+          "label": "Segmentation model",
+          "path": "omnizart/models/u_net.py",
+          "line": 65,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/models/u_net.py#L65"
+        },
+        {
+          "label": "Instrument/note decoding",
+          "path": "omnizart/music/inference.py",
+          "line": 372,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/music/inference.py#L372"
+        },
+        {
+          "label": "Vocal separation",
+          "path": "omnizart/vocal/app.py",
+          "line": 62,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/vocal/app.py#L62"
+        },
+        {
+          "label": "Drum output boundary",
+          "path": "omnizart/drum/app.py",
+          "line": 39,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/drum/app.py#L39"
+        },
+        {
+          "label": "MIDI beat input",
+          "path": "omnizart/beat/app.py",
+          "line": 66,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/beat/app.py#L66"
+        },
+        {
+          "label": "Combined command stub",
+          "path": "omnizart/transcribe_all.py",
+          "line": 8,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/transcribe_all.py#L8"
+        },
+        {
+          "label": "Combined CLI",
+          "path": "omnizart/cli/transcribe.py",
+          "line": 15,
+          "url": "https://github.com/Music-and-Culture-Technology-Lab/omnizart/blob/bcd8cb44d4da66ce87df10b6abee5c35a8cc2886/omnizart/cli/transcribe.py#L15"
+        }
+      ]
+    },
+    {
+      "name": "MuseScore Studio",
+      "repo": "MuseScore/MuseScore",
+      "role": "Symbolic notation editor and engraver",
+      "pipeline": "MIDI/MusicXML → score structure → rhythmic interpretation and quantization → staves/measures/voices/notes/rests → layout/editing → PDF and MusicXML",
+      "architecture": [
+        "C++/Qt notation application. In the reviewed workflow it starts from symbolic data rather than recognizing notes from an audio mixture.",
+        "NotationMidiReader calls the MIDI importer. convertMidi handles tracks, tempo/meter, piano hand splitting, drum voice/track splitting, quantization, instrument assignment and score construction.",
+        "Dedicated quantization/tuplet logic interprets note timestamps into notated durations. Existing MIDI timing is not automatically a clean score.",
+        "MusicXmlWriter serializes the internal Score using saveXml. PdfWriter paints notation through QPdfWriter and supports part or multipart output.",
+        "The audio module registers WAV/MP3/OGG/FLAC writers. These demonstrate score-to-audio export, not mixed-audio pitch recognition."
+      ],
+      "outputs": "Editable native scores, MusicXML, printed/PDF notation, MIDI and rendered audio",
+      "windows": "Native desktop application; also the external engraving engine used by MuScriptor.",
+      "assessment": "Direct route for an existing MIDI file and a strong notation stage after transcription. Incorrect recognized notes and instrument labels still need correction.",
+      "license": "GPL-3.0-only in inspected source headers. Dependencies have their own terms.",
+      "commit": "82ba7e5736f7e5a3466de77c07cba0950c86606b",
+      "evidence": [
+        {
+          "label": "MIDI entry",
+          "path": "src/importexport/midi/internal/notationmidireader.cpp",
+          "line": 31,
+          "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/notationmidireader.cpp#L31"
+        },
+        {
+          "label": "MIDI-to-score conversion",
+          "path": "src/importexport/midi/internal/midiimport/importmidi.cpp",
+          "line": 1133,
+          "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/midiimport/importmidi.cpp#L1133"
+        },
+        {
+          "label": "Rhythm quantization",
+          "path": "src/importexport/midi/internal/midiimport/importmidi_quant.cpp",
+          "line": 1487,
+          "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/midi/internal/midiimport/importmidi_quant.cpp#L1487"
+        },
+        {
+          "label": "MusicXML serialization",
+          "path": "src/importexport/musicxml/internal/musicxmlwriter.cpp",
+          "line": 59,
+          "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/musicxml/internal/musicxmlwriter.cpp#L59"
+        },
+        {
+          "label": "PDF output",
+          "path": "src/importexport/imagesexport/internal/pdfwriter.cpp",
+          "line": 61,
+          "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/imagesexport/internal/pdfwriter.cpp#L61"
+        },
+        {
+          "label": "Audio export",
+          "path": "src/importexport/audioexport/audioexportmodule.cpp",
+          "line": 59,
+          "url": "https://github.com/MuseScore/MuseScore/blob/82ba7e5736f7e5a3466de77c07cba0950c86606b/src/importexport/audioexport/audioexportmodule.cpp#L59"
+        }
+      ]
+    },
+    {
+      "name": "Sheet Sage",
+      "repo": "chrisdonahue/sheetsage",
+      "role": "Pop-song melody-and-chord lead sheets",
+      "pipeline": "madmom beats/downbeats → conventional log-mel or optional Jukebox features → sixteenth-note grid → separate melody/harmony models → LeadSheet structure → LilyPond/PDF and aligned MIDI",
+      "architecture": [
+        "Default handcrafted features are a 229-bin log-mel representation at 16 kHz. Optional Jukebox features are intermediate neural activations, rather than generated audio.",
+        "Beat tracking precedes transcription and resamples features onto musical subdivisions. The inspected flow assumes a constant 3- or 4-beat meter and four subdivisions per beat.",
+        "Separate PyTorch encoder-only transducers predict melody and harmony. The loader supports probe or transformer configurations; transformer settings use 512 dimensions, eight heads and four or six layers depending on checkpoint options.",
+        "The melody vocabulary has 89 states including null. Harmony has 97 states: null plus 12 roots across eight chord families. Predictions are selected by argmax or threshold.",
+        "LeadSheet organizes melody, harmony, key, meter and tempo. Key estimation calls Melisma with a C-major fallback. The CLI writes LilyPond, engraves PDF and separately exports audio-aligned MIDI."
+      ],
+      "outputs": "Lead-sheet PDF, LilyPond source and melody/harmony MIDI",
+      "windows": "Documented quickstart is Linux plus Docker. Native Windows/WSL compatibility was not tested.",
+      "assessment": "Good conceptual match for melody plus chord symbols. It does not attempt a complete multi-instrument arrangement. Fixed meter/grid and chord vocabulary limit coverage.",
+      "license": "MIT code; transcription models CC BY-NC-SA 3.0 per README, plus component terms.",
+      "commit": "bbdd7b7b6a5fb845828f82790acdceb03a197779",
+      "evidence": [
+        {
+          "label": "Default features",
+          "path": "sheetsage/representations/handcrafted.py",
+          "line": 10,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/representations/handcrafted.py#L10"
+        },
+        {
+          "label": "Optional learned features",
+          "path": "sheetsage/representations/jukebox.py",
+          "line": 79,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/representations/jukebox.py#L79"
+        },
+        {
+          "label": "Beat tracking",
+          "path": "sheetsage/beat_track.py",
+          "line": 9,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/beat_track.py#L9"
+        },
+        {
+          "label": "Model configurations",
+          "path": "sheetsage/infer.py",
+          "line": 94,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L94"
+        },
+        {
+          "label": "Output vocabularies",
+          "path": "sheetsage/infer.py",
+          "line": 78,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L78"
+        },
+        {
+          "label": "Meter assumption",
+          "path": "sheetsage/infer.py",
+          "line": 206,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L206"
+        },
+        {
+          "label": "Notation output",
+          "path": "sheetsage/infer.py",
+          "line": 863,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/sheetsage/infer.py#L863"
+        },
+        {
+          "label": "Model terms",
+          "path": "README.md",
+          "line": 61,
+          "url": "https://github.com/chrisdonahue/sheetsage/blob/bbdd7b7b6a5fb845828f82790acdceb03a197779/README.md#L61"
+        }
+      ]
+    },
+    {
+      "name": "Ultimate Vocal Remover (UVR)",
+      "repo": "Anjok07/ultimatevocalremovergui",
+      "role": "Audio source separation",
+      "pipeline": "Audio mix → selected separation model/ensemble → windowed waveform or spectral inference → stem reconstruction → audio files → optional downstream note transcriber",
+      "architecture": [
+        "separate.py dispatches several model families: VR cascaded networks, MDX/MDX-C spectral networks and Demucs variants. It is a collection of source-separation engines.",
+        "The MDX path uses STFT, predicts source spectra through ONNX Runtime or PyTorch depending on the model/settings, then reconstructs audio with inverse STFT.",
+        "The VR network cascades low-band, high-band and full-band convolutional encoder/decoder stages, with ASPP/LSTM components, to estimate spectral masks.",
+        "Hybrid Transformer Demucs combines waveform and spectrogram branches through a cross-transformer. Segment overlap and optional shifts help process full recordings; available stems depend on the selected checkpoint.",
+        "Final processing writes reconstructed audio stems. It does not create MIDI events, measure/voice structure or sheet music in this inspected path."
+      ],
+      "outputs": "Separated audio stems",
+      "windows": "README supplies a Windows installer; models are separate downloads.",
+      "assessment": "Optional helper before a single-instrument transcriber. Separation can reduce overlap but introduces leakage and transient/harmonic artifacts; improvement must be tested on the song. A broad 'other' stem may still contain several instruments.",
+      "license": "README describes GUI code as MIT. Third-party model and dependency terms were not exhaustively audited.",
+      "commit": "a5f88453bfb2b38b05a965bcf67727243e0cbf19",
+      "evidence": [
+        {
+          "label": "MDX",
+          "path": "separate.py",
+          "line": 472,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L472"
+        },
+        {
+          "label": "MDX-C",
+          "path": "separate.py",
+          "line": 639,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L639"
+        },
+        {
+          "label": "Demucs",
+          "path": "separate.py",
+          "line": 797,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L797"
+        },
+        {
+          "label": "VR",
+          "path": "separate.py",
+          "line": 1023,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L1023"
+        },
+        {
+          "label": "VR architecture",
+          "path": "lib_v5/vr_network/nets_new.py",
+          "line": 41,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/lib_v5/vr_network/nets_new.py#L41"
+        },
+        {
+          "label": "Hybrid transformer",
+          "path": "demucs/htdemucs.py",
+          "line": 27,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/demucs/htdemucs.py#L27"
+        },
+        {
+          "label": "Audio output",
+          "path": "separate.py",
+          "line": 386,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/separate.py#L386"
+        },
+        {
+          "label": "License statement",
+          "path": "README.md",
+          "line": 272,
+          "url": "https://github.com/Anjok07/ultimatevocalremovergui/blob/a5f88453bfb2b38b05a965bcf67727243e0cbf19/README.md#L272"
+        }
+      ]
+    }
+  ],
+  "_archive_context": {
+    "archived_on": "2026-11-11",
+    "status": "Historical research, not executed SMPL Tones functionality.",
+    "original_filenames": "Unlinked original evidence filenames are historical labels. The readable dossier and these normalized conclusions do not require those local files.",
+    "selection_policy": "Current SMPL Tones component choices are in DEVELOPMENT_PLAN.md and decision-ledger.json; earlier MuScriptor recommendations are historical.",
+    "payload_policy": "No proprietary binaries, weights, full manuals, production JavaScript or copied source snapshots are included."
+  }
+}

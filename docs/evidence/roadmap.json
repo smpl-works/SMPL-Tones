@@ -1,0 +1,271 @@
+{
+  "project": "SMPL Tones",
+  "application_status": "planned; no implementation completed by this documentation release",
+  "milestones": [
+    {
+      "step": 1,
+      "title": "Freeze provenance, licensing and release asset policy",
+      "status": "planned",
+      "depends_on_steps": [],
+      "deliverables": [
+        "Pin every selected code revision, model artifact, feature frontend and conversion-tool version.",
+        "Record author licensing statements and required distribution notices for code, weights, fonts, soundfonts, codecs and native providers.",
+        "Exclude non-commercial or unverified required assets; distinguish original MT3 from the separately labeled YourMT3+ author checkpoint.",
+        "Preserve stable MuseScore base and GPL obligations; define the offline release asset manifest."
+      ],
+      "tests": [
+        "Review the ledger against source/model authors and actual selected files, not repository badges alone.",
+        "Verify SHA-256 identities and notices; reject an absent or mismatched required artifact."
+      ],
+      "completion_gate": "A complete versioned code/model/asset ledger exists and all required distribution inputs meet the accepted policy. Research metadata alone does not close this issue.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 2,
+      "title": "Prove native YourMT3+ inference feasibility",
+      "status": "planned",
+      "depends_on_steps": [
+        1
+      ],
+      "deliverables": [
+        "Use the pinned author YPTF+Multi (PS) checkpoint/configuration as the reference.",
+        "Export encoder/decoder with cached generation state; implement exact native frontend, vocabulary, event and sustained-note/tie reconstruction.",
+        "Validate ONNX CPU/DirectML operation, source offsets, segmentation, short/padded input, EOS and instrument/drum mapping.",
+        "Measure working RAM, GPU memory, load times and processing time on the reference hardware; record unsupported operators and changes."
+      ],
+      "tests": [
+        "Compare final note events and targeted tensors with identical upstream input/frontend/decode settings.",
+        "Use chunk-crossing sustained notes, silence, short clips, dense mixtures and instrument/drum fixtures.",
+        "Allow no more than a 0.5 percentage-point fixed-metric loss from an optimized runtime relative to the pinned reference."
+      ],
+      "completion_gate": "Native recognition is reproducible and its numerical/event, memory and timing report is available. Failure blocks dependent integration; no cloud/external-app substitution is allowed.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 3,
+      "title": "Establish the integrated Windows editor and project foundation",
+      "status": "planned",
+      "depends_on_steps": [
+        1,
+        2
+      ],
+      "deliverables": [
+        "Create the separately branded C++/Qt application from stable MuseScore 4.7.6 at the recorded commit.",
+        "Retain notation, parts, accessibility, undo, playback and symbolic import/export inside SMPL Tones.",
+        "Remove required online accounts/cloud/download behavior and integrate local project handling.",
+        "Preserve existing research artifacts outside the application source/build changes."
+      ],
+      "tests": [
+        "Demonstrate offline MIDI import, note/part editing, undo, playback, MusicXML and PDF export.",
+        "Verify first launch without another MuseScore installation or a network connection."
+      ],
+      "completion_gate": "The branded editor builds and core local symbolic workflows pass focused checks; transcription is not claimed until its later integration.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 4,
+      "title": "Implement bounded media processing and recoverable jobs",
+      "status": "planned",
+      "depends_on_steps": [
+        3
+      ],
+      "deliverables": [
+        "Bundle local media decoding with networking disabled; add microphone, WASAPI system-audio and MIDI capture.",
+        "Create waveform/resampling caches and source-time metadata without loading entire long recordings into RAM.",
+        "Implement process isolation, queueing, progress, cancellation, atomic artifact finalization and durable stage checkpoints.",
+        "Add the working-project journal and recovery behavior separately from full archive save."
+      ],
+      "tests": [
+        "Exercise Unicode paths, long/corrupt media, recording-device loss, cancellation, worker crash and disk-full handling.",
+        "Restart after a finalized chunk/stage and verify source media and edited score remain intact."
+      ],
+      "completion_gate": "Media/jobs remain bounded and responsive; completed work survives interruption without corrupting project state.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 5,
+      "title": "Integrate versioned replaceable recognition engines",
+      "status": "planned",
+      "depends_on_steps": [
+        2,
+        4
+      ],
+      "deliverables": [
+        "Implement Engine manifest v1, Job request v1, Analysis result v1 and Progress/checkpoint v1.",
+        "Use process pipes for control/progress and local files or mapped buffers for large data; separate diagnostic output.",
+        "Integrate YourMT3+ and native Basic Pitch postprocessing, including optional bends for isolated instruments.",
+        "Expose range/instrument/backend controls, model identity, supported capabilities and genuine/nullable confidence."
+      ],
+      "tests": [
+        "Swap the two adapters without changing the editor/project contract.",
+        "Verify capability mismatch, version mismatch, corrupt/missing assets, note ordering and checkpoint provenance.",
+        "Compare Basic Pitch window/bend decoding with the pinned source implementation."
+      ],
+      "completion_gate": "Both engines run locally through the same contracts with validated results and explicit capabilities; no separately installed interpreter/app is required.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 6,
+      "title": "Add beat tracking and musically valid notation preparation",
+      "status": "planned",
+      "depends_on_steps": [
+        5
+      ],
+      "deliverables": [
+        "Integrate validated Beat This final0 and a smaller draft path with exact frontend/postprocessing.",
+        "Build editable tempo maps, downbeat/pickup/meter controls and provisional-state handling.",
+        "Implement quantization, rests, ties, tuplets, voices, piano-hand splitting and percussion mapping through score undo operations.",
+        "Preserve original performance events independently of written timing."
+      ],
+      "tests": [
+        "Use swing, triplets, rubato, sustained notes, pickups and meter-change fixtures.",
+        "Verify valid measure durations and that tempo/grid corrections reuse recognition without destroying source timing."
+      ],
+      "completion_gate": "Recognized events become editable valid notation with inspectable timing assumptions and reproducible source/score alignment.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 7,
+      "title": "Build synchronized correction and non-destructive take review",
+      "status": "planned",
+      "depends_on_steps": [
+        6
+      ],
+      "deliverables": [
+        "Synchronize source/stem audio, waveform, piano roll, score cursor and selection.",
+        "Provide loop/slow review, mute/solo, per-part levels, note split/join, pitch/timing edits and reassignment.",
+        "Persist transcription identities and alternative takes; compare results against the originating project revision.",
+        "Apply selected changes as grouped undoable operations without overwriting newer manual work."
+      ],
+      "tests": [
+        "Edit while inference runs, accept/reject an alternative and verify no manual correction disappears.",
+        "Save/reopen, undo/redo and recover after a worker failure while checking alignment and identity links."
+      ],
+      "completion_gate": "A musician can review and correct an automatic result with synchronized playback and safely compare retranscription alternatives.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 8,
+      "title": "Add stem separation and detailed local processing",
+      "status": "planned",
+      "depends_on_steps": [
+        5,
+        7
+      ],
+      "deliverables": [
+        "Validate a fixed Demucs-based native separation model and documented stem vocabulary.",
+        "Implement bounded overlap/reconstruction, reusable stem caches and stem playback.",
+        "Run selected-part recognition in detailed mode; preserve comparison alternatives rather than blindly merging notes.",
+        "Share job cancellation/recovery/backend and model-resource controls."
+      ],
+      "tests": [
+        "Compare separated waveforms and boundaries against the pinned separation reference.",
+        "Test leakage/transient artifacts, duplicate/conflicting notes and interrupted separation.",
+        "Measure whether detailed processing improves or harms specific fixed-corpus cases instead of asserting universal benefit."
+      ],
+      "completion_gate": "Separation is a validated optional local stage with coherent stems, bounded resources and reviewable downstream takes.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 9,
+      "title": "Add vocals, lyric drafts, chord analysis and score reductions",
+      "status": "planned",
+      "depends_on_steps": [
+        6,
+        7,
+        8
+      ],
+      "deliverables": [
+        "Integrate whisper.cpp with a verified multilingual small model; keep lyric drafts distinct from vocal-note recognition.",
+        "Provide editable text and manual syllable alignment; preserve uncertain/no-speech cases.",
+        "Add editable chord/key suggestions, melody selection, lead sheets, non-destructive simplification and voice/hand review.",
+        "Add guitar/bass/ukulele tablature, tuning, capo and inspectable fingering choices."
+      ],
+      "tests": [
+        "Evaluate singing, layered vocals, accompaniment and silent/instrumental sections for draft errors.",
+        "Verify lyric edits do not invalidate note recognition and reductions do not overwrite the original score.",
+        "Use chord, meter and fretted-instrument fixtures with manual correction and save/reopen."
+      ],
+      "completion_gate": "All auxiliary results are locally generated, editable and auditable; no perfect lyric/voice/chord accuracy is implied.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 10,
+      "title": "Complete integrated score, audio, GP5 and LilyPond exports",
+      "status": "planned",
+      "depends_on_steps": [
+        7,
+        9
+      ],
+      "deliverables": [
+        "Finish native project/score, MusicXML, full-score/part PDF and synthesized audio exports.",
+        "Provide distinct current-content performance MIDI and written/quantized MIDI, retaining original input separately.",
+        "Implement native GP5 and LilyPond text writers; do not assume MuseScore already exports Guitar Pro.",
+        "Produce concrete loss/unsupported-construct reports for limited target formats."
+      ],
+      "tests": [
+        "Round-trip supported notation/events through compatible MusicXML, MIDI and GP5 readers.",
+        "Check tuplets, drums, hands, lyrics, tabs, tempo maps and manual edits.",
+        "Inspect affected PDF/part layout and validate the supported LilyPond subset in release tooling."
+      ],
+      "completion_gate": "The documented modern export set is integrated and supported content survives round trips; unsupported content is reported rather than silently dropped.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 11,
+      "title": "Profile, optimize and harden reference workflows",
+      "status": "planned",
+      "depends_on_steps": [
+        8,
+        9,
+        10
+      ],
+      "deliverables": [
+        "Measure cold/warm loads, idle/working RAM, GPU allocations and per-stage/end-to-end timing on the reference CPU/GPU.",
+        "Enforce bounded queues/caches and one GPU-heavy stage at a time; select the correct laptop adapter.",
+        "Validate any lowering/quantization with the same numerical/transcription gates and preserve CPU operation.",
+        "Exercise cancellation, backend retry limits, autosave/atomic saves and project migration under failure."
+      ],
+      "tests": [
+        "Compare measured installer/runtime budgets and balanced real-time target with actual data.",
+        "Use GPU OOM/reset, full disk, corrupt assets, old projects and repeated worker failures.",
+        "Check app-owned required network traffic remains absent."
+      ],
+      "completion_gate": "A reproducible quality/performance/recovery report exists; regressions or unmet budgets are documented blockers rather than hidden downloads or unsupported speed claims.",
+      "issue_number": null,
+      "issue_url": null
+    },
+    {
+      "step": 12,
+      "title": "Package and validate the complete offline Windows release",
+      "status": "planned",
+      "depends_on_steps": [
+        11
+      ],
+      "deliverables": [
+        "Build one x64 offline MSI with all required native runtimes, models, fonts, soundfont and codec/provider assets.",
+        "Include verified hashes/notices, source/build instructions, source-availability material and release notes.",
+        "Validate clean-machine installation and first-use without accounts, internet, another music app or Python.",
+        "Require the release-signing input for stable publication; developer packages may remain unsigned."
+      ],
+      "tests": [
+        "On a clean offline Windows machine: install, first-launch, import/record, transcribe, edit, play, save/reopen and export.",
+        "Verify each required asset and no provider/model download, cloud fallback or update/telemetry requirement.",
+        "Check source/checksum/notice artifacts and publish measured hardware/performance conditions."
+      ],
+      "completion_gate": "The self-contained offline installer and release records satisfy all accepted gates. No public working-release claim is made before this issue completes.",
+      "issue_number": null,
+      "issue_url": null
+    }
+  ]
+}

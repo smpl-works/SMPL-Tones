@@ -1,0 +1,197 @@
+{
+  "investigation": "MuseScore-named installer: shipped artifact inspection and separately labeled upstream editor source trace",
+  "date": "2026-11-11",
+  "scope": {
+    "input_path": "MuseScore_Studio_Installer_via_MuseHub.exe",
+    "target_execution": false,
+    "application_installation": false,
+    "client_configuration_changes": false,
+    "analysis_tool": "REA CLI 6.8.0",
+    "runtime": "Existing bundled Node.js 24.22.1",
+    "source_commit": "701d557996fb0da981bc20e567d4c8efbe2433c7"
+  },
+  "identity": {
+    "bytes": 36818352,
+    "sha256": "d9eea2ae7c8c7babc0c98a3d3b3591e2295eec02e362791836e7fe2d911caee2",
+    "file_description": "MuseHub Installer",
+    "product_name": "MuseHub Installer",
+    "version": "3.6.0.2400",
+    "original_filename": "MuseHub.Installer.exe",
+    "authenticode": {
+      "status": "Valid (Signature verified)",
+      "signer": "MUSECY SM LTD",
+      "observation_tool": "PowerShell Get-AuthenticodeSignature"
+    }
+  },
+  "questions": [
+    {
+      "question": "What is the supplied file?",
+      "status": "answered",
+      "answer": "A signed x64 native MuseHub installer, not the MuseScore Studio editor executable.",
+      "evidence": [
+        "PE version properties",
+        "Windows Authenticode verification",
+        "ev_cedc65707190908707d309cb9562ab4958b5def19827b15fef6f31aaea607af4",
+        "ev_9464d64c9563d989f95c31d5fa173d89659e72cffd8c45a05bdf9ecc69b64951"
+      ]
+    },
+    {
+      "question": "What is packaged inside?",
+      "status": "answered",
+      "answer": "ZIP_MUSEHUB at offset 950496, length 35798508. The archive lists 108 entries including directories and 135511537 uncompressed bytes. It includes MuseHub.exe, updater, uninstaller, authorization service, ServiceCore.dll, WinUI/Windows App SDK libraries, fonts, and localization. No separately named MuseScore editor executable is listed.",
+      "evidence": [
+        "ev_9464d64c9563d989f95c31d5fa173d89659e72cffd8c45a05bdf9ecc69b64951",
+        "payload-members.json",
+        "selected-payload-provenance.json"
+      ]
+    },
+    {
+      "question": "How does installation and launch work?",
+      "status": "partially-answered",
+      "answer": "The manifest declares requireAdministrator. Static messages describe staging/extracting and verifying MuseHub, moving the old current directory aside, registering application/protocol/startup/uninstall entries, installing authorization and updater services, and launching MuseHub. The installer has a MuseScore-specific store-page URI. Branch execution and ordering are inferred from strings, not observed runtime or decompiled control flow.",
+      "evidence": [
+        "installer.manifest.xml",
+        "launcher-strings.json"
+      ],
+      "important_offsets": [
+        {
+          "offset": 807584,
+          "meaning": "MuseScore product-page URI"
+        },
+        {
+          "offset": 807824,
+          "meaning": "MuseScore installer detection message"
+        },
+        {
+          "offset": 816768,
+          "meaning": "Extracting MuseHub"
+        },
+        {
+          "offset": 816896,
+          "meaning": "Verifying MuseHub"
+        },
+        {
+          "offset": 819536,
+          "meaning": "Installing authorization service"
+        },
+        {
+          "offset": 819744,
+          "meaning": "Installing updater service"
+        },
+        {
+          "offset": 820840,
+          "meaning": "Launching MuseHub"
+        },
+        {
+          "offset": 836184,
+          "meaning": "musehub protocol registration path"
+        }
+      ],
+      "product_uri": "musehub://product/store?id=1afc2c26-93e3-4534-8af2-f91190db0faf&from=mh_installer_musescore_studio"
+    },
+    {
+      "question": "How does MIDI become notation?",
+      "status": "answered-from-upstream-source",
+      "answer": "The MIDI module registers mid/midi/kar readers. NotationMidiReader::read calls importMidi. The import pipeline parses MIDI, groups tracks/channels, adjusts beats, splits left/right hands and drum voices, quantizes timing, simplifies durations, separates voices, creates parts/staves and measures, adds notes/rests/keys/clefs/time signatures, ties, lyrics, tempo and chord names.",
+      "evidence": [
+        "source/midimodule.cpp:55",
+        "source/notationmidireader.cpp:34",
+        "source/importmidi.cpp:1133",
+        "source/importmidi.cpp:1239"
+      ],
+      "limitation": "This is verified against the pinned public source commit; that source is not contained in the supplied installer and binary equivalence was not established."
+    },
+    {
+      "question": "How does the score become sheet music?",
+      "status": "answered-from-upstream-source",
+      "answer": "The PDF writer prepares a Qt QPdfWriter and asks the notation painting layer to paint the score into PDF pages. It supports per-part and multi-part output. The MusicXML module independently registers XML/MusicXML/MXL readers and writers.",
+      "evidence": [
+        "source/pdfwriter.cpp:43",
+        "source/pdfwriter.cpp:46",
+        "source/pdfwriter.cpp:93",
+        "source/musicxmlmodule.cpp:52"
+      ]
+    },
+    {
+      "question": "Does this establish full-song audio-to-score transcription?",
+      "status": "bounded-negative",
+      "answer": "No audio-to-note transcription engine was established from the supplied installer. The editor audio module inspected registers WAV/MP3/OGG/FLAC/AAC writers, while MIDI and MusicXML have explicit readers. For the original workflow, an external transcription stage supplies MIDI/MusicXML to the notation editor.",
+      "evidence": [
+        "source/audioexportmodule.cpp:54",
+        "source/midimodule.cpp:55",
+        "source/musicxmlmodule.cpp:52"
+      ],
+      "limitation": "This is not an exhaustive audit of all MuseScore source, plugins or optional external products."
+    }
+  ],
+  "observed_pipeline": [
+    "Supplied MuseScore-named EXE",
+    "Embedded ZIP_MUSEHUB",
+    "MuseHub installation / repair / update (inferred static flow)",
+    "MuseHub store page for MuseScore Studio",
+    "Separate editor delivery; not observed at runtime"
+  ],
+  "music_pipeline_from_source": [
+    "MIDI / MusicXML",
+    "Reader and symbolic score construction",
+    "Rhythm / voices / staves / measures",
+    "Notation painting",
+    "Full score / individual parts as PDF"
+  ],
+  "evidence": [
+    {
+      "id": "ev_cedc65707190908707d309cb9562ab4958b5def19827b15fef6f31aaea607af4",
+      "file": "inspect-managed-artifact.json",
+      "kind": "REA shipped-artifact observation",
+      "conclusion": "Native PE32+ x86_64; no CLI directory, managed metadata or CIL available."
+    },
+    {
+      "id": "ev_9464d64c9563d989f95c31d5fa173d89659e72cffd8c45a05bdf9ecc69b64951",
+      "file": "inspect-pe-resources.json",
+      "kind": "REA shipped-artifact observation",
+      "conclusion": "Complete supported PE resource tree inventory: 11 resources."
+    },
+    {
+      "id": "ev_8f42f3c2657ef00e7bd694afefa9565b70183668e1805a5d25f2112ee0773f8f",
+      "file": "inspect-artifact.json",
+      "kind": "REA shipped-artifact observation",
+      "conclusion": "Root PE identity; nested PE resource archives not traversed automatically."
+    },
+    {
+      "file": "launcher-strings.json",
+      "kind": "Ordinary Python static strings, not REA Evidence",
+      "conclusion": "File offsets and encodings retained; strings establish references and messages, not executed branches."
+    },
+    {
+      "file": "extraction-provenance.json",
+      "kind": "Derived artifact provenance",
+      "conclusion": "Resource slices verified against REA payload SHA-256."
+    },
+    {
+      "file": "selected-payload-provenance.json",
+      "kind": "Ordinary Python extraction / integrity verification, not REA Evidence",
+      "conclusion": "Six selected files decoded from ZIP compression method 95 (XZ); all CRC32 values verified; all five non-manifest files match the package manifest SHA-256."
+    },
+    {
+      "file": "source/sources.json",
+      "kind": "Pinned upstream source",
+      "conclusion": "Six public MuseScore source files preserved with commit/blob identities and original URLs."
+    }
+  ],
+  "limitations": [
+    "No installer, bundled executable, service or editor was executed.",
+    "No function-level native decompiler provider was configured; native call order, branches, registry writes and networking were not dynamically verified.",
+    "REA and Python zipfile did not support ZIP compression method 95. A format-aware stdlib XZ decoder materialized selected members and verified CRC32 plus the package manifest SHA-256.",
+    "Only the selected six archive members were materialized; the complete 108-entry member index was retained.",
+    "Common installed MuseScore paths and uninstall entries were checked without finding an editor executable. This was not an exhaustive whole-disk search.",
+    "Studio source findings are separate from the supplied MuseHub binary and do not establish the editor release that MuseHub would download.",
+    "Persistent MCP registration was missing. The CLI supplied static analysis without editing Codex configuration or installing a native decompiler."
+  ],
+  "_archive_context": {
+    "archived_on": "2026-11-11",
+    "status": "Historical research, not executed SMPL Tones functionality.",
+    "original_filenames": "Unlinked original evidence filenames are historical labels. The readable dossier and these normalized conclusions do not require those local files.",
+    "selection_policy": "Current SMPL Tones component choices are in DEVELOPMENT_PLAN.md and decision-ledger.json; earlier MuScriptor recommendations are historical.",
+    "payload_policy": "No proprietary binaries, weights, full manuals, production JavaScript or copied source snapshots are included."
+  }
+}

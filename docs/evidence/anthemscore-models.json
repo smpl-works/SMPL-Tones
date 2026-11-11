@@ -1,0 +1,485 @@
+{
+  "parent_sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716",
+  "method": "Length-prefixed ONNX ModelProto metadata decoding; no inference or weight export",
+  "model_count": 6,
+  "unique_model_sha256_count": 6,
+  "models": [
+    {
+      "offset": 4604352,
+      "length_prefix_offset": 4604348,
+      "bytes": 1636717,
+      "sha256": "3c9d6527b5f3fe5ada98777e129b452cbe7332f869282b407740099fdd2986dc",
+      "ir_version": 8,
+      "producer": "pytorch",
+      "producer_version": "2.10.0",
+      "opsets": [
+        {
+          "version": 17
+        }
+      ],
+      "graph_name": "main_graph",
+      "inputs": [
+        {
+          "name": "x",
+          "element_type_id": 1,
+          "shape": [
+            1,
+            4,
+            400,
+            "L"
+          ]
+        },
+        {
+          "name": "beat",
+          "element_type_id": 1,
+          "shape": [
+            1,
+            "L",
+            2
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "chord_logp",
+          "element_type_id": 1,
+          "shape": [
+            "Transposechord_logp_dim_0",
+            "L",
+            133
+          ]
+        },
+        {
+          "name": "bass_logp",
+          "element_type_id": 1,
+          "shape": [
+            "Transposechord_logp_dim_0",
+            "L",
+            12
+          ]
+        }
+      ],
+      "nodes": 490,
+      "operators": {
+        "Cast": 109,
+        "Conv": 39,
+        "Constant": 115,
+        "Div": 19,
+        "Erf": 19,
+        "Add": 53,
+        "Mul": 55,
+        "MaxPool": 3,
+        "Shape": 18,
+        "Slice": 2,
+        "Concat": 1,
+        "Reshape": 35,
+        "Transpose": 3,
+        "InstanceNormalization": 17,
+        "LogSoftmax": 2
+      },
+      "initializers": 112,
+      "initializer_element_types": {
+        "10": 109,
+        "1": 3
+      }
+    },
+    {
+      "offset": 6241073,
+      "length_prefix_offset": 6241069,
+      "bytes": 3498166,
+      "sha256": "db1bcbce43d54793423330d5fd10b9cb8b9f4fd8a1fabbee6be40eebd0892cff",
+      "ir_version": 8,
+      "producer": "pytorch",
+      "producer_version": "2.10.0",
+      "opsets": [
+        {
+          "version": 17
+        }
+      ],
+      "graph_name": "main_graph",
+      "inputs": [
+        {
+          "name": "input",
+          "element_type_id": 1,
+          "shape": [
+            "batch_size",
+            4,
+            352,
+            720
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "onsets",
+          "element_type_id": 1,
+          "shape": [
+            "batch_size",
+            88,
+            "Sigmoidonsets_dim_2"
+          ]
+        }
+      ],
+      "nodes": 79,
+      "operators": {
+        "Constant": 15,
+        "Clip": 2,
+        "Div": 2,
+        "Log": 1,
+        "Mul": 2,
+        "Add": 8,
+        "LayerNormalization": 1,
+        "Conv": 13,
+        "Relu": 12,
+        "BatchNormalization": 12,
+        "MaxPool": 2,
+        "Split": 1,
+        "Concat": 1,
+        "Gather": 2,
+        "Shape": 1,
+        "Sub": 1,
+        "Unsqueeze": 1,
+        "Slice": 1,
+        "Sigmoid": 1
+      },
+      "initializers": 77,
+      "initializer_element_types": {
+        "1": 77
+      }
+    },
+    {
+      "offset": 9739243,
+      "length_prefix_offset": 9739239,
+      "bytes": 10498989,
+      "sha256": "cbab8ede9dae5b0aa81d854e1ebe3a3fc9a10bce7d029b170d656075263c0783",
+      "ir_version": 8,
+      "producer": "pytorch",
+      "producer_version": "2.10.0",
+      "opsets": [
+        {
+          "version": 17
+        }
+      ],
+      "graph_name": "main_graph",
+      "inputs": [
+        {
+          "name": "logmel",
+          "element_type_id": 1,
+          "shape": [
+            1,
+            "T",
+            128
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "beat",
+          "element_type_id": 1,
+          "shape": [
+            "Addbeat_dim_0",
+            "T"
+          ]
+        },
+        {
+          "name": "downbeat",
+          "element_type_id": 1,
+          "shape": [
+            "Addbeat_dim_0",
+            "T"
+          ]
+        }
+      ],
+      "nodes": 4740,
+      "operators": {
+        "Transpose": 60,
+        "BatchNormalization": 1,
+        "Shape": 467,
+        "Constant": 1790,
+        "Gather": 425,
+        "Unsqueeze": 496,
+        "Concat": 150,
+        "Reshape": 102,
+        "Conv": 4,
+        "Div": 97,
+        "Erf": 16,
+        "Add": 103,
+        "Mul": 300,
+        "ReduceL2": 25,
+        "Clip": 25,
+        "Expand": 29,
+        "MatMul": 86,
+        "Cast": 138,
+        "Split": 37,
+        "Squeeze": 86,
+        "Range": 2,
+        "Einsum": 2,
+        "ConstantOfShape": 2,
+        "Equal": 2,
+        "Where": 2,
+        "Slice": 135,
+        "ScatterND": 2,
+        "Neg": 48,
+        "Cos": 24,
+        "Sin": 24,
+        "Sqrt": 36,
+        "Softmax": 12,
+        "Sigmoid": 12
+      },
+      "initializers": 138,
+      "initializer_element_types": {
+        "1": 138
+      }
+    },
+    {
+      "offset": 20238236,
+      "length_prefix_offset": 20238232,
+      "bytes": 4956262,
+      "sha256": "d1cbd214eb539e4a32b5e5bc957625f67a1ed0ef71d87a1b823db7fae2e82887",
+      "ir_version": 8,
+      "producer": "pytorch",
+      "producer_version": "2.10.0",
+      "opsets": [
+        {
+          "version": 17
+        }
+      ],
+      "graph_name": "main_graph",
+      "inputs": [
+        {
+          "name": "views",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            4,
+            400,
+            720
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "inst_logp",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            22,
+            88,
+            "Sliceinst_logp_dim_3"
+          ]
+        },
+        {
+          "name": "perc_prob",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            14,
+            "Sliceinst_logp_dim_3"
+          ]
+        },
+        {
+          "name": "vol_logp",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            16,
+            102,
+            "Sliceinst_logp_dim_3"
+          ]
+        }
+      ],
+      "nodes": 121,
+      "operators": {
+        "Identity": 2,
+        "Constant": 33,
+        "Clip": 2,
+        "Div": 2,
+        "Log": 1,
+        "Mul": 2,
+        "Add": 8,
+        "LayerNormalization": 1,
+        "Conv": 18,
+        "Relu": 13,
+        "BatchNormalization": 13,
+        "MaxPool": 2,
+        "Split": 1,
+        "Concat": 3,
+        "Shape": 3,
+        "Gather": 4,
+        "Slice": 4,
+        "Unsqueeze": 4,
+        "Reshape": 1,
+        "Sub": 1,
+        "LogSoftmax": 2,
+        "Softmax": 1
+      },
+      "initializers": 89,
+      "initializer_element_types": {
+        "1": 89
+      }
+    },
+    {
+      "offset": 28225140,
+      "length_prefix_offset": 28225136,
+      "bytes": 4956262,
+      "sha256": "05a8cd747c57e9f37d2bbaf26e9eb5a7fb45cfd0522aace9a42dfed7865f8dd9",
+      "ir_version": 8,
+      "producer": "pytorch",
+      "producer_version": "2.10.0",
+      "opsets": [
+        {
+          "version": 17
+        }
+      ],
+      "graph_name": "main_graph",
+      "inputs": [
+        {
+          "name": "views",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            4,
+            400,
+            720
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "inst_logp",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            22,
+            88,
+            "Sliceinst_logp_dim_3"
+          ]
+        },
+        {
+          "name": "perc_prob",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            14,
+            "Sliceinst_logp_dim_3"
+          ]
+        },
+        {
+          "name": "vol_logp",
+          "element_type_id": 1,
+          "shape": [
+            "batch",
+            16,
+            102,
+            "Sliceinst_logp_dim_3"
+          ]
+        }
+      ],
+      "nodes": 121,
+      "operators": {
+        "Identity": 2,
+        "Constant": 33,
+        "Clip": 2,
+        "Div": 2,
+        "Log": 1,
+        "Mul": 2,
+        "Add": 8,
+        "LayerNormalization": 1,
+        "Conv": 18,
+        "Relu": 13,
+        "BatchNormalization": 13,
+        "MaxPool": 2,
+        "Split": 1,
+        "Concat": 3,
+        "Shape": 3,
+        "Gather": 4,
+        "Slice": 4,
+        "Unsqueeze": 4,
+        "Reshape": 1,
+        "Sub": 1,
+        "LogSoftmax": 2,
+        "Softmax": 1
+      },
+      "initializers": 89,
+      "initializer_element_types": {
+        "1": 89
+      }
+    },
+    {
+      "offset": 36051019,
+      "length_prefix_offset": 36051015,
+      "bytes": 369429,
+      "sha256": "abf004cdb3519ae41397798d4211f9de0c7b3d589f01e67a49a3aabdaafc1118",
+      "ir_version": 8,
+      "producer": "pytorch",
+      "producer_version": "2.10.0",
+      "opsets": [
+        {
+          "version": 17
+        }
+      ],
+      "graph_name": "main_graph",
+      "inputs": [
+        {
+          "name": "features",
+          "element_type_id": 7,
+          "shape": [
+            1,
+            384,
+            9
+          ]
+        },
+        {
+          "name": "pad_mask",
+          "element_type_id": 9,
+          "shape": [
+            1,
+            384
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "element_type_id": 1,
+          "shape": [
+            1,
+            384
+          ]
+        }
+      ],
+      "nodes": 475,
+      "operators": {
+        "Cast": 43,
+        "Constant": 136,
+        "Gather": 30,
+        "Add": 42,
+        "Where": 5,
+        "LayerNormalization": 9,
+        "Transpose": 32,
+        "MatMul": 21,
+        "Mod": 4,
+        "Shape": 8,
+        "Reshape": 56,
+        "Slice": 12,
+        "Concat": 4,
+        "Unsqueeze": 4,
+        "Squeeze": 5,
+        "ConstantOfShape": 4,
+        "Mul": 20,
+        "Equal": 4,
+        "Expand": 4,
+        "Sqrt": 12,
+        "Div": 8,
+        "Softmax": 4,
+        "Gemm": 4,
+        "Erf": 4
+      },
+      "initializers": 62,
+      "initializer_element_types": {
+        "10": 34,
+        "1": 28
+      }
+    }
+  ]
+}

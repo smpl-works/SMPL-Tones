@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-11",
+  "meaning": "Report identities preserve provenance, not original proprietary payloads.",
+  "reports": [
+    {
+      "case": "musehub-installer",
+      "original_report_filename": "findings.json",
+      "original_report_sha256": "2b15545d6d667ec0078c8be71865240a20fb7e8e939b019b395b1d9e11bdc62e",
+      "original_report_bytes": 9177,
+      "normalized_report": "dossiers/musehub-installer.json"
+    },
+    {
+      "case": "audioscore-demo",
+      "original_report_filename": "findings.json",
+      "original_report_sha256": "db3d897b85815ea5cf1c7fe6422852ad767ae57d787dceef0639564104fa2ecf",
+      "original_report_bytes": 13366,
+      "normalized_report": "dossiers/audioscore-demo.json"
+    },
+    {
+      "case": "anthemscore",
+      "original_report_filename": "findings.json",
+      "original_report_sha256": "801f194576cdc5945475814a32cd01f7b4463ab9abc1d66363cb10df95647085",
+      "original_report_bytes": 13758,
+      "normalized_report": "dossiers/anthemscore.json"
+    },
+    {
+      "case": "klangio-studio",
+      "original_report_filename": "findings.json",
+      "original_report_sha256": "986e5337aa5c279332edd029688a90627e11b9976a92d227daba91364ac68939",
+      "original_report_bytes": 13736,
+      "normalized_report": "dossiers/klangio-studio.json"
+    },
+    {
+      "case": "github-review",
+      "original_report_filename": "findings.json",
+      "original_report_sha256": "4018c906438f03a6a0a97e4a196b56aced8bd0f37d98386047fbfd5ee8874e4b",
+      "original_report_bytes": 41137,
+      "normalized_report": "dossiers/github-review.json"
+    }
+  ]
+}

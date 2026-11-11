@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-11",
+  "cases": {
+    "musehub-installer": {
+      "bytes": 36818352,
+      "sha256": "d9eea2ae7c8c7babc0c98a3d3b3591e2295eec02e362791836e7fe2d911caee2",
+      "file_description": "MuseHub Installer",
+      "product_name": "MuseHub Installer",
+      "version": "3.6.0.2400",
+      "original_filename": "MuseHub.Installer.exe",
+      "authenticode": {
+        "status": "Valid (Signature verified)",
+        "signer": "MUSECY SM LTD",
+        "observation_tool": "PowerShell Get-AuthenticodeSignature"
+      }
+    },
+    "audioscore-demo": {
+      "bytes": 16972520,
+      "sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e",
+      "publisher": "Neuratron Limited",
+      "authenticode": "Valid signature, observed with PowerShell Get-AuthenticodeSignature",
+      "installer_version": "9.0.0",
+      "installer_title": "Neuratron AudioScore Ultimate 2020 Demo",
+      "installer_architecture": "x86",
+      "requires_administrator": "Declared in the outer PE manifest"
+    },
+    "anthemscore": {
+      "installer_bytes": 33189600,
+      "installer_sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9",
+      "installer_signature": "Valid, Lunaverus LLC",
+      "installer_framework_version": "4.8.1.0 (PE fixed-version data; not the AnthemScore application version)",
+      "bootstrap_config_version": "1.0.5",
+      "repository_package_version": "6.3.100",
+      "application_file_version": "6.3.0.0",
+      "application_product": "AnthemScore",
+      "application_bytes": 37151008,
+      "application_sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716",
+      "application_signature": "Valid, Lunaverus LLC"
+    },
+    "klangio-studio": {
+      "application_title": "Songbook - Transcription Studio",
+      "frontend_asset_url": "https://studio.klang.io/assets/index-DIr4Mtaw.js",
+      "frontend_sha256": "7e641e9db38279872fa665dd85c8897fd33f8cec5916b86ad290d2465c5b8142",
+      "frontend_bytes": 4450311,
+      "public_asset_last_modified": "2026-11-09T19:44:01Z",
+      "declared_backend": "https://ai2notes.klang.io"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "requested_url": "https://studio.klang.io/en/",
+  "browser": "Existing user Chrome tab, selected by exact matching URL",
+  "page_title": "Songbook - Transcription Studio",
+  "visible_new_transcription_inputs": [
+    "Audio-file drop/choose input",
+    "MP3, WAV, MP4, MIDI, FLAC and more displayed",
+    "YouTube, Instagram or TikTok link",
+    "Record your own piece"
+  ],
+  "actions": [
+    "Opened New Transcription dialog",
+    "Read interface and asset inventory",
+    "Closed dialog and verified Songbook page restored"
+  ],
+  "asset_observed": "https://studio.klang.io/assets/index-DIr4Mtaw.js",
+  "observation_tool": "Computer-use browser extension accessibility tree and screenshot",
+  "uploads": 0,
+  "transcriptions_started": 0,
+  "billing_changes": 0,
+  "live_rea_cdp_capture": false,
+  "cdp_limitation": "No existing Chrome remote-debugging port or pipe was observed. No browser restart or debugging configuration change was made."
+}

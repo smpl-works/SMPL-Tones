@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-11",
+  "decisions": [
+    {
+      "id": "D01",
+      "subject": "Name and destination",
+      "decision": "SMPL Tones; public smpl-works/SMPL-Tones repository; documentation and roadmap issues, no Project board."
+    },
+    {
+      "id": "D02",
+      "subject": "Current deliverable",
+      "decision": "Research dossier and future development specification only. No working application or installer is claimed."
+    },
+    {
+      "id": "D03",
+      "subject": "Platform",
+      "decision": "Windows 11 x64; full native desktop editor; no initial Android or VST3 product."
+    },
+    {
+      "id": "D04",
+      "subject": "Self-sufficiency",
+      "decision": "One complete offline installer; no separately installed music app, Python, account, first-use download or external AI."
+    },
+    {
+      "id": "D05",
+      "subject": "Editing",
+      "decision": "Integrate a separately branded stable MuseScore-derived editor, rather than opening another application."
+    },
+    {
+      "id": "D06",
+      "subject": "Stable base",
+      "decision": "MuseScore v4.7.6, commit 96480d58445e3b24b230a3fe7d4725d639aa2eb3; the previously reviewed main branch was unstable 5.0."
+    },
+    {
+      "id": "D07",
+      "subject": "Application license",
+      "decision": "GPL-3.0-only application direction. All original dossier material is published under the same license; references retain their own terms."
+    },
+    {
+      "id": "D08",
+      "subject": "Model policy",
+      "decision": "Required bundled model terms must permit commercial use. Attribution and redistribution obligations still apply."
+    },
+    {
+      "id": "D09",
+      "subject": "MuScriptor decision change",
+      "decision": "Earlier leading workflow candidate; now excluded from the required bundle because official weights are CC BY-NC 4.0. NeuralNote v2 uses that same model family."
+    },
+    {
+      "id": "D10",
+      "subject": "Default engine",
+      "decision": "YourMT3+ YPTF+Multi (PS) selected subject to provenance, licensing and native-export feasibility gates. Original MT3 checkpoint licensing remains distinct."
+    },
+    {
+      "id": "D11",
+      "subject": "Feature scope",
+      "decision": "Complete modern music workflow, not every historical format or research/model option."
+    },
+    {
+      "id": "D12",
+      "subject": "Speed",
+      "decision": "Balanced default; fast draft and slower detailed processing. Resource and speed budgets are unmeasured engineering targets."
+    },
+    {
+      "id": "D13",
+      "subject": "Reprocessing",
+      "decision": "Keep raw recognition separate from manual score edits; retranscription produces reviewable alternatives."
+    },
+    {
+      "id": "D14",
+      "subject": "Preservation",
+      "decision": "Do not delete local investigation folders automatically. Verify published archive before the user considers removing them."
+    }
+  ]
+}
