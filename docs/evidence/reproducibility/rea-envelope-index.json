@@ -1,0 +1,911 @@
+{
+  "scope": "Selected identity/provider/operation/coverage fields from original portable REA outputs; not full replayable Evidence records.",
+  "records": [
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_output_filename": "inspect-artifact.json",
+      "original_output_sha256": "aeb9ce3b8ace9bc3b12c5fc82cc55d167819cf90e5acaef13f06bb7cecd62e8a",
+      "evidence_id": "ev_8f42f3c2657ef00e7bd694afefa9565b70183668e1805a5d25f2112ee0773f8f",
+      "subject": {
+        "name": "MuseScore_Studio_Installer_via_MuseHub.exe",
+        "digest": {
+          "sha256": "d9eea2ae7c8c7babc0c98a3d3b3591e2295eec02e362791836e7fe2d911caee2"
+        },
+        "local_path": "MuseScore_Studio_Installer_via_MuseHub.exe",
+        "format": "pe",
+        "architecture": null
+      },
+      "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+      },
+      "operation": "inspect_artifact",
+      "parameters": {
+        "integrity_policy": "fail",
+        "input_path": "MuseScore_Studio_Installer_via_MuseHub.exe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "inspection_id",
+        "subject",
+        "substeps",
+        "observations",
+        "hypotheses",
+        "contradictions",
+        "unexplored_branches",
+        "next_probes",
+        "coverage",
+        "evidence_links",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete-within-substeps",
+        "substeps_completed": 1,
+        "observations_retained": 1,
+        "observations_omitted": 0,
+        "hypotheses_retained": 1,
+        "hypotheses_omitted": 0,
+        "unexplored_branches_retained": 2,
+        "unexplored_branches_omitted": 0,
+        "next_probes_retained": 2,
+        "next_probes_omitted": 0
+      },
+      "limitations": [
+        "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+        "Inventory covers root bytes only; child container entries were not examined."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_output_filename": "inspect-managed-artifact.json",
+      "original_output_sha256": "d91b12e5e985e01abfdb2dd9c25b980a5cfb437625d1784e61e761aca22d6ab8",
+      "evidence_id": "ev_cedc65707190908707d309cb9562ab4958b5def19827b15fef6f31aaea607af4",
+      "subject": {
+        "name": "MuseScore_Studio_Installer_via_MuseHub.exe",
+        "digest": {
+          "sha256": "d9eea2ae7c8c7babc0c98a3d3b3591e2295eec02e362791836e7fe2d911caee2"
+        },
+        "local_path": "MuseScore_Studio_Installer_via_MuseHub.exe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_artifact",
+      "parameters": {
+        "input_path": "MuseScore_Studio_Installer_via_MuseHub.exe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "pe",
+        "classification",
+        "metadata",
+        "module",
+        "assembly",
+        "target_frameworks",
+        "references",
+        "resources",
+        "attributes",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "unavailable",
+        "issues": []
+      },
+      "limitations": [
+        "The PE has no CLI data directory; managed metadata and CIL are unavailable."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_output_filename": "inspect-pe-resources.json",
+      "original_output_sha256": "f0e473e0dc4807e7abc29fe53fc5ab710ca9564cff752b7169193e0df1846f73",
+      "evidence_id": "ev_9464d64c9563d989f95c31d5fa173d89659e72cffd8c45a05bdf9ecc69b64951",
+      "subject": {
+        "name": "MuseScore_Studio_Installer_via_MuseHub.exe",
+        "digest": {
+          "sha256": "d9eea2ae7c8c7babc0c98a3d3b3591e2295eec02e362791836e7fe2d911caee2"
+        },
+        "local_path": "MuseScore_Studio_Installer_via_MuseHub.exe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-pe-resources",
+        "name": "REA PE resource parser",
+        "version": "1"
+      },
+      "operation": "inspect_pe_resources",
+      "parameters": {
+        "path": "MuseScore_Studio_Installer_via_MuseHub.exe",
+        "max_file_bytes": 67108864,
+        "max_entries": 16384
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "format",
+        "machine",
+        "directory",
+        "directories",
+        "resources",
+        "icon_groups",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete",
+        "examined_entries": 28,
+        "resources": 11
+      },
+      "limitations": [
+        "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+        "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+        "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "app-inspect-managed-artifact.json",
+      "original_output_sha256": "a5fed10dfbf14590834676f31907871ddbfd7b7abc024cf0a4eb5ce12076bf9c",
+      "evidence_id": "ev_1eddb48e91a8a7705eff22604896bcac891ac37a23783b6b5da8081a6e853dcf",
+      "subject": {
+        "name": "021.pe",
+        "digest": {
+          "sha256": "b39f97ac262c51527cbbd19b9000c469a7637ca1ab4855fdc5aae00697dcd533"
+        },
+        "local_path": "021.pe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_artifact",
+      "parameters": {
+        "input_path": "021.pe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "pe",
+        "classification",
+        "metadata",
+        "module",
+        "assembly",
+        "target_frameworks",
+        "references",
+        "resources",
+        "attributes",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "unavailable",
+        "issues": []
+      },
+      "limitations": [
+        "The PE has no CLI data directory; managed metadata and CIL are unavailable."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "app-inspect-pe-resources.json",
+      "original_output_sha256": "9cf39bc12791fe2616d4bf0b69a7761ca907188cbcc4315598d2e569781a7430",
+      "evidence_id": "ev_96fddb439c91a354a33c5f0943d71278046440ce30d8591cb4e13689d9777cab",
+      "subject": {
+        "name": "021.pe",
+        "digest": {
+          "sha256": "b39f97ac262c51527cbbd19b9000c469a7637ca1ab4855fdc5aae00697dcd533"
+        },
+        "local_path": "021.pe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-pe-resources",
+        "name": "REA PE resource parser",
+        "version": "1"
+      },
+      "operation": "inspect_pe_resources",
+      "parameters": {
+        "path": "021.pe",
+        "max_file_bytes": 67108864,
+        "max_entries": 16384
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "format",
+        "machine",
+        "directory",
+        "directories",
+        "resources",
+        "icon_groups",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete",
+        "examined_entries": 1417,
+        "resources": 702
+      },
+      "limitations": [
+        "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+        "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+        "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "helper-29-inspect-managed-members.json",
+      "original_output_sha256": "2713168300d2d409489b658652c1c762b8b94ddec9ae58f548623dbcc16e31c5",
+      "evidence_id": "ev_c9b58fb566c3d19f3c2f36011c15f2ef14a766c985da5d70af636d0fc3d682f5",
+      "subject": {
+        "name": "029.pe",
+        "digest": {
+          "sha256": "ea5476a86a06e6bdfac319caea04250ba32259a2ed9556c0bda0fd660eadb037"
+        },
+        "local_path": "029.pe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_members",
+      "parameters": {
+        "input_path": "029.pe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "signature_resolution",
+        "artifact",
+        "module",
+        "assembly",
+        "metadata",
+        "identity_scope",
+        "types",
+        "nesting_read",
+        "exported_types",
+        "fields",
+        "methods",
+        "member_refs",
+        "call_edges",
+        "field_accesses",
+        "user_strings",
+        "selection",
+        "method_rows",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "partial",
+        "issues": []
+      },
+      "limitations": [
+        "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+        "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+        "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+        "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens.",
+        "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "helper-29-inspect-managed-native-boundaries.json",
+      "original_output_sha256": "4a857206c6a22f5effcaf5c0247bea385e1041cf9677beeaf6ccdf8d201f1b90",
+      "evidence_id": "ev_8fec990fc375f991835682ee87d40b398674e8003a459ce83bed3feb088f53af",
+      "subject": {
+        "name": "029.pe",
+        "digest": {
+          "sha256": "ea5476a86a06e6bdfac319caea04250ba32259a2ed9556c0bda0fd660eadb037"
+        },
+        "local_path": "029.pe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_native_boundaries",
+      "parameters": {
+        "input_path": "029.pe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "module",
+        "metadata",
+        "identity_scope",
+        "cli_native",
+        "module_refs",
+        "pinvoke_imports",
+        "native_implementations",
+        "summary",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+        "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+        "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "helper-29-managed.json",
+      "original_output_sha256": "e4779cb7297d11f2122cadd852b6a5aa53fd6cd824c91c690ea4676ba95eb304",
+      "evidence_id": "ev_60d3126e8fdf573e3bd4a1cb776c0b892e2b2a8caeb6652134d052d5af136c26",
+      "subject": {
+        "name": "029.pe",
+        "digest": {
+          "sha256": "ea5476a86a06e6bdfac319caea04250ba32259a2ed9556c0bda0fd660eadb037"
+        },
+        "local_path": "029.pe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_artifact",
+      "parameters": {
+        "input_path": "029.pe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "pe",
+        "classification",
+        "metadata",
+        "module",
+        "assembly",
+        "target_frameworks",
+        "references",
+        "resources",
+        "attributes",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "helper-30-inspect-managed-members.json",
+      "original_output_sha256": "4e1990bfe3ed8aab926a2455f13bb74c9ee694f5885f6c223dfcfdb8fe7daa1d",
+      "evidence_id": "ev_bc195346e11baf1bb2c6829fe31ee7257623cd82e578e85ffd5d23075e8ec6eb",
+      "subject": {
+        "name": "030.pe",
+        "digest": {
+          "sha256": "f217c3fcdb2db87f2c60428c223b87e483a9e84fd3e72cd69abdedf61dce024c"
+        },
+        "local_path": "030.pe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_members",
+      "parameters": {
+        "input_path": "030.pe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "signature_resolution",
+        "artifact",
+        "module",
+        "assembly",
+        "metadata",
+        "identity_scope",
+        "types",
+        "nesting_read",
+        "exported_types",
+        "fields",
+        "methods",
+        "member_refs",
+        "call_edges",
+        "field_accesses",
+        "user_strings",
+        "selection",
+        "method_rows",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+        "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+        "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+        "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens.",
+        "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "helper-30-managed.json",
+      "original_output_sha256": "17021999e53a11ffbdf2b0e565a25320476a93027cb6cef1da43778bbaad3636",
+      "evidence_id": "ev_d4cba294f6ede0b18d4051d5489cfc952e59e4c4337f437a22c0460cb32decf7",
+      "subject": {
+        "name": "030.pe",
+        "digest": {
+          "sha256": "f217c3fcdb2db87f2c60428c223b87e483a9e84fd3e72cd69abdedf61dce024c"
+        },
+        "local_path": "030.pe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_artifact",
+      "parameters": {
+        "input_path": "030.pe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "pe",
+        "classification",
+        "metadata",
+        "module",
+        "assembly",
+        "target_frameworks",
+        "references",
+        "resources",
+        "attributes",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "inspect-artifact.json",
+      "original_output_sha256": "2e7464dba25a8ece31260cc8d8b9553a85885ba5f4582534df3a353908401cf7",
+      "evidence_id": "ev_247596ce90b2c428377f9792830e3506ab82c4dc714ec2d8f2648a8a61d45289",
+      "subject": {
+        "name": "AudioScoreUltimateDemo.EXE",
+        "digest": {
+          "sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e"
+        },
+        "local_path": "AudioScoreUltimateDemo.EXE",
+        "format": "pe",
+        "architecture": null
+      },
+      "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+      },
+      "operation": "inspect_artifact",
+      "parameters": {
+        "integrity_policy": "fail",
+        "input_path": "AudioScoreUltimateDemo.EXE"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "inspection_id",
+        "subject",
+        "substeps",
+        "observations",
+        "hypotheses",
+        "contradictions",
+        "unexplored_branches",
+        "next_probes",
+        "coverage",
+        "evidence_links",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete-within-substeps",
+        "substeps_completed": 1,
+        "observations_retained": 1,
+        "observations_omitted": 0,
+        "hypotheses_retained": 1,
+        "hypotheses_omitted": 0,
+        "unexplored_branches_retained": 2,
+        "unexplored_branches_omitted": 0,
+        "next_probes_retained": 2,
+        "next_probes_omitted": 0
+      },
+      "limitations": [
+        "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+        "Inventory covers root bytes only; child container entries were not examined."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "inspect-managed-artifact.json",
+      "original_output_sha256": "0bfc7e154312515ee7332f146e50d6bec9b7a0aa30120e36635d7c8b64f2a75b",
+      "evidence_id": "ev_ecf5c729dfe4f279a994773eb1d0989f49fe637729a8b6e983c9fbc94ca04af5",
+      "subject": {
+        "name": "AudioScoreUltimateDemo.EXE",
+        "digest": {
+          "sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e"
+        },
+        "local_path": "AudioScoreUltimateDemo.EXE",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_artifact",
+      "parameters": {
+        "input_path": "AudioScoreUltimateDemo.EXE"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "pe",
+        "classification",
+        "metadata",
+        "module",
+        "assembly",
+        "target_frameworks",
+        "references",
+        "resources",
+        "attributes",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "unavailable",
+        "issues": []
+      },
+      "limitations": [
+        "The PE has no CLI data directory; managed metadata and CIL are unavailable."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_output_filename": "inspect-pe-resources.json",
+      "original_output_sha256": "b7a1873546d5a3a0553e375f9da09294ab1de035118abf0f75c5eab7cab5150a",
+      "evidence_id": "ev_7b899945e0e9b2cb63bcefb0101712406358b0f75fdcf47004559dd8ea7952f0",
+      "subject": {
+        "name": "AudioScoreUltimateDemo.EXE",
+        "digest": {
+          "sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e"
+        },
+        "local_path": "AudioScoreUltimateDemo.EXE",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-pe-resources",
+        "name": "REA PE resource parser",
+        "version": "1"
+      },
+      "operation": "inspect_pe_resources",
+      "parameters": {
+        "path": "AudioScoreUltimateDemo.EXE",
+        "max_file_bytes": 67108864,
+        "max_entries": 16384
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "format",
+        "machine",
+        "directory",
+        "directories",
+        "resources",
+        "icon_groups",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete",
+        "examined_entries": 15,
+        "resources": 5
+      },
+      "limitations": [
+        "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+        "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+        "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_output_filename": "app-inspect-managed-artifact.json",
+      "original_output_sha256": "87a73b5d706b3823b6b6ce1dd329a1184e350b20dded81018d1137a5e6996ce1",
+      "evidence_id": "ev_f621c32686f371333241a7311b7fcca54ce2d1f8a41fdde649a5f9a0f6fc46aa",
+      "subject": {
+        "name": "AnthemScore.exe",
+        "digest": {
+          "sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716"
+        },
+        "local_path": "AnthemScore.exe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_artifact",
+      "parameters": {
+        "input_path": "AnthemScore.exe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "pe",
+        "classification",
+        "metadata",
+        "module",
+        "assembly",
+        "target_frameworks",
+        "references",
+        "resources",
+        "attributes",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "unavailable",
+        "issues": []
+      },
+      "limitations": [
+        "The PE has no CLI data directory; managed metadata and CIL are unavailable."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_output_filename": "app-inspect-pe-resources.json",
+      "original_output_sha256": "9c4a562f06155184c91d4f47cdd2c827d64dfd9badba99df563fe51b8cbfadba",
+      "evidence_id": "ev_b86aec20e4c984e2d5a2758d24b4de62ad2f4c1f9d7ca2b902510a0a05ecea4b",
+      "subject": {
+        "name": "AnthemScore.exe",
+        "digest": {
+          "sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716"
+        },
+        "local_path": "AnthemScore.exe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-pe-resources",
+        "name": "REA PE resource parser",
+        "version": "1"
+      },
+      "operation": "inspect_pe_resources",
+      "parameters": {
+        "path": "AnthemScore.exe",
+        "max_file_bytes": 67108864,
+        "max_entries": 16384
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "format",
+        "machine",
+        "directory",
+        "directories",
+        "resources",
+        "icon_groups",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete",
+        "examined_entries": 12,
+        "resources": 4
+      },
+      "limitations": [
+        "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+        "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+        "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_output_filename": "inspect-artifact.json",
+      "original_output_sha256": "238bf965e154426a34b70ac90e90a2b391bdfdb335dc08bc77a79b1c32c7c387",
+      "evidence_id": "ev_2ae87b2709a2fdd8328e470b28c721e15d88678d2ff9cdb3fed4ade8a454fd63",
+      "subject": {
+        "name": "AnthemScore_installer_windows_x86_64.exe",
+        "digest": {
+          "sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9"
+        },
+        "local_path": "AnthemScore_installer_windows_x86_64.exe",
+        "format": "pe",
+        "architecture": null
+      },
+      "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+      },
+      "operation": "inspect_artifact",
+      "parameters": {
+        "integrity_policy": "fail",
+        "input_path": "AnthemScore_installer_windows_x86_64.exe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "inspection_id",
+        "subject",
+        "substeps",
+        "observations",
+        "hypotheses",
+        "contradictions",
+        "unexplored_branches",
+        "next_probes",
+        "coverage",
+        "evidence_links",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete-within-substeps",
+        "substeps_completed": 1,
+        "observations_retained": 1,
+        "observations_omitted": 0,
+        "hypotheses_retained": 1,
+        "hypotheses_omitted": 0,
+        "unexplored_branches_retained": 2,
+        "unexplored_branches_omitted": 0,
+        "next_probes_retained": 2,
+        "next_probes_omitted": 0
+      },
+      "limitations": [
+        "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+        "Inventory covers root bytes only; child container entries were not examined."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_output_filename": "inspect-managed-artifact.json",
+      "original_output_sha256": "62374e9ca5e7302c062ff825f0e3d3e94b616564df79705116916148409775d9",
+      "evidence_id": "ev_e728ac8f3c6e2b57ef4c992f5cc0accd7ec9c996025264d2a1a694fd5ae4eafa",
+      "subject": {
+        "name": "AnthemScore_installer_windows_x86_64.exe",
+        "digest": {
+          "sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9"
+        },
+        "local_path": "AnthemScore_installer_windows_x86_64.exe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-dotnet-static",
+        "name": "REA managed static analysis provider",
+        "version": "1"
+      },
+      "operation": "inspect_managed_artifact",
+      "parameters": {
+        "input_path": "AnthemScore_installer_windows_x86_64.exe"
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "pe",
+        "classification",
+        "metadata",
+        "module",
+        "assembly",
+        "target_frameworks",
+        "references",
+        "resources",
+        "attributes",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "state": "unavailable",
+        "issues": []
+      },
+      "limitations": [
+        "The PE has no CLI data directory; managed metadata and CIL are unavailable."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_output_filename": "inspect-pe-resources.json",
+      "original_output_sha256": "e0aaaeb86f3ad81072b80958b3504072e7773bebff72ee7d8f27ce0c33ce6eaa",
+      "evidence_id": "ev_77779d38d7a5e8ffe77d393eeaada2a58be0282d346adea51d61664a07dadd70",
+      "subject": {
+        "name": "AnthemScore_installer_windows_x86_64.exe",
+        "digest": {
+          "sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9"
+        },
+        "local_path": "AnthemScore_installer_windows_x86_64.exe",
+        "format": "pe",
+        "architecture": "x86_64"
+      },
+      "provider": {
+        "id": "rea-pe-resources",
+        "name": "REA PE resource parser",
+        "version": "1"
+      },
+      "operation": "inspect_pe_resources",
+      "parameters": {
+        "path": "AnthemScore_installer_windows_x86_64.exe",
+        "max_file_bytes": 67108864,
+        "max_entries": 16384
+      },
+      "analysis_profile": null,
+      "result_sections": [
+        "artifact",
+        "format",
+        "machine",
+        "directory",
+        "directories",
+        "resources",
+        "icon_groups",
+        "coverage",
+        "limitations"
+      ],
+      "coverage": {
+        "status": "complete",
+        "examined_entries": 38,
+        "resources": 22
+      },
+      "limitations": [
+        "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+        "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+        "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+      ],
+      "note": "Selected envelope only. Raw normalized payloads/source/resource contents are not archived here."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "member": ".manifest",
+    "path": ".manifest",
+    "compression_method": 95,
+    "compressed_range": {
+      "offset": 75,
+      "bytes": 4552
+    },
+    "bytes": 9783,
+    "sha256": "e452a15bd70a768a8fb61a8c3455ca2372c93a27dc39371d69619a53ac1e1eed",
+    "crc32_verified": true,
+    "extraction_tool": "Python stdlib ZIP header + XZ decoder"
+  },
+  {
+    "member": "Assets/Strings/en-US/Localizable.strings",
+    "path": "Localizable.strings",
+    "compression_method": 95,
+    "compressed_range": {
+      "offset": 192068,
+      "bytes": 9068
+    },
+    "bytes": 38879,
+    "sha256": "130941b9a14da403fb2717e0fadb11d70bdfcefcc124828d5074d241bb0a0163",
+    "crc32_verified": true,
+    "extraction_tool": "Python stdlib ZIP header + XZ decoder",
+    "package_manifest_sha256_verified": true
+  },
+  {
+    "member": "MuseHub.exe",
+    "path": "MuseHub.exe",
+    "compression_method": 95,
+    "compressed_range": {
+      "offset": 14477907,
+      "bytes": 13583820
+    },
+    "bytes": 58918320,
+    "sha256": "a41f5773e9b9bb0127b3486e2ae01b2a4685f0c1ee8d405130584e6c6eafac5e",
+    "crc32_verified": true,
+    "extraction_tool": "Python stdlib ZIP header + XZ decoder",
+    "package_manifest_sha256_verified": true
+  },
+  {
+    "member": "MuseHub.Updater.exe",
+    "path": "MuseHub.Updater.exe",
+    "compression_method": 95,
+    "compressed_range": {
+      "offset": 28764130,
+      "bytes": 2837136
+    },
+    "bytes": 8670128,
+    "sha256": "63e4d16eb6de91d9542e42faeb704682930cbb9c3367929b839a3c642b73c061",
+    "crc32_verified": true,
+    "extraction_tool": "Python stdlib ZIP header + XZ decoder",
+    "package_manifest_sha256_verified": true
+  },
+  {
+    "member": "MuseAuthService.exe",
+    "path": "MuseAuthService.exe",
+    "compression_method": 95,
+    "compressed_range": {
+      "offset": 14215130,
+      "bytes": 262684
+    },
+    "bytes": 733104,
+    "sha256": "1865b8e962b32608c6f8c16e5016c7812a1b1933b9718a39a29696b0dc8ff3ee",
+    "crc32_verified": true,
+    "extraction_tool": "Python stdlib ZIP header + XZ decoder",
+    "package_manifest_sha256_verified": true
+  },
+  {
+    "member": "ServiceCore.dll",
+    "path": "ServiceCore.dll",
+    "compression_method": 95,
+    "compressed_range": {
+      "offset": 31652869,
+      "bytes": 2589188
+    },
+    "bytes": 7025072,
+    "sha256": "5036d33260ea713a395a59beb0813ec3d6888b1532db5da2ced0f40728d85347",
+    "crc32_verified": true,
+    "extraction_tool": "Python stdlib ZIP header + XZ decoder",
+    "package_manifest_sha256_verified": true
+  }
+]

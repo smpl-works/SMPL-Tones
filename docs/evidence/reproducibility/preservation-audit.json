@@ -1,0 +1,35 @@
+{
+  "audit_date": "2026-11-11",
+  "research_knowledge": "Preserved in the dossier, normalized finding ledgers and evidence packet.",
+  "gaps_closed": [
+    "Authored extraction/acquisition/parsing methods preserved as sanitized reference text.",
+    "Exact byte-range, CRC, member, acquisition and JavaScript-slice provenance records preserved.",
+    "A hash inventory identifies every original investigation file without publishing payloads.",
+    "Selected original REA identity and coverage envelopes preserved."
+  ],
+  "local_file_count": 474,
+  "local_bytes": 367671112,
+  "added_metadata_records": 20,
+  "added_authored_method_texts": 14,
+  "rea_envelope_records": 18,
+  "original_report_sha256_after_audit": {
+    "musescore-installer-2026-11-11": "2b15545d6d667ec0078c8be71865240a20fb7e8e939b019b395b1d9e11bdc62e",
+    "audioscore-demo-2026-11-11": "db3d897b85815ea5cf1c7fe6422852ad767ae57d787dceef0639564104fa2ecf",
+    "anthemscore-installer-2026-11-11": "801f194576cdc5945475814a32cd01f7b4463ab9abc1d66363cb10df95647085",
+    "klangio-studio-2026-11-11": "986e5337aa5c279332edd029688a90627e11b9976a92d227daba91364ac68939",
+    "github-repos-2026-11-11": "4018c906438f03a6a0a97e4a196b56aced8bd0f37d98386047fbfd5ee8874e4b"
+  },
+  "not_reconstructable_from_repository": [
+    "Original/extracted executables, archives and model bytes.",
+    "Exact downloaded Klangio production JavaScript and full derived source slices.",
+    "Complete vendor manuals/resources, full raw REA ledgers and every original output/log."
+  ],
+  "private_backup_if_exact_replay_matters": [
+    "Keep the three original supplied installers in their existing location.",
+    "Keep the exact AnthemScore 6.3.100 meta/content/AS_resources archives, or equivalent expanded payload; the bootstrapper points at a mutable repository.",
+    "Keep the exact Klangio index-DIr4Mtaw.js asset and raw REA bundle; the historical web asset may disappear.",
+    "For a fully lossless archive, retain one private backup of all five original investigation directories, including raw REA JSON/bundles, logs and source snapshots."
+  ],
+  "deletion_policy": "Nothing was deleted or moved. Knowledge-only cleanup is distinct from exact forensic replay; the user decides whether to retain private raw backups.",
+  "repository_clone_note": "Keep SMPL-Tones itself; the original analysis directories are separate. The publication-helper folder is not needed to read or develop from the repository."
+}

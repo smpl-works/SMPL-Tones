@@ -60,6 +60,8 @@ This repository preserves the analytical knowledge from the local investigations
 
 It is not a byte-for-byte backup of the original investigations. Repeating binary inspection requires the original input artifacts. Proprietary installers, extracted binaries/weights, complete manuals, source snapshots and copied production JavaScript are not published. The local investigation directories are not deleted by this publication.
 
+The [preservation audit and reproducibility supplement](docs/evidence/reproducibility/README.md) additionally retain authored method reference texts, exact acquisition/extraction provenance and a hash inventory of the original files, with explicit guidance on what needs a private backup for exact forensic replay.
+
 ## License and contribution status
 
 Original repository material is licensed under **GPL-3.0-only**, matching the proposed application direction; see [LICENSE](LICENSE). Referenced upstream projects and models retain their own licenses. No third-party application source or model weights are bundled in this documentation release.

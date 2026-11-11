@@ -1,0 +1,62 @@
+[
+  {
+    "requested_url": "https://lunaverus.com/static/AnthemScore_repository_windows_x86_64/lunaverus.anthemscore.windows_x86_64/6.3.100meta.7z",
+    "resolved_url": "https://sfo2.digitaloceanspaces.com/lunaverus/static/AnthemScore_repository_windows_x86_64/lunaverus.anthemscore.windows_x86_64/6.3.100meta.7z",
+    "status": 200,
+    "headers": {
+      "content-length": "15009",
+      "accept-ranges": "bytes",
+      "last-modified": "Wed, 30 Sep 2026 18:55:17 GMT",
+      "etag": "\"64d808d304cec1d90922166156859258\"",
+      "content-type": "application/x-7z-compressed",
+      "date": "Wed, 11 Nov 2026 12:29:17 GMT"
+    },
+    "retrieved_utc": "2026-11-11T12:29:17.607686+00:00",
+    "file": "6.3.100meta.7z",
+    "bytes": 15009,
+    "sha1": "bb867cb793fa401f131528c0eed9c205069363d3",
+    "sha256": "591e39dfb4b6e3a529ccd6d98a66be31d63e0c5f6053aed05c579e0bba221671",
+    "repository_sha1_verified": true,
+    "sidecar_status": 403
+  },
+  {
+    "requested_url": "https://lunaverus.com/static/AnthemScore_repository_windows_x86_64/lunaverus.anthemscore.windows_x86_64/6.3.100content.7z",
+    "resolved_url": "https://sfo2.digitaloceanspaces.com/lunaverus/static/AnthemScore_repository_windows_x86_64/lunaverus.anthemscore.windows_x86_64/6.3.100content.7z",
+    "status": 200,
+    "headers": {
+      "content-length": "47438827",
+      "accept-ranges": "bytes",
+      "last-modified": "Wed, 30 Sep 2026 18:55:16 GMT",
+      "etag": "\"080a4612a578ea7252d2215484032450-4\"",
+      "content-type": "application/x-7z-compressed",
+      "date": "Wed, 11 Nov 2026 12:29:17 GMT"
+    },
+    "retrieved_utc": "2026-11-11T12:29:17.614375+00:00",
+    "file": "6.3.100content.7z",
+    "bytes": 47438827,
+    "sha1": "7ec2823e87c22c000330fcd326883ae22644c7a6",
+    "sha256": "f3754e539cc04d6f2e88a4a6034eebaaded97df437150cc26b0e4e00c0b083c0",
+    "sidecar_sha1": "7ec2823e87c22c000330fcd326883ae22644c7a6",
+    "sidecar_sha1_verified": true
+  },
+  {
+    "requested_url": "https://lunaverus.com/static/AnthemScore_repository_windows_x86_64/lunaverus.anthemscore.windows_x86_64/6.3.100AS_resources.7z",
+    "resolved_url": "https://sfo2.digitaloceanspaces.com/lunaverus/static/AnthemScore_repository_windows_x86_64/lunaverus.anthemscore.windows_x86_64/6.3.100AS_resources.7z",
+    "status": 200,
+    "headers": {
+      "content-length": "13819215",
+      "accept-ranges": "bytes",
+      "last-modified": "Wed, 30 Sep 2026 18:54:54 GMT",
+      "etag": "\"5717fef841aa3df5cf954e8f7f603f59\"",
+      "content-type": "application/x-7z-compressed",
+      "date": "Wed, 11 Nov 2026 12:29:17 GMT"
+    },
+    "retrieved_utc": "2026-11-11T12:29:17.435694+00:00",
+    "file": "6.3.100AS_resources.7z",
+    "bytes": 13819215,
+    "sha1": "16474f1878e4b68750780c12ff6f3e6aea57ad0f",
+    "sha256": "c2193ad62518d1ff1ea291982ec7071f0b3d5a8e62d260701cf81a636b82a021",
+    "sidecar_sha1": "16474f1878e4b68750780c12ff6f3e6aea57ad0f",
+    "sidecar_sha1_verified": true
+  }
+]

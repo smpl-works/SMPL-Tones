@@ -1,0 +1,75 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+// Parse delivered JavaScript as data and identify focused transcription code.
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const { parse } = require('@babel/parser');
+const root = __dirname;
+const file = path.join(root, 'frontend', 'index-DIr4Mtaw.js');
+const source = fs.readFileSync(file, 'utf8');
+const sha256 = s => crypto.createHash('sha256').update(s).digest('hex');
+const ast = parse(source, { sourceType: 'module' });
+const declarations = [];
+for (const node of ast.program.body) {
+  if (node.type === 'VariableDeclaration') {
+    for (const item of node.declarations) {
+      declarations.push({ name: item.id.name || 'pattern', type: item.type,
+        start: item.start, end: item.end, prefix: `${node.kind} `, suffix: ';' });
+    }
+  } else if (['FunctionDeclaration', 'ClassDeclaration'].includes(node.type)) {
+    declarations.push({ name: node.id?.name || 'anonymous', type: node.type,
+      start: node.start, end: node.end, prefix: '', suffix: '' });
+  } else if (node.type === 'ExpressionStatement') {
+    const body=source.slice(node.start,node.end);
+    for(const symbol of ['Re','Xt']){
+      if(body.includes(`${symbol}||(${symbol}={})`)){
+        declarations.push({name:symbol+'_initialization',type:node.type,start:node.start,end:node.end,prefix:'',suffix:''});
+      }
+    }
+  }
+}
+const services = declarations.filter(n => source.slice(n.start,n.end).includes('/api/Transcription/'));
+const names = services.map(n => n.name);
+const refs = new RegExp(`\\b(?:${names.join('|')})\\.transcription[A-Za-z0-9_]*`, 'g');
+const matches = declarations.flatMap(n => {
+  const text = source.slice(n.start,n.end);
+  const calls = [...new Set(text.match(refs) || [])];
+  if (!calls.length && !services.includes(n)) return [];
+  return [{...n, code_units: n.end-n.start, calls,
+    raw_sha256: sha256(text),
+    utf8_byte_start: Buffer.byteLength(source.slice(0,n.start),'utf8'),
+    utf8_byte_end: Buffer.byteLength(source.slice(0,n.end),'utf8')}];
+});
+fs.writeFileSync(path.join(root,'workflow-declaration-inventory.json'),JSON.stringify({
+  original_file:file,original_sha256:sha256(fs.readFileSync(file)),
+  parser:'@babel/parser, inert parse only',services:names,declarations:matches
+},null,2));
+fs.writeFileSync(path.join(root,'top-level-declaration-index.json'),JSON.stringify(declarations,null,2));
+const wanted = new Set(['qn','$r','At','Dt','ZFe','c$e','d$e','yme','aDt','$ze','Uze','Gze','qze','Wze','Yze','Kze','Xze','Re','Wt','Xt','Re_initialization','Xt_initialization','$M','w$','rh']);
+const selected = declarations.filter(n=>wanted.has(n.name));
+const folder = path.join(root,'selected-workflow');
+fs.mkdirSync(folder,{recursive:true});
+const provenance=[];
+const combined=[];
+for(const item of selected){
+  const original=source.slice(item.start,item.end);
+  const code=item.prefix+original+item.suffix+'\n';
+  const filename=item.name.replaceAll('$','dollar')+'.js';
+  fs.writeFileSync(path.join(folder,filename),code);
+  combined.push(code);
+  provenance.push({...item,file:filename,original_utf8_byte_start:Buffer.byteLength(source.slice(0,item.start),'utf8'),
+    original_utf8_byte_end:Buffer.byteLength(source.slice(0,item.end),'utf8'),raw_sha256:sha256(original),
+    derived_sha256:sha256(code),wrapper_note:item.prefix?'Declaration keyword and semicolon restored around an exact VariableDeclarator slice':'Exact declaration bytes'});
+}
+fs.writeFileSync(path.join(root,'selected-workflow-provenance.json'),JSON.stringify({
+  original_file:file,original_sha256:sha256(fs.readFileSync(file)),selection:'Transcription submission, polling, structured-score editing, exports and supporting configuration only',
+  files:provenance,limitations:['Unselected dependencies and modules remain outside scope. No code was executed.']
+},null,2));
+const analysisFolder=path.join(root,'analysis-input');
+fs.mkdirSync(analysisFolder,{recursive:true});
+fs.writeFileSync(path.join(analysisFolder,'app-workflow.js'),combined.join('\n'));
+console.log(JSON.stringify({service_names:names,selected:provenance.map(n=>({name:n.name,file:n.file,code_units:n.end-n.start})),
+  supporting_code:selected.filter(n=>['ZFe','Re_initialization','Xt_initialization','rh'].includes(n.name)).map(n=>({name:n.name,code:source.slice(n.start,n.end).slice(0,10000)}))},null,2));

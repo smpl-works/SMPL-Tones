@@ -1,0 +1,70 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Bounded static REA inspection of the user-supplied AudioScore package."""
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+import hashlib
+import json
+import re
+import struct
+import subprocess
+import zipfile
+
+ROOT = Path(__file__).resolve().parent
+TARGET = Path(r'<INPUT_INSTALLER>/AudioScoreUltimateDemo.EXE')
+NODE = r'<NODE_EXECUTABLE>'
+REA = r'<REA_CLI_ENTRY>'
+
+
+def inspect(command):
+    result = subprocess.run([NODE, REA, command, str(TARGET), '--format', 'json', '--full-output'],
+                            capture_output=True, text=True, encoding='utf-8', timeout=60)
+    (ROOT / f'{command}.json').write_text(result.stdout, encoding='utf-8')
+    (ROOT / f'{command}.stderr.txt').write_text(result.stderr, encoding='utf-8')
+    value = json.loads(result.stdout)
+    evidence = value.get('data', {})
+    normalized = evidence.get('normalized_result', {})
+    return {'command': command, 'exit_code': result.returncode,
+            'evidence_id': evidence.get('evidence_id'), 'error': value.get('error'),
+            'result_keys': list(normalized), 'classification': normalized.get('classification'),
+            'coverage': normalized.get('coverage'), 'limitations': evidence.get('limitations')}
+
+
+def inventory_bytes():
+    data = TARGET.read_bytes()
+    pe = struct.unpack_from('<I', data, 0x3c)[0]
+    machine, section_count = struct.unpack_from('<HH', data, pe + 4)
+    optional_size = struct.unpack_from('<H', data, pe + 20)[0]
+    sections = []
+    for i in range(section_count):
+        offset = pe + 24 + optional_size + 40 * i
+        name = data[offset:offset + 8].rstrip(b'\x00').decode('ascii', errors='replace')
+        virtual_size, rva, size, raw_offset = struct.unpack_from('<IIII', data, offset + 8)
+        sections.append({'name': name, 'rva': rva, 'virtual_bytes': virtual_size,
+                         'file_offset': raw_offset, 'file_bytes': size})
+    patterns = [b'NullsoftInst', b'Inno Setup', b'InstallShield', b'Wise Installation',
+                b'PK\x03\x04', b'MSCF', b'7z\xbc\xaf\x27\x1c', b'Rar!']
+    signatures = [{'marker': str(p), 'offset': data.find(p)} for p in patterns]
+    selected = []
+    relevant = re.compile(r'audioscore|neuratron|sibelius|musicxml|\.msi|\.cab|\.wav|\.mp3|\.mid|\.nif|installshield|inno setup|nsis|uninstall|setup|extract|transcri|spectr|polyphon|pitch|fft|license', re.I)
+    for encoding, pattern in [('ascii', rb'[\x20-\x7e]{7,}'), ('utf-16le', rb'(?:[\x20-\x7e]\x00){7,}')]:
+        for match in re.finditer(pattern, data):
+            text = match.group().decode(encoding)
+            if relevant.search(text):
+                selected.append({'file_offset': match.start(), 'encoding': encoding, 'text': text})
+    selected.sort(key=lambda x: x['file_offset'])
+    (ROOT / 'package-strings.json').write_text(json.dumps(selected, indent=2), encoding='utf-8')
+    result = {'sha256': hashlib.sha256(data).hexdigest(), 'bytes': len(data), 'machine': hex(machine),
+              'sections': sections, 'archive_markers': signatures, 'is_zip': zipfile.is_zipfile(TARGET),
+              'selected_string_count': len(selected)}
+    (ROOT / 'byte-inventory.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
+    return result
+
+
+if __name__ == '__main__':
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        results = list(pool.map(inspect, ['inspect-managed-artifact', 'inspect-pe-resources', 'inspect-artifact']))
+    (ROOT / 'rea-runs.json').write_text(json.dumps(results, indent=2), encoding='utf-8')
+    print(json.dumps({'rea': results, 'bytes': inventory_bytes()}, indent=2))

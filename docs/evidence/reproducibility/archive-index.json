@@ -1,0 +1,266 @@
+{
+  "audit_date": "2026-11-11",
+  "metadata_records": [
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_filename": "extraction-provenance.json",
+      "original_sha256": "454c5d8af7dbd3335c59be854a986ffb4625b500d828d7f50f6bce7cbb476acd",
+      "archived_record": "metadata/musescore-installer-2026-11-11/extraction-provenance.json",
+      "archived_sha256": "2e1aed1390f3dd43b24755efb0fde6fbba4d00c2eb428a5be84e57059a714f8b"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_filename": "selected-payload-provenance.json",
+      "original_sha256": "9d8ca5004eee8c4fe66c44309642e80d22d0dd1cc1fae5a760269f98fcc2c9e3",
+      "archived_record": "metadata/musescore-installer-2026-11-11/selected-payload-provenance.json",
+      "archived_sha256": "5ad0edc179ef42ceda26af30b5c4e7ab2e2213f081e97a27c6d10851e3d54fae"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_filename": "payload-members.json",
+      "original_sha256": "cb7aeff3bf4713356ddb6e1b738a7e1322e5035437bf16beb7f1462620a75267",
+      "archived_record": "metadata/musescore-installer-2026-11-11/payload-members.json",
+      "archived_sha256": "cf59b1fcac50dea54f94bb60de6eaed5b4f49c36f46995423ab020a8e36e9ee2"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_filename": "wise-streams.json",
+      "original_sha256": "454966fcdebac80df43bff1de502802b676e56e2287c6029baba9d13815eeb95",
+      "archived_record": "metadata/audioscore-demo-2026-11-11/wise-streams.json",
+      "archived_sha256": "2963492b19250b41007d2c402b0f4e0006578f132d882ef71161ed9fd9a52dfa"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_filename": "installer-file-destinations.json",
+      "original_sha256": "70a83e3ed366dd7a6aee3451438956a54af901a4f5672cc8e9fe77b633651748",
+      "archived_record": "metadata/audioscore-demo-2026-11-11/installer-file-destinations.json",
+      "archived_sha256": "a618d793cd03dd2d6cabac6f181d9eb93ce496757da037d97c25c34d7888e88f"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_filename": "byte-inventory.json",
+      "original_sha256": "efe7dc2e8fd57f3d8c9d619536294385c74488cd9e8d1b76f16dcdb86450ed3d",
+      "archived_record": "metadata/audioscore-demo-2026-11-11/byte-inventory.json",
+      "archived_sha256": "5b75517605d17bb5f41be318d808275f03bd9751525c42fb930e3cebb07e5902"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_filename": "embedded-pe-headers.json",
+      "original_sha256": "23a4abd9a8cddf62a6e1541b6ad1a9fb6fdf171f7464357f209180ee43d2750f",
+      "archived_record": "metadata/audioscore-demo-2026-11-11/embedded-pe-headers.json",
+      "archived_sha256": "169f8e24fc642523ac338309d4255f95ca95e051f2afd0f5b8b4cab6c76adcf5"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "bootstrap-provenance.json",
+      "original_sha256": "0a8dfaeb20215b0bba53715187c5180627300ee6a08e35d6029046523d634a2a",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/bootstrap-provenance.json",
+      "archived_sha256": "b557bda9ddecff8eccf0ec2d0f9fe2b1dadf8e44fe2db12c566263516a131aad"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "package-downloads.json",
+      "original_sha256": "061699f1a492d5ea6c4bc6546408f3564bb70dd78950625bd8ad76269ac9da16",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/package-downloads.json",
+      "archived_sha256": "9fed0dd8f7d72927a89dacfc423eb1e8e4636f0032e8c98156080cb2ac4437ba"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "core-members.json",
+      "original_sha256": "aad5dcc0cfc869d01c8969864401cd9f9c3af038b64404db30592c7ae29050f2",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/core-members.json",
+      "archived_sha256": "c7000beb680a31775fbadb938f7a51677349850ea99f3e95ed5f8bfc263a4ac1"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "resources-members.json",
+      "original_sha256": "3da740f007fa0658b2aa8d1c0d0e61d0d4dcaca043f9c76c258f36bcbdd812bc",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/resources-members.json",
+      "archived_sha256": "a97199f31077cf27e479d8095a756a838ed4f3de54d3edbb31e72672bb3088c9"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "metadata-members.json",
+      "original_sha256": "51bec63809a345770e2f7e70d874c5c8d12e00f58786fe0e3ffe3209102ce91f",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/metadata-members.json",
+      "archived_sha256": "94e4c9c318cd3a23fc0c35c7185db03fe0096d35cc050179deec7b9cf2c9d1b4"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "embedded-english-provenance.json",
+      "original_sha256": "8c33537868ee3053dbb667b55177e4c917d5578dd78e745765ce6dfff5e61878",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/embedded-english-provenance.json",
+      "archived_sha256": "b983539d467d5b98afbe9fd38296d017e4313074e7769bdeee54b7da2eb399d5"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "onnx-schema-reference.json",
+      "original_sha256": "ceb9b1e5ca1938f7a6eda1f0901decd7af499a008c27efcebf9982546bf8aee4",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/onnx-schema-reference.json",
+      "archived_sha256": "572f8a56220a88c9fc34c79d5ccdda821dcb0366e9e3ef1313b0abedf1920c32"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "repository-packages.json",
+      "original_sha256": "62a094bc7784f3eecc5e48274ca9103d1abd91d7e1c77a44a7b2b5166fcf0cd2",
+      "archived_record": "metadata/anthemscore-installer-2026-11-11/repository-packages.json",
+      "archived_sha256": "f1557e91dea9cd4514f29286555991bef48fa2dd6caee8b8eeeae5ab9409241f"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "original_filename": "frontend-acquisition.json",
+      "original_sha256": "7da3f48b95d292a1155eb7fb543d86a4a01323d14de0d08b92978e6dc1868a1a",
+      "archived_record": "metadata/klangio-studio-2026-11-11/frontend-acquisition.json",
+      "archived_sha256": "868d80dff69e46708cd741f018e2a677d86fb6a545028e99a7309fa127a7c92c"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "original_filename": "selected-workflow-provenance.json",
+      "original_sha256": "060b790cf615cd759d11460f5bb27abd674f05f995312502041c2b63f14a7f4b",
+      "archived_record": "metadata/klangio-studio-2026-11-11/selected-workflow-provenance.json",
+      "archived_sha256": "5984e16ffcfbc4c098e42f66056c16e16c1c82008d54dbc1c015604e365ad56e"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "original_filename": "additional-source-context.json",
+      "original_sha256": "8f8f6caaa4ef2c23cdbd1e19d36959f667c83e19ada68d2e5684d656ec3bd01b",
+      "archived_record": "metadata/klangio-studio-2026-11-11/additional-source-context.json",
+      "archived_sha256": "8effd71a4b82fbdd04da625f7d79dcf0878e85622cebc7f7d3361f0a93148ae0"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "original_filename": "source-map-acquisition.json",
+      "original_sha256": "c0e7dfb0412c63ab9af0594ce16d55e7feb06774c97db2f26bced74b0b3de10d",
+      "archived_record": "metadata/klangio-studio-2026-11-11/source-map-acquisition.json",
+      "archived_sha256": "edac6f760ac71dbcb8641b55d077af5d45dd3d6840fd2cbaa140a5e42eeb09e3"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "original_filename": "workflow-declaration-inventory.json",
+      "original_sha256": "b20fc376c43af0e7a17c7568d53a5ab20ee5ffb403a5e2218b0dd878c5d7f854",
+      "archived_record": "metadata/klangio-studio-2026-11-11/workflow-declaration-inventory.json",
+      "archived_sha256": "a01294c70a92b7e0b66e8334d431e265417251cc0ad5bc811d2f9b68065a8c97"
+    }
+  ],
+  "authored_method_texts": [
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_filename": "extract_payload.py",
+      "original_sha256": "960c9948d5caa86a26e874d6ffedc7863fb9add2915dfb5a2fe86ec8b07441f0",
+      "archived_method": "methods/musescore-installer-2026-11-11/extract_payload.py.txt",
+      "archived_sha256": "0a8a48af42b6d2f388e75ff63a27a72a166ff4a9af2f21d10fbf29928da7531f",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_filename": "read_selected_payload.py",
+      "original_sha256": "e5b1f52af39d87d88d17529956c112766230ee0bb75170967e2ff1cf5c3150ba",
+      "archived_method": "methods/musescore-installer-2026-11-11/read_selected_payload.py.txt",
+      "archived_sha256": "a9d47683c54ee63cf44c18834e6f50c193a21b735116c968092f29c2a7f2f187",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "original_filename": "run_rea.py",
+      "original_sha256": "48a6b979450a120ed0b581f43b97bd123727a32a15178448293a1079b525dcf1",
+      "archived_method": "methods/musescore-installer-2026-11-11/run_rea.py.txt",
+      "archived_sha256": "d1e5f9eabd8df7a68c36b1c089f3d49733e6dd53fd14e66609633006c9b12a31",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_filename": "decode_wise_streams.py",
+      "original_sha256": "7d0d44f96a9dd998a5fedb677d404dc60cae4ac7d30679bc5f0fe40300aaa3c8",
+      "archived_method": "methods/audioscore-demo-2026-11-11/decode_wise_streams.py.txt",
+      "archived_sha256": "e8bd70fa6de17da8202ea2a8218e414f1b7630742f31c8ce27b24b9942390ac0",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_filename": "inspect_app.py",
+      "original_sha256": "4be149d90f373a209f0ddf509b7e7b0b594792142b3ef914904ab25c13875653",
+      "archived_method": "methods/audioscore-demo-2026-11-11/inspect_app.py.txt",
+      "archived_sha256": "f15de4ec59b688eece5584d2e354b4408280e4cdda67c15e28c2731b72cd24ef",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "original_filename": "inspect_package.py",
+      "original_sha256": "77eee09a0b485a88a018fc99243e3e3682adc65b1fb69dd8674d96777a5e56d4",
+      "archived_method": "methods/audioscore-demo-2026-11-11/inspect_package.py.txt",
+      "archived_sha256": "46ebe2deae0701ee7424d5faffbde5fede9ed5f67af4cc7c1fc8586410b59926",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "download_packages.py",
+      "original_sha256": "371e6c7d0d780784c0cdb170326e724c0379f324b75efc12bc189621b32942f1",
+      "archived_method": "methods/anthemscore-installer-2026-11-11/download_packages.py.txt",
+      "archived_sha256": "39007c10075cc986115743c5ddb0bf9c396649dc205fde23f3d6da71cf05138c",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "extract_packages.py",
+      "original_sha256": "318dcd8071e02f47be8ec527d7b3b668c07ca5fbdf0ee7ece0553b687905007c",
+      "archived_method": "methods/anthemscore-installer-2026-11-11/extract_packages.py.txt",
+      "archived_sha256": "e4a7b5c8b433cab67fc890930eb3b331d99e7bcef7e6d5e6b846085a8a7702a6",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "inspect_app.py",
+      "original_sha256": "4b4f9ad0c066c2703400850cb20ca0182c1fd88bde9b08e51f8d7f61d23a4662",
+      "archived_method": "methods/anthemscore-installer-2026-11-11/inspect_app.py.txt",
+      "archived_sha256": "4d9815e8cde3e048bb18e9490c136236f5849d9f43549cc0f216f65bb3f5550b",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "inspect_embedded_models.py",
+      "original_sha256": "d08d7b09b030ef5ee3cbce1e815da08d326bf950b65f6f1a1d359a158631f00f",
+      "archived_method": "methods/anthemscore-installer-2026-11-11/inspect_embedded_models.py.txt",
+      "archived_sha256": "dafa9d766958ec6d20c33f6ab349d36198523625390b47cd2b3f7a839d489d8f",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "inspect_installer.py",
+      "original_sha256": "0811f3c4e29097bb6c49ef41a31021ae8f8cbe7d3a7711c1adcc6f0b3ef8609a",
+      "archived_method": "methods/anthemscore-installer-2026-11-11/inspect_installer.py.txt",
+      "archived_sha256": "1ee72c51776b202d74b520f300be94b11390a9bc05909a49acc2c49eab21f7f2",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "original_filename": "read_repository.py",
+      "original_sha256": "799d7ed859decbca4163886a18a04886de95c8c5608a7560de518576bcc263d9",
+      "archived_method": "methods/anthemscore-installer-2026-11-11/read_repository.py.txt",
+      "archived_sha256": "e0bd7742074e0c6431e700d12699b5944db74dd15b38025f75e361382f253144",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "original_filename": "acquire_frontend.py",
+      "original_sha256": "bc1b25c3bd84a487d2a929ca5f876c7f9c4a620e1c07648c17c13aff11ba40e4",
+      "archived_method": "methods/klangio-studio-2026-11-11/acquire_frontend.py.txt",
+      "archived_sha256": "9493cbef5c179ed6e6d2130be9ca375c6ddb6d15997d3d0cd19905620c026bdb",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "original_filename": "slice_frontend.cjs",
+      "original_sha256": "b873d354034f5df78d11d50238672aa5990dddf2212a89dae9619eeb52ab771a",
+      "archived_method": "methods/klangio-studio-2026-11-11/slice_frontend.cjs.txt",
+      "archived_sha256": "7a08345d108366b69d393a2865aacc5a19472b0d97eeb8f38ba8483feebdfb2a",
+      "treatment": "Authored analysis method preserved as non-executable reference text, with environment paths replaced. Logic was not re-executed or validated in this audit."
+    }
+  ],
+  "transformations": [
+    "Personal absolute paths replaced by basenames or placeholders.",
+    "Only identity-relevant public HTTP headers retained.",
+    "No target code, extractors or downloads were executed.",
+    "Vendor source/binaries/models/manual contents excluded."
+  ],
+  "coverage": "Additional provenance and method preservation. This is not a lossless backup of all local files."
+}

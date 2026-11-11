@@ -1,0 +1,93 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Decode resource strings and import declarations; never load target code."""
+from pathlib import Path
+import hashlib
+import json
+import re
+import struct
+
+ROOT = Path(__file__).resolve().parent
+PATH = ROOT / 'wise-streams/021.pe'
+data = PATH.read_bytes()
+evidence = json.loads((ROOT / 'app-inspect-pe-resources.json').read_text())['data']
+assert hashlib.sha256(data).hexdigest() == evidence['subject']['digest']['sha256']
+resources = evidence['normalized_result']['resources']
+strings = []
+for resource in resources:
+    if resource['type'].get('id') != 6:
+        continue
+    location = resource['payload']['location']
+    payload = data[location['offset']:location['offset'] + location['bytes']]
+    assert hashlib.sha256(payload).hexdigest() == resource['payload']['sha256']
+    pos = 0
+    for slot in range(16):
+        length = struct.unpack_from('<H', payload, pos)[0]
+        pos += 2
+        text = payload[pos:pos + 2 * length].decode('utf-16le')
+        if text:
+            strings.append({'string_id': (resource['name']['id'] - 1) * 16 + slot,
+                            'language': resource['language'].get('id'),
+                            'file_offset': location['offset'] + pos,
+                            'text': text, 'resource_index': resource['index']})
+        pos += 2 * length
+(ROOT / 'app-resource-strings.json').write_text(json.dumps(strings, indent=2), encoding='utf-8')
+
+pe = struct.unpack_from('<I', data, 60)[0]
+machine, count = struct.unpack_from('<HH', data, pe + 4)
+optional_size = struct.unpack_from('<H', data, pe + 20)[0]
+optional = pe + 24
+magic = struct.unpack_from('<H', data, optional)[0]
+directory = optional + (112 if magic == 0x20b else 96)
+sections = []
+for index in range(count):
+    pos = optional + optional_size + 40 * index
+    name = data[pos:pos + 8].rstrip(b'\x00').decode('ascii')
+    virtual_size, rva, size, offset = struct.unpack_from('<IIII', data, pos + 8)
+    sections.append((name, rva, max(virtual_size, size), offset))
+
+def rva_offset(rva):
+    for name, start, size, offset in sections:
+        if start <= rva < start + size:
+            return offset + rva - start
+    raise ValueError(f'Unmapped RVA {rva:x}')
+
+def cstring(offset):
+    end = data.index(b'\x00', offset)
+    return data[offset:end].decode('ascii', errors='replace')
+
+imports = []
+import_rva, import_size = struct.unpack_from('<II', data, directory + 8)
+offset = rva_offset(import_rva)
+for index in range(256):
+    pos = offset + 20 * index
+    original, timestamp, forwarder, name_rva, first = struct.unpack_from('<IIIII', data, pos)
+    if not any([original, timestamp, forwarder, name_rva, first]):
+        break
+    thunk = rva_offset(original or first)
+    width = 8 if magic == 0x20b else 4
+    functions = []
+    for i in range(65536):
+        entry = int.from_bytes(data[thunk + width * i:thunk + width * (i + 1)], 'little')
+        if not entry:
+            break
+        if entry & (1 << (width * 8 - 1)):
+            functions.append({'ordinal': entry & 0xffff})
+        else:
+            functions.append({'name': cstring(rva_offset(entry) + 2)})
+    imports.append({'dll': cstring(rva_offset(name_rva)), 'functions': functions})
+(ROOT / 'app-imports.json').write_text(json.dumps({'machine': hex(machine), 'imports': imports}, indent=2))
+
+raw = []
+pattern = re.compile(r'hit.?n.?mix|infinity|ripper|musicxml|\.xml|\.nif|\.mid|\.wav|\.mp3|transcri|recogn|polyphon|pitch|harmonic|spectr|fourier|fft|demo|save.*disabl|send.*sibelius', re.I)
+for encoding, regex in [('ascii', rb'[\x20-\x7e]{7,}'), ('utf-16le', rb'(?:[\x20-\x7e]\x00){7,}')]:
+    for match in re.finditer(regex, data):
+        text = match.group().decode(encoding)
+        if pattern.search(text):
+            raw.append({'offset': match.start(), 'encoding': encoding, 'text': text})
+(ROOT / 'app-selected-literals.json').write_text(json.dumps(raw, indent=2), encoding='utf-8')
+print(json.dumps({'resource_string_count':len(strings),'literal_count':len(raw),
+                  'imports':[{'dll': x['dll'], 'function_count':len(x['functions'])} for x in imports],
+                  'selected_strings':[x for x in strings if pattern.search(x['text'])][:75]}, indent=2))

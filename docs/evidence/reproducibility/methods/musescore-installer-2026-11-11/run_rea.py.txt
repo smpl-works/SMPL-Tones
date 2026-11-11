@@ -1,0 +1,40 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Run bounded, execution-free REA inspections and retain complete output."""
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+import json
+import subprocess
+
+ROOT = Path(__file__).resolve().parent
+NODE = r"<NODE_EXECUTABLE>"
+REA = r"<REA_CLI_ENTRY>"
+TARGET = r"<INPUT_INSTALLER>/MuseScore_Studio_Installer_via_MuseHub.exe"
+
+
+def inspect(command):
+    result = subprocess.run(
+        [NODE, REA, command, TARGET, "--format", "json", "--full-output"],
+        capture_output=True, text=True, encoding="utf-8", timeout=60,
+    )
+    (ROOT / f"{command}.json").write_text(result.stdout, encoding="utf-8")
+    (ROOT / f"{command}.stderr.txt").write_text(result.stderr, encoding="utf-8")
+    summary = {"command": command, "exit_code": result.returncode,
+               "stdout_bytes": len(result.stdout), "stderr": result.stderr[:600]}
+    try:
+        value = json.loads(result.stdout)
+        summary["keys"] = list(value)
+        summary["preview"] = json.dumps(value, ensure_ascii=False)[:3500]
+    except ValueError:
+        summary["preview"] = result.stdout[:600]
+    return summary
+
+
+if __name__ == "__main__":
+    commands = ["inspect-managed-artifact", "inspect-pe-resources", "inspect-artifact"]
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        results = list(pool.map(inspect, commands))
+    (ROOT / "rea-runs.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
+    print(json.dumps(results, indent=2, ensure_ascii=False))

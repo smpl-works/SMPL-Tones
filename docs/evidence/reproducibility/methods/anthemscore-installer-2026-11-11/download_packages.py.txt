@@ -1,0 +1,73 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Download declared public package archives and retain URL/hash provenance."""
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
+from pathlib import Path
+import hashlib
+import json
+import time
+import urllib.error
+import urllib.request
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parent
+DOWNLOADS = ROOT / 'packages'
+DOWNLOADS.mkdir(exist_ok=True)
+BASE = 'http<LOCAL_DEPENDENCY>/'
+NAMES = ['6.3.100meta.7z','6.3.100content.7z','6.3.100AS_resources.7z']
+updates = ET.fromstring((ROOT/'repository-Updates.xml').read_bytes())
+expected_meta = next(x for x in updates.findall('PackageUpdate') if x.findtext('Name') == 'lunaverus.anthemscore.windows_x86_64').findtext('SHA1')
+
+
+def download(name):
+    url = BASE + name
+    path = DOWNLOADS / name
+    if path.exists():
+        raise FileExistsError(path)
+    sha1, sha256 = hashlib.sha1(), hashlib.sha256()
+    start = time.monotonic()
+    size = 0
+    with urllib.request.urlopen(url, timeout=30) as response:
+        metadata = {'requested_url':url,'resolved_url':response.url,'status':response.status,
+                    'headers':dict(response.headers),'retrieved_utc':datetime.now(timezone.utc).isoformat()}
+        with (DOWNLOADS/(name+'.part')).open('xb') as output:
+            while True:
+                if time.monotonic()-start > 120:
+                    raise TimeoutError('120 second transfer budget exceeded')
+                block = response.read(1024*1024)
+                if not block:
+                    break
+                size += len(block)
+                if size > 80*1024*1024:
+                    raise ValueError('Archive size budget exceeded')
+                output.write(block)
+                sha1.update(block)
+                sha256.update(block)
+    metadata.update({'file':str(path),'bytes':size,'sha1':sha1.hexdigest(),'sha256':sha256.hexdigest()})
+    if name.endswith('meta.7z'):
+        metadata['repository_sha1_verified'] = sha1.hexdigest() == expected_meta
+        assert metadata['repository_sha1_verified']
+    try:
+        with urllib.request.urlopen(url+'.sha1', timeout=20) as response:
+            checksum = response.read(4096).decode('ascii').strip().split()[0].lower()
+        if len(checksum) == 40:
+            metadata['sidecar_sha1'] = checksum
+            metadata['sidecar_sha1_verified'] = checksum == sha1.hexdigest()
+            assert metadata['sidecar_sha1_verified']
+    except urllib.error.HTTPError as error:
+        metadata['sidecar_status'] = error.code
+    (DOWNLOADS/(name+'.part')).rename(path)
+    (DOWNLOADS/(name+'.provenance.json')).write_text(json.dumps(metadata,indent=2))
+    return metadata
+
+
+if __name__ == '__main__':
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        results = list(pool.map(download,NAMES))
+    (ROOT/'package-downloads.json').write_text(json.dumps(results,indent=2))
+    print(json.dumps([{k:x[k] for k in ['file','bytes','sha256']}
+                      | {k:v for k,v in x.items() if k.endswith('_verified') or k == 'sidecar_status'}
+                      for x in results],indent=2))

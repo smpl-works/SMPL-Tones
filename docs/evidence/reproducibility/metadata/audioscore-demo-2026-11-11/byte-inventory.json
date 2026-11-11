@@ -1,0 +1,64 @@
+{
+  "sha256": "106dd615004840f3fc1a2e9986a733e32eff4c983b35e15b5af120080e69333e",
+  "bytes": 16972520,
+  "machine": "0x14c",
+  "sections": [
+    {
+      "name": ".text",
+      "rva": 4096,
+      "virtual_bytes": 521,
+      "file_offset": 1024,
+      "file_bytes": 1024
+    },
+    {
+      "name": ".rdata",
+      "rva": 8192,
+      "virtual_bytes": 597,
+      "file_offset": 2048,
+      "file_bytes": 1024
+    },
+    {
+      "name": ".rsrc",
+      "rva": 12288,
+      "virtual_bytes": 16965632,
+      "file_offset": 3072,
+      "file_bytes": 16962048
+    }
+  ],
+  "archive_markers": [
+    {
+      "marker": "b'NullsoftInst'",
+      "offset": -1
+    },
+    {
+      "marker": "b'Inno Setup'",
+      "offset": -1
+    },
+    {
+      "marker": "b'InstallShield'",
+      "offset": -1
+    },
+    {
+      "marker": "b'Wise Installation'",
+      "offset": 67239
+    },
+    {
+      "marker": "b'PK\\x03\\x04'",
+      "offset": -1
+    },
+    {
+      "marker": "b'MSCF'",
+      "offset": -1
+    },
+    {
+      "marker": "b\"7z\\xbc\\xaf'\\x1c\"",
+      "offset": -1
+    },
+    {
+      "marker": "b'Rar!'",
+      "offset": -1
+    }
+  ],
+  "is_zip": false,
+  "selected_string_count": 15
+}

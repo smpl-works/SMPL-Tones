@@ -1,0 +1,61 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Read the bootstrapper's QResource config and its declared package index."""
+from pathlib import Path
+from datetime import datetime, timezone
+import hashlib
+import json
+import struct
+import urllib.request
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parent
+TARGET = Path(r'<INPUT_INSTALLER>/AnthemScore_installer_windows_x86_64.exe')
+data = TARGET.read_bytes()
+base = 33172480
+magic, version, tree, content, names = struct.unpack_from('>4sIIII', data, base)
+assert magic == b'qres' and version == 1
+position = base + content
+records = []
+configuration = None
+while position < base + names:
+    length = struct.unpack_from('>I', data, position)[0]
+    start = position + 4
+    payload = data[start:start + length]
+    text = payload.decode('utf-8')
+    if '<Installer>' in text:
+        filename = 'installer-config.xml'
+        configuration = ET.fromstring(text)
+    elif text.startswith('<Updates>'):
+        filename = 'embedded-Updates.xml'
+    elif text.startswith('<!DOCTYPE RCC>'):
+        filename = 'embedded-resources.qrc'
+    else:
+        filename = 'config-internal.ini'
+    (ROOT / filename).write_bytes(payload)
+    records.append({'file':filename,'offset':start,'bytes':length,
+                    'sha256':hashlib.sha256(payload).hexdigest()})
+    position = start + length
+assert position == base + names
+assert configuration is not None
+repository = configuration.findtext('./RemoteRepositories/Repository/Url')
+url = repository.rstrip('/') + '/Updates.xml'
+request = urllib.request.Request(url, headers={'User-Agent':'StaticPackageInspection/1.0'})
+with urllib.request.urlopen(request, timeout=30) as response:
+    payload = response.read(2 * 1024 * 1024 + 1)
+    assert len(payload) <= 2 * 1024 * 1024
+    metadata = {'requested_url':url,'resolved_url':response.url,'status':response.status,
+                'retrieved_utc':datetime.now(timezone.utc).isoformat(),
+                'headers':dict(response.headers),'sha256':hashlib.sha256(payload).hexdigest()}
+(ROOT / 'repository-Updates.xml').write_bytes(payload)
+(ROOT / 'bootstrap-provenance.json').write_text(json.dumps({'input_sha256':hashlib.sha256(data).hexdigest(),
+    'qresource_version':version,'embedded_resources':records,'repository_metadata':metadata},indent=2))
+updates = ET.fromstring(payload)
+packages = []
+for package in updates.findall('PackageUpdate'):
+    packages.append({child.tag:child.text for child in package})
+(ROOT / 'repository-packages.json').write_text(json.dumps(packages,indent=2))
+print(json.dumps({'repository':repository,'installer_config_version':configuration.findtext('Version'),
+                  'packages':packages},indent=2))

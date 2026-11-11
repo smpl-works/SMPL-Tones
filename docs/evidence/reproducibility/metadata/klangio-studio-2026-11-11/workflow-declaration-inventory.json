@@ -1,0 +1,446 @@
+{
+  "original_file": "index-DIr4Mtaw.js",
+  "original_sha256": "7e641e9db38279872fa665dd85c8897fd33f8cec5916b86ad290d2465c5b8142",
+  "parser": "@babel/parser, inert parse only",
+  "services": [
+    "qn"
+  ],
+  "declarations": [
+    {
+      "name": "qn",
+      "type": "ClassDeclaration",
+      "start": 725320,
+      "end": 731695,
+      "prefix": "",
+      "suffix": "",
+      "code_units": 6375,
+      "calls": [],
+      "raw_sha256": "8a77d0ecb34e50531e551bc73545ccba6a0bb8f3ada0c2bbde77748a5ddca8d5",
+      "utf8_byte_start": 725344,
+      "utf8_byte_end": 731719
+    },
+    {
+      "name": "uze",
+      "type": "VariableDeclarator",
+      "start": 755238,
+      "end": 755632,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 394,
+      "calls": [
+        "qn.transcriptionClaimTranscription"
+      ],
+      "raw_sha256": "e3fa0dd5c7a3eedaf06f85f7ad434da955c150badec2aa10398459edbdbc1c4b",
+      "utf8_byte_start": 755262,
+      "utf8_byte_end": 755656
+    },
+    {
+      "name": "$ze",
+      "type": "VariableDeclarator",
+      "start": 805226,
+      "end": 805518,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 292,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionMidi"
+      ],
+      "raw_sha256": "0564ae6b3ce6ea6438e78da26f2ab86fc0a238d8d14a6dcc61fc5545b19ed9a2",
+      "utf8_byte_start": 805298,
+      "utf8_byte_end": 805590
+    },
+    {
+      "name": "Uze",
+      "type": "VariableDeclarator",
+      "start": 805519,
+      "end": 805773,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 254,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionMusicXml"
+      ],
+      "raw_sha256": "a5ee77bbdfa552b18a8b17361a8dbbc50ea009d63eb8383e26c9871a14f78dae",
+      "utf8_byte_start": 805591,
+      "utf8_byte_end": 805845
+    },
+    {
+      "name": "Gze",
+      "type": "VariableDeclarator",
+      "start": 805774,
+      "end": 806051,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 277,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionPdf"
+      ],
+      "raw_sha256": "ac352714e4b1694df00aa9bc08d1ac0e90ccfba66b40de01a2a735ee5730f465",
+      "utf8_byte_start": 805846,
+      "utf8_byte_end": 806123
+    },
+    {
+      "name": "qze",
+      "type": "VariableDeclarator",
+      "start": 806127,
+      "end": 806442,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 315,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionUnquantizedMidi"
+      ],
+      "raw_sha256": "9d26e07a3d8c0a65ce639abf58010697ab6b1e339c7e750be53c89b291ff2608",
+      "utf8_byte_start": 806199,
+      "utf8_byte_end": 806514
+    },
+    {
+      "name": "Wze",
+      "type": "VariableDeclarator",
+      "start": 806443,
+      "end": 806748,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 305,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionGuitarPro"
+      ],
+      "raw_sha256": "b64a43f8bddc4ea134c335e376666d77bdd229b5f0d4ac65bba6f8f6f1f54772",
+      "utf8_byte_start": 806515,
+      "utf8_byte_end": 806820
+    },
+    {
+      "name": "Yze",
+      "type": "VariableDeclarator",
+      "start": 806749,
+      "end": 807038,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 289,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionMp3"
+      ],
+      "raw_sha256": "4534e4ddfc841fd224608d515eaec216c7f971223ce40de892736d989eecd94d",
+      "utf8_byte_start": 806821,
+      "utf8_byte_end": 807110
+    },
+    {
+      "name": "Kze",
+      "type": "VariableDeclarator",
+      "start": 807039,
+      "end": 807258,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 219,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionLilypond"
+      ],
+      "raw_sha256": "2b31b4914fc03c97faf8398580ac2ac407bec08bb6189a212c43c674e988f3e3",
+      "utf8_byte_start": 807111,
+      "utf8_byte_end": 807330
+    },
+    {
+      "name": "Xze",
+      "type": "VariableDeclarator",
+      "start": 807259,
+      "end": 807779,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 520,
+      "calls": [
+        "qn.transcriptionAccept",
+        "qn.transcriptionMusicJson",
+        "qn.transcriptionMusicJsonPlain"
+      ],
+      "raw_sha256": "82c691e6381d42dfbc7b983026d0c7cf058f34c24ec2688f537b036cad5b6247",
+      "utf8_byte_start": 807331,
+      "utf8_byte_end": 807851
+    },
+    {
+      "name": "c$e",
+      "type": "VariableDeclarator",
+      "start": 818973,
+      "end": 821049,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 2076,
+      "calls": [
+        "qn.transcriptionGetMyFilesGet",
+        "qn.transcriptionGetGet"
+      ],
+      "raw_sha256": "b7c24a805ab138d6a277f3210f36489a73920bf25f8339edc133fae297a34e0f",
+      "utf8_byte_start": 819045,
+      "utf8_byte_end": 821121
+    },
+    {
+      "name": "d$e",
+      "type": "VariableDeclarator",
+      "start": 821464,
+      "end": 822919,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 1455,
+      "calls": [
+        "qn.transcriptionGetGet"
+      ],
+      "raw_sha256": "587a4e6c450838997e15f01008c7327a0fbce5c31f930dc1f4f7306c38760c1e",
+      "utf8_byte_start": 821536,
+      "utf8_byte_end": 822991
+    },
+    {
+      "name": "fpe",
+      "type": "VariableDeclarator",
+      "start": 1030158,
+      "end": 1031093,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 935,
+      "calls": [
+        "qn.transcriptionRetranscribeSheet"
+      ],
+      "raw_sha256": "6d2138f186c08aec66ac3aecac75f4a3277283e99cfaae59e6b32e9883c419ca",
+      "utf8_byte_start": 1030430,
+      "utf8_byte_end": 1031365
+    },
+    {
+      "name": "ZHe",
+      "type": "VariableDeclarator",
+      "start": 1036699,
+      "end": 1038929,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 2230,
+      "calls": [
+        "qn.transcriptionUpdateTranscription"
+      ],
+      "raw_sha256": "8fb0129ab06e5f3ef53b3e79042fade794ac2f0ac182c2924bceecbabeef80a2",
+      "utf8_byte_start": 1036971,
+      "utf8_byte_end": 1039201
+    },
+    {
+      "name": "fqe",
+      "type": "VariableDeclarator",
+      "start": 1049307,
+      "end": 1050165,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 858,
+      "calls": [
+        "qn.transcriptionUnlock"
+      ],
+      "raw_sha256": "3c20e35c9d9d7eed482b1dc9e4bcf910a779e21388525a971534bcba7924f785",
+      "utf8_byte_start": 1049579,
+      "utf8_byte_end": 1050437
+    },
+    {
+      "name": "yme",
+      "type": "VariableDeclarator",
+      "start": 2294452,
+      "end": 2299458,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 5006,
+      "calls": [
+        "qn.transcriptionSocial"
+      ],
+      "raw_sha256": "0c207f85da28581bc117d51353bb528bfbd7cbc45e0beaa1b4c7101f54dd301b",
+      "utf8_byte_start": 2294791,
+      "utf8_byte_end": 2299797
+    },
+    {
+      "name": "Mit",
+      "type": "VariableDeclarator",
+      "start": 2299459,
+      "end": 2301078,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 1619,
+      "calls": [
+        "qn.transcriptionRetranscribeSheet"
+      ],
+      "raw_sha256": "1940b409f610ee3154804d2c397d762e57d6c24936cb60828e183cb1007d828d",
+      "utf8_byte_start": 2299798,
+      "utf8_byte_end": 2301417
+    },
+    {
+      "name": "$2t",
+      "type": "VariableDeclarator",
+      "start": 3241926,
+      "end": 3242327,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 401,
+      "calls": [
+        "qn.transcriptionGetGet"
+      ],
+      "raw_sha256": "bc63623f0e0f1ffa577cac85402339dda701826d7b76714ac4468dd8be23fe11",
+      "utf8_byte_start": 3242317,
+      "utf8_byte_end": 3242718
+    },
+    {
+      "name": "Yft",
+      "type": "VariableDeclarator",
+      "start": 3352904,
+      "end": 3354040,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 1136,
+      "calls": [
+        "qn.transcriptionMp3"
+      ],
+      "raw_sha256": "d5ef00a4c64c935575f8e4f350d914d2806723a407d78e8e5183eff04190fe60",
+      "utf8_byte_start": 3353297,
+      "utf8_byte_end": 3354433
+    },
+    {
+      "name": "Jft",
+      "type": "VariableDeclarator",
+      "start": 3355387,
+      "end": 3358235,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 2848,
+      "calls": [
+        "qn.transcriptionRefund"
+      ],
+      "raw_sha256": "57c0a7d2f0d8aafb714b79192334c04351ec3f105f59fab798fd2910553a281b",
+      "utf8_byte_start": 3355780,
+      "utf8_byte_end": 3358628
+    },
+    {
+      "name": "qge",
+      "type": "VariableDeclarator",
+      "start": 3366614,
+      "end": 3370568,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 3954,
+      "calls": [
+        "qn.transcriptionDelete",
+        "qn.transcriptionUpdateTranscription",
+        "qn.transcriptionRetranscribeSheet"
+      ],
+      "raw_sha256": "bd0c1c615adcab2b11c75b712b4a7051df98c4905d4ac49085c26f8a5ada9ebb",
+      "utf8_byte_start": 3367007,
+      "utf8_byte_end": 3370961
+    },
+    {
+      "name": "mpt",
+      "type": "VariableDeclarator",
+      "start": 3394369,
+      "end": 3397094,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 2725,
+      "calls": [
+        "qn.transcriptionUnlock"
+      ],
+      "raw_sha256": "f351d56783167422721adbb1a480d6902d38cd9296efda0575ea3d828b95070e",
+      "utf8_byte_start": 3394762,
+      "utf8_byte_end": 3397487
+    },
+    {
+      "name": "qpt",
+      "type": "VariableDeclarator",
+      "start": 3414698,
+      "end": 3417932,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 3234,
+      "calls": [
+        "qn.transcriptionGetGet"
+      ],
+      "raw_sha256": "d5eec1311b331908e68ca5ea2dd5cfa560d36fe7c65a36e3b760e814e87cfa21",
+      "utf8_byte_start": 3415091,
+      "utf8_byte_end": 3418325
+    },
+    {
+      "name": "y9t",
+      "type": "VariableDeclarator",
+      "start": 3790265,
+      "end": 3791539,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 1274,
+      "calls": [
+        "qn.transcriptionUpdateTranscription"
+      ],
+      "raw_sha256": "a7e7453fb771aad64fd56eab3a47f8aeb1b7e742520528634f17418565eb4ab9",
+      "utf8_byte_start": 3790696,
+      "utf8_byte_end": 3791970
+    },
+    {
+      "name": "qNt",
+      "type": "VariableDeclarator",
+      "start": 4402351,
+      "end": 4406729,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 4378,
+      "calls": [
+        "qn.transcriptionMusicJson"
+      ],
+      "raw_sha256": "0165865bf535d9f4c0b63df5f5e3a3e868860c0cb6192b49dec681ba155f4464",
+      "utf8_byte_start": 4402798,
+      "utf8_byte_end": 4407176
+    },
+    {
+      "name": "aDt",
+      "type": "VariableDeclarator",
+      "start": 4413739,
+      "end": 4418359,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 4620,
+      "calls": [
+        "qn.transcriptionUnlock",
+        "qn.transcriptionUpdateMusicJson",
+        "qn.transcriptionMusicJson",
+        "qn.transcriptionMp3"
+      ],
+      "raw_sha256": "c7f95fdb4dfa4e4a2aa7209014f1bb09a0aff56f5f182d9be439379f3b20f4e4",
+      "utf8_byte_start": 4414186,
+      "utf8_byte_end": 4418806
+    },
+    {
+      "name": "uDt",
+      "type": "VariableDeclarator",
+      "start": 4419573,
+      "end": 4421912,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 2339,
+      "calls": [
+        "qn.transcriptionMusicJson",
+        "qn.transcriptionMp3",
+        "qn.transcriptionGetGet",
+        "qn.transcriptionUpdateMusicJson"
+      ],
+      "raw_sha256": "4f9009848ba78da786fe107a2c99eaec17815204a4b226b49d94678db325e2ca",
+      "utf8_byte_start": 4420020,
+      "utf8_byte_end": 4422359
+    },
+    {
+      "name": "pDt",
+      "type": "VariableDeclarator",
+      "start": 4424252,
+      "end": 4425146,
+      "prefix": "const ",
+      "suffix": ";",
+      "code_units": 894,
+      "calls": [
+        "qn.transcriptionMusicJson"
+      ],
+      "raw_sha256": "8adeedaa654e4325b99c27ed15e1c4e57205661960fe82e7d33a3ad68f582a99",
+      "utf8_byte_start": 4424699,
+      "utf8_byte_end": 4425593
+    }
+  ]
+}

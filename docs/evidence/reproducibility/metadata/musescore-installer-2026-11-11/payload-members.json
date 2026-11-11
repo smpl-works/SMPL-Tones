@@ -1,0 +1,542 @@
+[
+  {
+    "name": ".manifest",
+    "bytes": 9783,
+    "compressed_bytes": 4552
+  },
+  {
+    "name": "Assets/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Assets/Fonts/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Assets/Fonts/MuseDisplay-Harmony.ttf",
+    "bytes": 92324,
+    "compressed_bytes": 29780
+  },
+  {
+    "name": "Assets/Fonts/MuseSansVF.ttf",
+    "bytes": 155556,
+    "compressed_bytes": 54540
+  },
+  {
+    "name": "Assets/Images/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Assets/Images/AppList.scale-100.png",
+    "bytes": 755,
+    "compressed_bytes": 816
+  },
+  {
+    "name": "Assets/Images/AppList.scale-200.png",
+    "bytes": 1293,
+    "compressed_bytes": 1276
+  },
+  {
+    "name": "Assets/Images/GrainTexture.png",
+    "bytes": 7568,
+    "compressed_bytes": 6928
+  },
+  {
+    "name": "Assets/Images/MuseLayer.scale-100.png",
+    "bytes": 5782,
+    "compressed_bytes": 5628
+  },
+  {
+    "name": "Assets/Images/MuseLayer.scale-200.png",
+    "bytes": 11334,
+    "compressed_bytes": 10644
+  },
+  {
+    "name": "Assets/Images/Platforms/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Assets/Images/Platforms/Apple.scale-100.png",
+    "bytes": 438,
+    "compressed_bytes": 500
+  },
+  {
+    "name": "Assets/Images/Platforms/Apple.scale-150.png",
+    "bytes": 565,
+    "compressed_bytes": 628
+  },
+  {
+    "name": "Assets/Images/Platforms/Apple.scale-200.png",
+    "bytes": 761,
+    "compressed_bytes": 824
+  },
+  {
+    "name": "Assets/Images/Platforms/MuseScoreStudio.scale-100.png",
+    "bytes": 938,
+    "compressed_bytes": 1000
+  },
+  {
+    "name": "Assets/Images/Platforms/MuseScoreStudio.scale-150.png",
+    "bytes": 1468,
+    "compressed_bytes": 1528
+  },
+  {
+    "name": "Assets/Images/Platforms/MuseScoreStudio.scale-200.png",
+    "bytes": 2025,
+    "compressed_bytes": 2088
+  },
+  {
+    "name": "Assets/Images/Platforms/StaffPad.scale-100.png",
+    "bytes": 874,
+    "compressed_bytes": 936
+  },
+  {
+    "name": "Assets/Images/Platforms/StaffPad.scale-150.png",
+    "bytes": 1300,
+    "compressed_bytes": 1360
+  },
+  {
+    "name": "Assets/Images/Platforms/StaffPad.scale-200.png",
+    "bytes": 1823,
+    "compressed_bytes": 1884
+  },
+  {
+    "name": "Assets/Images/Platforms/Windows.scale-100.png",
+    "bytes": 147,
+    "compressed_bytes": 204
+  },
+  {
+    "name": "Assets/Images/Platforms/Windows.scale-150.png",
+    "bytes": 165,
+    "compressed_bytes": 212
+  },
+  {
+    "name": "Assets/Images/Platforms/Windows.scale-200.png",
+    "bytes": 172,
+    "compressed_bytes": 232
+  },
+  {
+    "name": "Assets/Images/WalletMono.png",
+    "bytes": 954,
+    "compressed_bytes": 1016
+  },
+  {
+    "name": "Assets/logo-dark.ico",
+    "bytes": 17981,
+    "compressed_bytes": 3340
+  },
+  {
+    "name": "Assets/logo-light.ico",
+    "bytes": 19908,
+    "compressed_bytes": 5304
+  },
+  {
+    "name": "Assets/logo-notification-dark.ico",
+    "bytes": 21240,
+    "compressed_bytes": 7092
+  },
+  {
+    "name": "Assets/logo-notification-light.ico",
+    "bytes": 106108,
+    "compressed_bytes": 9952
+  },
+  {
+    "name": "Assets/logo.ico",
+    "bytes": 28008,
+    "compressed_bytes": 15360
+  },
+  {
+    "name": "Assets/notification.ico",
+    "bytes": 21806,
+    "compressed_bytes": 7604
+  },
+  {
+    "name": "Assets/Strings/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Assets/Strings/de-DE/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Assets/Strings/de-DE/Localizable.strings",
+    "bytes": 41367,
+    "compressed_bytes": 12840
+  },
+  {
+    "name": "Assets/Strings/en-US/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Assets/Strings/en-US/Localizable.strings",
+    "bytes": 38879,
+    "compressed_bytes": 9068
+  },
+  {
+    "name": "CoreMessagingXP.dll",
+    "bytes": 1298240,
+    "compressed_bytes": 438244
+  },
+  {
+    "name": "dcompi.dll",
+    "bytes": 3222320,
+    "compressed_bytes": 811764
+  },
+  {
+    "name": "dwmcorei.dll",
+    "bytes": 3426096,
+    "compressed_bytes": 1011648
+  },
+  {
+    "name": "DwmSceneI.dll",
+    "bytes": 2679576,
+    "compressed_bytes": 600840
+  },
+  {
+    "name": "en-us/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "en-us/Microsoft.ui.xaml.dll.mui",
+    "bytes": 25952,
+    "compressed_bytes": 10820
+  },
+  {
+    "name": "en-us/Microsoft.UI.Xaml.Phone.dll.mui",
+    "bytes": 14136,
+    "compressed_bytes": 8044
+  },
+  {
+    "name": "marshal.dll",
+    "bytes": 540464,
+    "compressed_bytes": 174372
+  },
+  {
+    "name": "Microsoft.DirectManipulation.dll",
+    "bytes": 568600,
+    "compressed_bytes": 221260
+  },
+  {
+    "name": "Microsoft.Foundation.winmd",
+    "bytes": 11552,
+    "compressed_bytes": 7288
+  },
+  {
+    "name": "Microsoft.Graphics.Canvas.dll",
+    "bytes": 1734176,
+    "compressed_bytes": 454880
+  },
+  {
+    "name": "Microsoft.Graphics.Display.dll",
+    "bytes": 204568,
+    "compressed_bytes": 79400
+  },
+  {
+    "name": "Microsoft.Graphics.winmd",
+    "bytes": 21288,
+    "compressed_bytes": 10316
+  },
+  {
+    "name": "Microsoft.InputStateManager.dll",
+    "bytes": 448792,
+    "compressed_bytes": 165140
+  },
+  {
+    "name": "Microsoft.Internal.FrameworkUdk.dll",
+    "bytes": 440584,
+    "compressed_bytes": 149308
+  },
+  {
+    "name": "Microsoft.Security.Authentication.OAuth.winmd",
+    "bytes": 24376,
+    "compressed_bytes": 11036
+  },
+  {
+    "name": "Microsoft.UI.Composition.OSSupport.dll",
+    "bytes": 51992,
+    "compressed_bytes": 24532
+  },
+  {
+    "name": "Microsoft.UI.Designer.dll",
+    "bytes": 103208,
+    "compressed_bytes": 45192
+  },
+  {
+    "name": "Microsoft.UI.dll",
+    "bytes": 131368,
+    "compressed_bytes": 53164
+  },
+  {
+    "name": "Microsoft.UI.Input.dll",
+    "bytes": 1509168,
+    "compressed_bytes": 457316
+  },
+  {
+    "name": "Microsoft.UI.pri",
+    "bytes": 101520,
+    "compressed_bytes": 25372
+  },
+  {
+    "name": "Microsoft.UI.Text.winmd",
+    "bytes": 35168,
+    "compressed_bytes": 14776
+  },
+  {
+    "name": "Microsoft.UI.Windowing.Core.dll",
+    "bytes": 621864,
+    "compressed_bytes": 207936
+  },
+  {
+    "name": "Microsoft.UI.Windowing.dll",
+    "bytes": 670488,
+    "compressed_bytes": 194452
+  },
+  {
+    "name": "Microsoft.UI.winmd",
+    "bytes": 294720,
+    "compressed_bytes": 76176
+  },
+  {
+    "name": "Microsoft.UI.Xaml/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Microsoft.UI.Xaml/Assets/",
+    "bytes": 0,
+    "compressed_bytes": 0
+  },
+  {
+    "name": "Microsoft.UI.Xaml/Assets/map.html",
+    "bytes": 32558,
+    "compressed_bytes": 6700
+  },
+  {
+    "name": "Microsoft.UI.Xaml/Assets/NoiseAsset_256x256_PNG.png",
+    "bytes": 3241,
+    "compressed_bytes": 3304
+  },
+  {
+    "name": "Microsoft.UI.Xaml.Controls.dll",
+    "bytes": 7446368,
+    "compressed_bytes": 1997144
+  },
+  {
+    "name": "Microsoft.UI.Xaml.Controls.pri",
+    "bytes": 2278400,
+    "compressed_bytes": 287200
+  },
+  {
+    "name": "Microsoft.ui.xaml.dll",
+    "bytes": 15191392,
+    "compressed_bytes": 4209612
+  },
+  {
+    "name": "Microsoft.UI.Xaml.Internal.dll",
+    "bytes": 893240,
+    "compressed_bytes": 341540
+  },
+  {
+    "name": "Microsoft.UI.Xaml.Phone.dll",
+    "bytes": 1093944,
+    "compressed_bytes": 298076
+  },
+  {
+    "name": "Microsoft.ui.xaml.resources.19h1.dll",
+    "bytes": 1120568,
+    "compressed_bytes": 84288
+  },
+  {
+    "name": "Microsoft.ui.xaml.resources.common.dll",
+    "bytes": 55096,
+    "compressed_bytes": 18592
+  },
+  {
+    "name": "Microsoft.UI.Xaml.winmd",
+    "bytes": 1634616,
+    "compressed_bytes": 287848
+  },
+  {
+    "name": "Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll",
+    "bytes": 96056,
+    "compressed_bytes": 41488
+  },
+  {
+    "name": "Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.winmd",
+    "bytes": 12640,
+    "compressed_bytes": 7676
+  },
+  {
+    "name": "Microsoft.Windows.ApplicationModel.Background.winmd",
+    "bytes": 13624,
+    "compressed_bytes": 7980
+  },
+  {
+    "name": "Microsoft.Windows.ApplicationModel.DynamicDependency.winmd",
+    "bytes": 18232,
+    "compressed_bytes": 9240
+  },
+  {
+    "name": "Microsoft.Windows.ApplicationModel.Resources.dll",
+    "bytes": 158008,
+    "compressed_bytes": 61228
+  },
+  {
+    "name": "Microsoft.Windows.ApplicationModel.Resources.winmd",
+    "bytes": 19256,
+    "compressed_bytes": 9712
+  },
+  {
+    "name": "Microsoft.Windows.ApplicationModel.WindowsAppRuntime.winmd",
+    "bytes": 23352,
+    "compressed_bytes": 11592
+  },
+  {
+    "name": "Microsoft.Windows.AppLifecycle.winmd",
+    "bytes": 17208,
+    "compressed_bytes": 9312
+  },
+  {
+    "name": "Microsoft.Windows.AppNotifications.Builder.winmd",
+    "bytes": 24376,
+    "compressed_bytes": 10988
+  },
+  {
+    "name": "Microsoft.Windows.AppNotifications.winmd",
+    "bytes": 19768,
+    "compressed_bytes": 9860
+  },
+  {
+    "name": "Microsoft.Windows.BadgeNotifications.winmd",
+    "bytes": 13112,
+    "compressed_bytes": 7944
+  },
+  {
+    "name": "Microsoft.Windows.Foundation.winmd",
+    "bytes": 16184,
+    "compressed_bytes": 8496
+  },
+  {
+    "name": "Microsoft.Windows.Globalization.winmd",
+    "bytes": 12600,
+    "compressed_bytes": 7716
+  },
+  {
+    "name": "Microsoft.Windows.Management.Deployment.winmd",
+    "bytes": 42296,
+    "compressed_bytes": 15028
+  },
+  {
+    "name": "Microsoft.Windows.Media.Capture.winmd",
+    "bytes": 16184,
+    "compressed_bytes": 8848
+  },
+  {
+    "name": "Microsoft.Windows.PushNotifications.winmd",
+    "bytes": 15672,
+    "compressed_bytes": 8720
+  },
+  {
+    "name": "Microsoft.Windows.Security.AccessControl.winmd",
+    "bytes": 12600,
+    "compressed_bytes": 7736
+  },
+  {
+    "name": "Microsoft.Windows.Storage.Pickers.winmd",
+    "bytes": 19808,
+    "compressed_bytes": 9812
+  },
+  {
+    "name": "Microsoft.Windows.Storage.winmd",
+    "bytes": 16224,
+    "compressed_bytes": 8796
+  },
+  {
+    "name": "Microsoft.Windows.System.Power.winmd",
+    "bytes": 17248,
+    "compressed_bytes": 9044
+  },
+  {
+    "name": "Microsoft.Windows.System.winmd",
+    "bytes": 13664,
+    "compressed_bytes": 8056
+  },
+  {
+    "name": "Microsoft.WindowsAppRuntime.Bootstrap.dll",
+    "bytes": 394080,
+    "compressed_bytes": 146480
+  },
+  {
+    "name": "Microsoft.WindowsAppRuntime.dll",
+    "bytes": 2639672,
+    "compressed_bytes": 666536
+  },
+  {
+    "name": "Microsoft.WindowsAppRuntime.pri",
+    "bytes": 11296,
+    "compressed_bytes": 4652
+  },
+  {
+    "name": "MRM.dll",
+    "bytes": 290104,
+    "compressed_bytes": 122320
+  },
+  {
+    "name": "MuseAuthService.exe",
+    "bytes": 733104,
+    "compressed_bytes": 262684
+  },
+  {
+    "name": "MuseHub.exe",
+    "bytes": 58918320,
+    "compressed_bytes": 13583820
+  },
+  {
+    "name": "MuseHub.pri",
+    "bytes": 2969888,
+    "compressed_bytes": 401248
+  },
+  {
+    "name": "MuseHub.Uninstaller.exe",
+    "bytes": 770480,
+    "compressed_bytes": 300856
+  },
+  {
+    "name": "MuseHub.Updater.exe",
+    "bytes": 8670128,
+    "compressed_bytes": 2837136
+  },
+  {
+    "name": "PushNotificationsLongRunningTask.ProxyStub.dll",
+    "bytes": 33120,
+    "compressed_bytes": 15560
+  },
+  {
+    "name": "RestartAgent.exe",
+    "bytes": 77624,
+    "compressed_bytes": 35720
+  },
+  {
+    "name": "ServiceCore.dll",
+    "bytes": 7025072,
+    "compressed_bytes": 2589188
+  },
+  {
+    "name": "WinUIEdit.dll",
+    "bytes": 3360608,
+    "compressed_bytes": 1368088
+  },
+  {
+    "name": "wuceffectsi.dll",
+    "bytes": 498968,
+    "compressed_bytes": 171976
+  }
+]

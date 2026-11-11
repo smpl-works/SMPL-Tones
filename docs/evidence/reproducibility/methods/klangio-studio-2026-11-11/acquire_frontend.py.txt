@@ -1,0 +1,39 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Acquire the public script observed in the user's selected browser tab.
+
+No browser cookies, account state, authorization headers, or API calls are used.
+"""
+from datetime import datetime, timezone
+from pathlib import Path
+import hashlib
+import json
+import re
+import urllib.request
+
+ROOT=Path(__file__).resolve().parent
+SOURCES=ROOT/'frontend'
+SOURCES.mkdir(exist_ok=True)
+observed=[('http<LOCAL_DEPENDENCY>/','page.html'),
+          ('http<LOCAL_DEPENDENCY>/index-DIr4Mtaw.js','index-DIr4Mtaw.js')]
+provenance=[]
+for url,name in observed:
+    request=urllib.request.Request(url,headers={'User-Agent':'StaticApplicationInspection/1.0'})
+    with urllib.request.urlopen(request,timeout=35) as response:
+        body=response.read(16*1024*1024+1)
+        assert len(body)<=16*1024*1024
+        record={'url':url,'resolved_url':response.url,'http_status':response.status,
+                'retrieved_utc':datetime.now(timezone.utc).isoformat(),'bytes':len(body),
+                'sha256':hashlib.sha256(body).hexdigest(),'content_type':response.headers.get('Content-Type'),
+                'etag':response.headers.get('ETag'),'last_modified':response.headers.get('Last-Modified')}
+    path=SOURCES/name
+    with path.open('xb') as output:output.write(body)
+    provenance.append(record|{'file':str(path)})
+(ROOT/'frontend-acquisition.json').write_text(json.dumps(provenance,indent=2),encoding='utf-8')
+script=(SOURCES/'index-DIr4Mtaw.js').read_text(encoding='utf-8')
+source_maps=re.findall(r'[#@]\s*sourceMappingURL=([^\s]+)',script[-3000:])
+chunks=sorted(set(re.findall(r'["\']([^"\']{1,180}\.js)["\']',script)))
+(ROOT/'declared-javascript-assets.json').write_text(json.dumps({'source_maps':source_maps,'javascript_paths':chunks},indent=2))
+print(json.dumps({'acquired':provenance,'source_maps':source_maps,'declared_chunks':chunks[:75]},indent=2))

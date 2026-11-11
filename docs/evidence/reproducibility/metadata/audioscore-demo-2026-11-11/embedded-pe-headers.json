@@ -1,0 +1,14 @@
+[
+  {
+    "offset": 0,
+    "pe_offset": 224,
+    "machine": "0x14c",
+    "sections": 3
+  },
+  {
+    "offset": 6144,
+    "pe_offset": 6376,
+    "machine": "0x14c",
+    "sections": 4
+  }
+]

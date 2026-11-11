@@ -1,0 +1,55 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Materialize verified PE resources without executing the installer."""
+from pathlib import Path
+import hashlib
+import json
+import re
+import struct
+import zipfile
+
+ROOT = Path(__file__).resolve().parent
+TARGET = Path(r"<INPUT_INSTALLER>/MuseScore_Studio_Installer_via_MuseHub.exe")
+evidence = json.loads((ROOT / "inspect-pe-resources.json").read_text())['data']
+data = TARGET.read_bytes()
+assert hashlib.sha256(data).hexdigest() == evidence['subject']['digest']['sha256']
+derived = []
+for resource in evidence['normalized_result']['resources']:
+    if resource['type'].get('name') == 'ZIP':
+        name = 'payload.zip'
+    elif resource['type'].get('id') == 24:
+        name = 'installer.manifest.xml'
+    else:
+        continue
+    loc = resource['payload']['location']
+    payload = data[loc['offset']:loc['offset'] + loc['bytes']]
+    assert hashlib.sha256(payload).hexdigest() == resource['payload']['sha256']
+    path = ROOT / name
+    with path.open('xb') as output:
+        output.write(payload)
+    derived.append({'path': str(path), 'parent_sha256': hashlib.sha256(data).hexdigest(),
+                    'parent_resource_index': resource['index'], 'file_range': loc,
+                    'sha256': hashlib.sha256(payload).hexdigest(),
+                    'rea_evidence_id': evidence['evidence_id']})
+(ROOT / 'extraction-provenance.json').write_text(json.dumps(derived, indent=2))
+
+with zipfile.ZipFile(ROOT / 'payload.zip') as archive:
+    members = [{'name': item.filename, 'bytes': item.file_size,
+                'compressed_bytes': item.compress_size} for item in archive.infolist()]
+(ROOT / 'payload-members.json').write_text(json.dumps(members, indent=2))
+print(json.dumps({'derived': derived, 'members': members}, indent=2))
+
+# Restrict strings to the launcher, excluding the ZIP payload and signatures.
+launcher = data[:950496]
+pattern = re.compile(r'muse|install|launch|uninstall|https?[:/]|service|msix|appx|download|update|registry|SOFTWARE|silent', re.I)
+strings = []
+for encoding, regexp in [('ascii', rb'[\x20-\x7e]{6,}'), ('utf-16le', rb'(?:[\x20-\x7e]\x00){6,}')]:
+    for match in re.finditer(regexp, launcher):
+        text = match.group().decode(encoding)
+        if pattern.search(text):
+            strings.append({'offset': match.start(), 'encoding': encoding, 'text': text})
+strings.sort(key=lambda item: item['offset'])
+(ROOT / 'launcher-strings.json').write_text(json.dumps(strings, indent=2))
+print('LAUNCHER STRINGS', json.dumps(strings, indent=2))

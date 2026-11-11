@@ -1,0 +1,46 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Retain bounded, execution-free REA and archive inspections."""
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+import json
+import subprocess
+
+ROOT = Path(__file__).resolve().parent
+TARGET = Path(r'<INPUT_INSTALLER>/AnthemScore_installer_windows_x86_64.exe')
+NODE = r'<NODE_EXECUTABLE>'
+REA = r'<REA_CLI_ENTRY>'
+SEVENZIP = r'<SEVENZIP_EXECUTABLE>'
+
+
+def inspect(command):
+    if command == '7zip-list':
+        args = [SEVENZIP, 'l', '-slt', str(TARGET)]
+    else:
+        args = [NODE, REA, command, str(TARGET), '--format', 'json', '--full-output']
+    result = subprocess.run(args, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=60)
+    suffix = 'txt' if command == '7zip-list' else 'json'
+    (ROOT / f'{command}.{suffix}').write_text(result.stdout, encoding='utf-8')
+    (ROOT / f'{command}.stderr.txt').write_text(result.stderr, encoding='utf-8')
+    summary = {'command': command, 'exit_code': result.returncode, 'output_bytes': len(result.stdout)}
+    if command == '7zip-list':
+        summary['preview'] = result.stdout[:6500]
+        summary['stderr'] = result.stderr[:700]
+    else:
+        value = json.loads(result.stdout)
+        evidence = value.get('data', {})
+        normalized = evidence.get('normalized_result', {})
+        summary.update({'evidence_id': evidence.get('evidence_id'), 'error': value.get('error'),
+                        'classification': normalized.get('classification'),
+                        'coverage': normalized.get('coverage'), 'keys': list(normalized)})
+    return summary
+
+
+if __name__ == '__main__':
+    commands = ['inspect-managed-artifact', 'inspect-pe-resources', 'inspect-artifact', '7zip-list']
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        summaries = list(pool.map(inspect, commands))
+    (ROOT / 'inspection-runs.json').write_text(json.dumps(summaries, indent=2), encoding='utf-8')
+    print(json.dumps(summaries, indent=2))

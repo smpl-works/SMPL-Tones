@@ -1,0 +1,78 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Recover contiguous raw-DEFLATE streams and verify Wise CRC32 trailers.
+
+This is byte-stream extraction, not installation-script interpretation.
+"""
+from pathlib import Path
+import hashlib
+import json
+import struct
+import zlib
+
+ROOT = Path(__file__).resolve().parent
+SOURCE = Path(r'<INPUT_INSTALLER>/AudioScoreUltimateDemo.EXE')
+data = SOURCE.read_bytes()
+marker = b'Initializing Wise Installation Wizard...\x00'
+offset = data.index(marker) + len(marker)
+destination = ROOT / 'wise-streams'
+destination.mkdir(exist_ok=True)
+previous_path = ROOT / 'wise-streams.json'
+if previous_path.exists():
+    previous = json.loads(previous_path.read_text())
+    assert previous['parent_sha256'] == hashlib.sha256(data).hexdigest()
+    records = previous['streams']
+    total = previous['total_decoded_bytes']
+    offset = previous['next_boundary']['offset']
+else:
+    records = []
+    total = 0
+boundary = None
+for index in range(len(records), 128):
+    decoder = zlib.decompressobj(-15)
+    try:
+        result = decoder.decompress(data[offset:], 128 * 1024 * 1024)
+    except zlib.error as exc:
+        boundary = {'offset': offset, 'reason': str(exc)}
+        break
+    consumed = len(data[offset:]) - len(decoder.unused_data) - len(decoder.unconsumed_tail)
+    if not decoder.eof or consumed <= 0:
+        boundary = {'offset': offset, 'reason': 'No complete bounded DEFLATE stream'}
+        break
+    crc_offset = offset + consumed
+    actual = zlib.crc32(result) & 0xffffffff
+    padding = 0
+    expected = struct.unpack_from('<I', data, crc_offset)[0]
+    if expected != actual and data[crc_offset] == 0:
+        candidate = struct.unpack_from('<I', data, crc_offset + 1)[0]
+        if candidate == actual:
+            padding = 1
+            crc_offset += 1
+            expected = candidate
+    if expected != actual:
+        boundary = {'offset': offset, 'reason': 'CRC32 trailer mismatch',
+                    'expected_crc32': hex(expected), 'decoded_crc32': hex(actual)}
+        break
+    total += len(result)
+    if total > 512 * 1024 * 1024:
+        raise RuntimeError('Aggregate extraction budget exceeded')
+    kind = 'pe' if result.startswith(b'MZ') else 'chm' if result.startswith(b'ITSF') else 'data'
+    path = destination / f'{index:03d}.{kind}'
+    with path.open('xb') as output:
+        output.write(result)
+    records.append({'index': index, 'path': str(path), 'kind': kind,
+                    'compressed_offset': offset, 'compressed_bytes': consumed,
+                    'bytes': len(result), 'sha256': hashlib.sha256(result).hexdigest(),
+                    'crc32': hex(actual), 'crc32_verified': True,
+                    'padding_before_crc32': padding})
+    offset = crc_offset + 4
+else:
+    boundary = {'offset': offset, 'reason': '128-stream budget reached'}
+summary = {'parent_sha256': hashlib.sha256(data).hexdigest(), 'streams': records,
+           'total_decoded_bytes': total, 'next_boundary': boundary,
+           'coverage': 'Contiguous CRC-verified streams only; filenames and installation-script semantics not inferred'}
+(ROOT / 'wise-streams.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
+print(json.dumps({'stream_count':len(records),'new_tail_streams': [{k: x[k] for k in ['index', 'kind', 'bytes', 'compressed_offset']} for x in records[27:]],
+                  'total_bytes': total, 'boundary': boundary}, indent=2))

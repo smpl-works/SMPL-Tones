@@ -1,0 +1,43 @@
+[
+  {
+    "Name": "lunaverus.anthemscore.windows_gpu_libs",
+    "DisplayName": "Windows GPU Libs",
+    "Description": "Windows GPU Libs",
+    "name": "lunaverus.anthemscore.windows_gpu_libs",
+    "Version": "1.5.1",
+    "ReleaseDate": "2026-07-13",
+    "Virtual": "true",
+    "UpdateFile": null,
+    "SHA1": "8974add416c1b1345aeca044ff30397da130e306"
+  },
+  {
+    "Name": "lunaverus.anthemscore.windows_qt_libs",
+    "DisplayName": "AnthemScore Windows Qt Libs",
+    "Description": "AnthemScore Windows Qt Libs",
+    "name": "lunaverus.anthemscore.windows_qt_libs",
+    "Version": "1.18.1",
+    "ReleaseDate": "2026-07-13",
+    "RequiresAdminRights": "true",
+    "Virtual": "true",
+    "Script": "installscript.qs",
+    "UpdateFile": null,
+    "DownloadableArchives": "generic.7z,iconengines.7z,imageformats.7z,multimedia.7z,networkinformation.7z,platforms.7z,position.7z,qml.7z,qmltooling.7z,resources.7z,styles.7z,tls.7z,translations.7z,content.7z",
+    "SHA1": "4e81b26e433aba365661e1cedf475428d4567294"
+  },
+  {
+    "Name": "lunaverus.anthemscore.windows_x86_64",
+    "DisplayName": "AnthemScore Windows 64 bit (x86_64)",
+    "Description": "Install AnthemScore.",
+    "name": "lunaverus.anthemscore.windows_x86_64",
+    "Dependencies": "lunaverus.anthemscore.windows_qt_libs,lunaverus.anthemscore.windows_gpu_libs",
+    "Version": "6.3.100",
+    "ReleaseDate": "2026-09-30",
+    "Default": "true",
+    "Script": "installscript.qs",
+    "UpdateFile": null,
+    "DownloadableArchives": "AS_resources.7z,languages.7z,content.7z",
+    "UserInterfaces": "launch_when_done.ui",
+    "Licenses": "\n   ",
+    "SHA1": "bb867cb793fa401f131528c0eed9c205069363d3"
+  }
+]

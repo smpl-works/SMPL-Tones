@@ -1,0 +1,44 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Inventory and extract verified package archives into new analysis folders."""
+from pathlib import Path, PurePosixPath, PureWindowsPath
+import json
+import subprocess
+
+ROOT = Path(__file__).resolve().parent
+SEVENZIP = r'<SEVENZIP_EXECUTABLE>'
+archives = [('6.3.100meta.7z','metadata'),('6.3.100content.7z','core'),('6.3.100AS_resources.7z','resources')]
+summaries = []
+for filename, label in archives:
+    path = ROOT/'packages'/filename
+    result = subprocess.run([SEVENZIP,'l','-slt',str(path)],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=30)
+    (ROOT/f'{label}-archive-list.txt').write_text(result.stdout,encoding='utf-8')
+    assert result.returncode == 0, result.stderr
+    member_text = result.stdout.split('----------',1)[1]
+    members = []
+    for block in member_text.strip().split('\n\n'):
+        record = dict(line.split(' = ',1) for line in block.splitlines() if ' = ' in line)
+        name = record.get('Path')
+        if not name:
+            continue
+        normalized = PurePosixPath(name.replace('\\','/'))
+        assert not normalized.is_absolute() and '..' not in normalized.parts
+        assert not PureWindowsPath(name).drive and ':' not in name
+        assert 'Symbolic Link' not in record and 'Hard Link' not in record
+        members.append(record)
+    assert len(members) <= 10000
+    total = sum(int(x.get('Size','0')) for x in members)
+    assert total <= 512*1024*1024
+    destination = ROOT/'payload'/label
+    assert not destination.exists(), destination
+    result = subprocess.run([SEVENZIP,'x',str(path),f'-o{destination}','-y'],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=120)
+    (ROOT/f'{label}-extraction.txt').write_text(result.stdout+'\n'+result.stderr,encoding='utf-8')
+    assert result.returncode == 0, result.stderr
+    summary = {'archive':filename,'destination':str(destination),'member_count':len(members),
+               'uncompressed_bytes':total,'sevenzip_exit_code':result.returncode,'members':members}
+    (ROOT/f'{label}-members.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
+    summaries.append({k:v for k,v in summary.items() if k!='members'} | {
+        'interesting_members':[x['Path'] for x in members if any(t in x['Path'].lower() for t in ['anthem','onnx','tflite','tensorflow','model','network','readme','manual','.pdf','.qs','.xml','.json','.dat','.bin','.pb','.pt','.dll'])][:95]})
+print(json.dumps(summaries,indent=2))

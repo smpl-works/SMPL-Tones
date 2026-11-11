@@ -1,0 +1,7 @@
+{
+  "repository": "onnx/onnx",
+  "path": "onnx/onnx.proto",
+  "blob_sha": "60b740ac1d31565205c655d4bafa7fe019da3ed4",
+  "url": "https://github.com/onnx/onnx/blob/main/onnx/onnx.proto",
+  "purpose": "Field numbers used for static ONNX metadata decoding; no model execution"
+}

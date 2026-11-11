@@ -26,6 +26,7 @@ Earlier MuScriptor recommendations in historical records are retained as history
 - [Supplementary GitHub document identities](supplementary-github-sources.json): observed source URLs and immutable Git blob object URLs.
 - [Global/per-case limitations](limitations.json): evidence and execution boundaries.
 - [Roadmap definitions](roadmap.json): future milestones; issue metadata is added after submission.
+- [Preservation audit and reproducibility supplement](reproducibility/README.md): additional acquisition/extraction/slice provenance, sanitized authored-method texts, a full original-file hash inventory and the exact-replay backup boundary.
 
 ## Preservation boundary
 
@@ -36,3 +37,5 @@ Proprietary installers, executables, model weights, complete manuals, source sna
 Re-running a binary investigation requires its original input. Vendor servers and versioned browser assets may change or disappear; hashes identify past inputs but do not recreate their bytes. No numerical transcription benchmark or native-export proof was run during this research.
 
 Before removing any local working archive, verify a clean clone of this repository, open the dossier and evidence files, and retain original installers separately if future replay matters. Publication does not delete local data automatically.
+
+The subsequent [preservation audit](reproducibility/preservation-audit.json) closes the provenance/method gaps found after the first publication. Its [cleanup guidance](reproducibility/README.md#can-the-local-folders-be-removed) distinguishes knowledge-only cleanup from retaining the ability to repeat the exact forensic work.

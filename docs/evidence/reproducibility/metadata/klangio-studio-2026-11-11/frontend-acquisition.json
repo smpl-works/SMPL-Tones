@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://studio.klang.io/en/",
+    "resolved_url": "https://studio.klang.io/en/",
+    "http_status": 200,
+    "retrieved_utc": "2026-11-11T12:44:18.798412+00:00",
+    "bytes": 1658,
+    "sha256": "066d501c41b5f9a554b0f51773c2b72d2f888b0c48bd353ddba73caf219fefe9",
+    "content_type": "text/html; charset=utf-8",
+    "etag": "\"a7e3409cef16257e3f8ebf950b8c1866\"",
+    "last_modified": "Mon, 09 Nov 2026 19:53:31 GMT",
+    "file": "page.html"
+  },
+  {
+    "url": "https://studio.klang.io/assets/index-DIr4Mtaw.js",
+    "resolved_url": "https://studio.klang.io/assets/index-DIr4Mtaw.js",
+    "http_status": 200,
+    "retrieved_utc": "2026-11-11T12:44:19.197580+00:00",
+    "bytes": 4450311,
+    "sha256": "7e641e9db38279872fa665dd85c8897fd33f8cec5916b86ad290d2465c5b8142",
+    "content_type": "application/javascript; charset=utf-8",
+    "etag": "\"d633a8e8a2b520659c8db922a91672b7\"",
+    "last_modified": "Mon, 09 Nov 2026 19:44:01 GMT",
+    "file": "index-DIr4Mtaw.js"
+  }
+]

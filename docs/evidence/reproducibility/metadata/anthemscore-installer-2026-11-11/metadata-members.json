@@ -1,0 +1,60 @@
+{
+  "archive": "6.3.100meta.7z",
+  "destination": "metadata",
+  "member_count": 4,
+  "uncompressed_bytes": 51834,
+  "sevenzip_exit_code": 0,
+  "members": [
+    {
+      "Path": "lunaverus.anthemscore.windows_x86_64\\installscript.qs",
+      "Size": "2082",
+      "Packed Size": "14673",
+      "Modified": "2026-07-14 04:57:30.6843650",
+      "Created": "2026-09-30 19:45:02.6061191",
+      "Accessed": "2026-09-30 19:45:02.6396134",
+      "Attributes": "A -rw-rw-rw-",
+      "CRC": "1C6E30B4",
+      "Encrypted": "-",
+      "Method": "LZMA:23",
+      "Block": "0"
+    },
+    {
+      "Path": "lunaverus.anthemscore.windows_x86_64\\launch_when_done.ui",
+      "Size": "782",
+      "Packed Size": "",
+      "Modified": "2016-01-09 02:50:41.2579500",
+      "Created": "2026-09-30 19:45:02.6080607",
+      "Accessed": "2026-09-30 19:45:02.6551862",
+      "Attributes": "A -rw-rw-rw-",
+      "CRC": "D2E7E767",
+      "Encrypted": "-",
+      "Method": "LZMA:23",
+      "Block": "0"
+    },
+    {
+      "Path": "lunaverus.anthemscore.windows_x86_64\\license.txt",
+      "Size": "48970",
+      "Packed Size": "",
+      "Modified": "2017-12-18 00:08:42.6010110",
+      "Created": "2026-09-30 19:45:02.6080607",
+      "Accessed": "2026-09-30 19:45:02.6708100",
+      "Attributes": "A -rw-rw-rw-",
+      "CRC": "DFAC1381",
+      "Encrypted": "-",
+      "Method": "LZMA:23",
+      "Block": "0"
+    },
+    {
+      "Path": "lunaverus.anthemscore.windows_x86_64",
+      "Size": "0",
+      "Packed Size": "0",
+      "Modified": "2026-09-30 19:45:02.6080607",
+      "Created": "2026-09-30 19:45:02.5589942",
+      "Accessed": "2026-09-30 19:45:02.6708100",
+      "Attributes": "D drwxrwxrwx",
+      "CRC": "",
+      "Encrypted": "-",
+      "Method": ""
+    }
+  ]
+}

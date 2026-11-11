@@ -1,0 +1,24 @@
+[
+  {
+    "path": "payload.zip",
+    "parent_sha256": "d9eea2ae7c8c7babc0c98a3d3b3591e2295eec02e362791836e7fe2d911caee2",
+    "parent_resource_index": 3,
+    "file_range": {
+      "offset": 950496,
+      "bytes": 35798508
+    },
+    "sha256": "7dfcd7e6c2dd9f8780461de5c2136845792448ee0a5c591ffb20a1528f12cb1e",
+    "rea_evidence_id": "ev_9464d64c9563d989f95c31d5fa173d89659e72cffd8c45a05bdf9ecc69b64951"
+  },
+  {
+    "path": "installer.manifest.xml",
+    "parent_sha256": "d9eea2ae7c8c7babc0c98a3d3b3591e2295eec02e362791836e7fe2d911caee2",
+    "parent_resource_index": 10,
+    "file_range": {
+      "offset": 36804136,
+      "bytes": 1549
+    },
+    "sha256": "cf1fdeefa3e1d00f918ebc2808f678c473a604416c5904325ddf6c1e67f8b3b1",
+    "rea_evidence_id": "ev_9464d64c9563d989f95c31d5fa173d89659e72cffd8c45a05bdf9ecc69b64951"
+  }
+]

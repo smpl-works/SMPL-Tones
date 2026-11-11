@@ -1,0 +1,7 @@
+{
+  "parent_sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716",
+  "offset": 33181406,
+  "bytes": 30657,
+  "sha256": "3ca4950e5efcb7a8705392efe0bcb1801e4681ace57ea858dfc882db894928b4",
+  "method": "Qt resource length-prefixed UTF-8 JSON"
+}

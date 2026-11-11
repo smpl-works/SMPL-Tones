@@ -1,0 +1,12 @@
+{
+  "url": "https://studio.klang.io/assets/index-DIr4Mtaw.js.map",
+  "resolved_url": "https://studio.klang.io/assets/index-DIr4Mtaw.js.map",
+  "retrieved_utc": "2026-11-11T12:44:58.363540+00:00",
+  "status": 200,
+  "bytes": 1658,
+  "sha256": "066d501c41b5f9a554b0f51773c2b72d2f888b0c48bd353ddba73caf219fefe9",
+  "content_type": "text/html; charset=utf-8",
+  "valid_source_map": false,
+  "reason": "The advertised map URL returned HTML instead of JSON",
+  "saved_response": "unavailable-source-map-response.html"
+}

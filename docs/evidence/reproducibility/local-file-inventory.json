@@ -1,0 +1,2851 @@
+{
+  "audit_date": "2026-11-11",
+  "scope": "Five original investigation directories only; publication tooling/verification clones are excluded.",
+  "payloads_included": false,
+  "files": [
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "extract_payload.py",
+      "bytes": 2493,
+      "sha256": "960c9948d5caa86a26e874d6ffedc7863fb9add2915dfb5a2fe86ec8b07441f0"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "extraction-provenance.json",
+      "bytes": 1025,
+      "sha256": "454c5d8af7dbd3335c59be854a986ffb4625b500d828d7f50f6bce7cbb476acd"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "findings.json",
+      "bytes": 9177,
+      "sha256": "2b15545d6d667ec0078c8be71865240a20fb7e8e939b019b395b1d9e11bdc62e"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "inspect-artifact.json",
+      "bytes": 7253,
+      "sha256": "aeb9ce3b8ace9bc3b12c5fc82cc55d167819cf90e5acaef13f06bb7cecd62e8a"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "inspect-artifact.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "inspect-managed-artifact.json",
+      "bytes": 2126,
+      "sha256": "d91b12e5e985e01abfdb2dd9c25b980a5cfb437625d1784e61e761aca22d6ab8"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "inspect-managed-artifact.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "inspect-pe-resources.json",
+      "bytes": 13543,
+      "sha256": "f0e473e0dc4807e7abc29fe53fc5ab710ca9564cff752b7169193e0df1846f73"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "inspect-pe-resources.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "installer.manifest.xml",
+      "bytes": 1549,
+      "sha256": "cf1fdeefa3e1d00f918ebc2808f678c473a604416c5904325ddf6c1e67f8b3b1"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "launcher-strings.json",
+      "bytes": 36215,
+      "sha256": "2c11cc232a0a8dcc157405d200f580d82f684afeb4f8f3d26b127d63677cfc60"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "payload-extraction-rea.json",
+      "bytes": 589,
+      "sha256": "2d98abd0d3d05928e0902dcfbc8064240afae49965ba03b174567efb696a72a8"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "payload-extraction-rea.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "payload-members.json",
+      "bytes": 11957,
+      "sha256": "cb7aeff3bf4713356ddb6e1b738a7e1322e5035437bf16beb7f1462620a75267"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "payload.zip",
+      "bytes": 35798508,
+      "sha256": "7dfcd7e6c2dd9f8780461de5c2136845792448ee0a5c591ffb20a1528f12cb1e"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "rea-runs.json",
+      "bytes": 10865,
+      "sha256": "19fcae168fa6ce5ac447f58d44d7cfa39c6885fb9eb4e2799018cc3008b35736"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "read_selected_payload.py",
+      "bytes": 2813,
+      "sha256": "e5b1f52af39d87d88d17529956c112766230ee0bb75170967e2ff1cf5c3150ba"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "run_rea.py",
+      "bytes": 1692,
+      "sha256": "48a6b979450a120ed0b581f43b97bd123727a32a15178448293a1079b525dcf1"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "selected-payload/.manifest",
+      "bytes": 9783,
+      "sha256": "e452a15bd70a768a8fb61a8c3455ca2372c93a27dc39371d69619a53ac1e1eed"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "selected-payload/Assets/Strings/en-US/Localizable.strings",
+      "bytes": 38879,
+      "sha256": "130941b9a14da403fb2717e0fadb11d70bdfcefcc124828d5074d241bb0a0163"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "selected-payload/MuseAuthService.exe",
+      "bytes": 733104,
+      "sha256": "1865b8e962b32608c6f8c16e5016c7812a1b1933b9718a39a29696b0dc8ff3ee"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "selected-payload/MuseHub.exe",
+      "bytes": 58918320,
+      "sha256": "a41f5773e9b9bb0127b3486e2ae01b2a4685f0c1ee8d405130584e6c6eafac5e"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "selected-payload/MuseHub.Updater.exe",
+      "bytes": 8670128,
+      "sha256": "63e4d16eb6de91d9542e42faeb704682930cbb9c3367929b839a3c642b73c061"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "selected-payload/ServiceCore.dll",
+      "bytes": 7025072,
+      "sha256": "5036d33260ea713a395a59beb0813ec3d6888b1532db5da2ced0f40728d85347"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "selected-payload-provenance.json",
+      "bytes": 3262,
+      "sha256": "9d8ca5004eee8c4fe66c44309642e80d22d0dd1cc1fae5a760269f98fcc2c9e3"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "source/audioexportmodule.cpp",
+      "bytes": 2150,
+      "sha256": "f6d4af5c6a4c6f36f8d21396758729c138567a6726f6300da586500720ca4d9c"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "source/importmidi.cpp",
+      "bytes": 45769,
+      "sha256": "b2ab1976fea9bd7792f54e2cf6e7e0de76b2b86f6b81c91771c4764a7608d1a6"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "source/midimodule.cpp",
+      "bytes": 1959,
+      "sha256": "362a4df4c3ff08b25652ecdbccf1dd5c0b56fe1c244b7049baacf934fa6ef5f1"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "source/musicxmlmodule.cpp",
+      "bytes": 2205,
+      "sha256": "9fcddf4441d2898d92e6c8c546ba0c60c2335d606f18c8fb5e4140a9ad0bb93b"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "source/notationmidireader.cpp",
+      "bytes": 1219,
+      "sha256": "45a3557a21153e82cdd34cf3b1fbf382400867ca7f61965a7deb4fad46a2f0df"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "source/pdfwriter.cpp",
+      "bytes": 5345,
+      "sha256": "d44d1f64d71bc926d12a7527015c15fc70c4d448f2892ac6b678bebba9202ff9"
+    },
+    {
+      "case": "musescore-installer-2026-11-11",
+      "relative_path": "source/sources.json",
+      "bytes": 2250,
+      "sha256": "ce9dc4c4ddf06643a5a137f76118fd2eddeac66ace55cafe5a696e20392b33f7"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "7zip-list.txt",
+      "bytes": 1754,
+      "sha256": "0721ae8aed93933328076ccdbfb383053dcd5b215a6ee6646073c0625b4c17c3"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "app-imports.json",
+      "bytes": 38138,
+      "sha256": "278fa95647380d71bd185b998b63ed240c72ca98700f1df9c63b9e5f6d4312fc"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "app-inspect-managed-artifact.json",
+      "bytes": 2209,
+      "sha256": "a5fed10dfbf14590834676f31907871ddbfd7b7abc024cf0a4eb5ce12076bf9c"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "app-inspect-managed-artifact.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "app-inspect-pe-resources.json",
+      "bytes": 559083,
+      "sha256": "9cf39bc12791fe2616d4bf0b69a7761ca907188cbcc4315598d2e569781a7430"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "app-inspect-pe-resources.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "app-resource-strings.json",
+      "bytes": 309208,
+      "sha256": "b3c370bf8d8ded47e96277550318a0968883f55acb15fdfa516730015c82fe09"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "app-selected-literals.json",
+      "bytes": 48168,
+      "sha256": "0a79371fda5e2db831b9242e66c9158fe99502ba8dcbb87ee4bdb4849efd2b3f"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "bundled-quick-guide.pdf",
+      "bytes": 255781,
+      "sha256": "96fc4ba402b358ad38121f03c66821952b439970c124a12eccb672cd7b222d26"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "bundled-quick-guide.pdf.pages.json",
+      "bytes": 10300,
+      "sha256": "6ddda5e3a099f1d017ba8ca60cfc121656f2c86f7d0cfa0c200a2c3e1d3b78f9"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "bundled-user-manual.pdf",
+      "bytes": 685803,
+      "sha256": "cb7d8e82ff6891916ca5cb60b7fac56d0d6798e5243f5d668e13d83e7ab1bc8f"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "bundled-user-manual.pdf.pages.json",
+      "bytes": 148072,
+      "sha256": "97a54b4c42aa43cbc2232bdbee7a501cb3c857f52800b8b031effa7b26b19fd6"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "byte-inventory.json",
+      "bytes": 1236,
+      "sha256": "efe7dc2e8fd57f3d8c9d619536294385c74488cd9e8d1b76f16dcdb86450ed3d"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "decode_wise_streams.py",
+      "bytes": 3386,
+      "sha256": "7d0d44f96a9dd998a5fedb677d404dc60cae4ac7d30679bc5f0fe40300aaa3c8"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "embedded-pe-headers.json",
+      "bytes": 199,
+      "sha256": "23a4abd9a8cddf62a6e1541b6ad1a9fb6fdf171f7464357f209180ee43d2750f"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "findings.json",
+      "bytes": 13366,
+      "sha256": "db3d897b85815ea5cf1c7fe6422852ad767ae57d787dceef0639564104fa2ecf"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "first-wise-stream.bin",
+      "bytes": 16824,
+      "sha256": "cc5a514ce4d5df729fb4b36431db8cb0ec673b979afd865dd2518c0d993bb5ca"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "helper-29-inspect-managed-members.json",
+      "bytes": 570627,
+      "sha256": "2713168300d2d409489b658652c1c762b8b94ddec9ae58f548623dbcc16e31c5"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "helper-29-inspect-managed-native-boundaries.json",
+      "bytes": 14031,
+      "sha256": "4a857206c6a22f5effcaf5c0247bea385e1041cf9677beeaf6ccdf8d201f1b90"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "helper-29-managed.json",
+      "bytes": 62462,
+      "sha256": "e4779cb7297d11f2122cadd852b6a5aa53fd6cd824c91c690ea4676ba95eb304"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "helper-30-inspect-managed-members.json",
+      "bytes": 126425,
+      "sha256": "4e1990bfe3ed8aab926a2455f13bb74c9ee694f5885f6c223dfcfdb8fe7daa1d"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "helper-30-managed.json",
+      "bytes": 15218,
+      "sha256": "17021999e53a11ffbdf2b0e565a25320476a93027cb6cef1da43778bbaad3636"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect-artifact.json",
+      "bytes": 7157,
+      "sha256": "2e7464dba25a8ece31260cc8d8b9553a85885ba5f4582534df3a353908401cf7"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect-artifact.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect-managed-artifact.json",
+      "bytes": 2034,
+      "sha256": "0bfc7e154312515ee7332f146e50d6bec9b7a0aa30120e36635d7c8b64f2a75b"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect-managed-artifact.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect-pe-resources.json",
+      "bytes": 7140,
+      "sha256": "b7a1873546d5a3a0553e375f9da09294ab1de035118abf0f75c5eab7cab5150a"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect-pe-resources.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect_app.py",
+      "bytes": 4178,
+      "sha256": "4be149d90f373a209f0ddf509b7e7b0b594792142b3ef914904ab25c13875653"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "inspect_package.py",
+      "bytes": 3813,
+      "sha256": "77eee09a0b485a88a018fc99243e3e3682adc65b1fb69dd8674d96777a5e56d4"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "installer-file-destinations.json",
+      "bytes": 8135,
+      "sha256": "70a83e3ed366dd7a6aee3451438956a54af901a4f5672cc8e9fe77b633651748"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "installer-script.wse",
+      "bytes": 85986,
+      "sha256": "5213a1f79d756b91b91619e584019501e8a31941e02ebf769661def0ade717a7"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "package-strings.json",
+      "bytes": 1628,
+      "sha256": "211e6303eeac4314853c96cdc44298d60e7c944120dc96145b14a8200a7908fc"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "rea-runs.json",
+      "bytes": 3155,
+      "sha256": "230f2f34ba8f302786cd0342ce36887cc653a665e831e4e076c886c5d5ea9143"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/000.data",
+      "bytes": 16824,
+      "sha256": "cc5a514ce4d5df729fb4b36431db8cb0ec673b979afd865dd2518c0d993bb5ca"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/001.data",
+      "bytes": 19620,
+      "sha256": "5783a11a93a4764c0957d323d82a04a4c439f5c5427b7e951d2575c8d43b41ee"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/002.pe",
+      "bytes": 193120,
+      "sha256": "739105d5981cdb3040a184c28f7d7bfaf0eabf2529fa81f5697cb7c42ba0e784"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/003.data",
+      "bytes": 85674,
+      "sha256": "1fcbbd86610ebbb70cc45733fae2213cd4b985038d60c72e35f83ca8721bff24"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/004.data",
+      "bytes": 479,
+      "sha256": "7bec7760a48eb64e89b8069f33850874c1f05255fedca4aadb34ec5750c9ee74"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/005.pe",
+      "bytes": 15968,
+      "sha256": "246e52d624b07d8b71eb0b7bcb81c97ed3aeca72b5a94d460282077d0da7d9a5"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/006.data",
+      "bytes": 43823,
+      "sha256": "c6546e0a588329ec2c5a691e5b4f38d1796e85b7e2344f7330b8eb79fe83b67a"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/007.data",
+      "bytes": 16882,
+      "sha256": "dc8ccfbb3bb24bfdf31632ccdbe1e18c288cd83cce10d93d08deb7804887903c"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/008.data",
+      "bytes": 48,
+      "sha256": "d2b75072bc6773d5b3aa8704cbcc43e295b8a9be53bca9fdd84c650e093acc67"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/009.data",
+      "bytes": 4189,
+      "sha256": "e7765d86ff06df07e2a81a26478bedc27db2e672c86a28522ccbd8324eda16e6"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/010.data",
+      "bytes": 391,
+      "sha256": "3d2fbd1f425d139d39789f42b08b916337d7f9d40225275be27f89f2af61daf3"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/011.data",
+      "bytes": 1459,
+      "sha256": "3c6cac9f5797c43a9ddda5838750537816a8421c59997a6eabb6850d5410daaa"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/012.data",
+      "bytes": 514,
+      "sha256": "35a8168b93b84dcf92b850e8ac97b26f752ed0b8d7cd8106d3cadf75740a4220"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/013.data",
+      "bytes": 478,
+      "sha256": "92d2542abd0688fbae5dc471614618041e5b809ccff997509e5d60cc58130317"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/014.data",
+      "bytes": 618,
+      "sha256": "6b1a2e8f47613fa9ae89bcc108acc868f093a049c56c1226afb18fa31967e980"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/015.data",
+      "bytes": 1412,
+      "sha256": "d44af8cad49a99415f66b9d5d546271261bcf3b60ec78dc687e99d37b1571f55"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/016.data",
+      "bytes": 507,
+      "sha256": "8a3ffb748658dd9d2fefbe44ceff560c98a7935503099d6e8cf9b4674cd71ab7"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/017.data",
+      "bytes": 545332,
+      "sha256": "ceb047f3e0cf879557e0555046a2e871454749d815fa7ee492555565542f7ee9"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/018.data",
+      "bytes": 2060,
+      "sha256": "2ae1d24e54e12a77e638c6ff519d5123bc2e41aaa1168250663eb952457b16db"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/019.data",
+      "bytes": 915,
+      "sha256": "ef3141802fe3d3bea8df27fdf4ebdb2b826d518feb516b0d0f0fbe2fc152872c"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/020.pe",
+      "bytes": 341589,
+      "sha256": "ff6d5c7f485ee947357456179363c86e4f8e716623985f6e855f96883933358e"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/021.pe",
+      "bytes": 9872896,
+      "sha256": "b39f97ac262c51527cbbd19b9000c469a7637ca1ab4855fdc5aae00697dcd533"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/022.pe",
+      "bytes": 73728,
+      "sha256": "b0b1fe12c7c7458eb4b88fe3aa6dd8399bdeba27f4bfdb5e2a34c6d36abae3e0"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/023.pe",
+      "bytes": 489472,
+      "sha256": "c1f19bfc1e95ca70cd938eeb376b937f4bc6118ef7e72baf069c4449a34f9ed9"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/024.pe",
+      "bytes": 348160,
+      "sha256": "8094af5ee310714caebccaeee7769ffb08048503ba478b879edfef5f1a24fefe"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/025.pe",
+      "bytes": 499712,
+      "sha256": "df96156f6a548fd6fe5672918de5ae4509d3c810a57bffd2a91de45a3ed5b23b"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/026.pe",
+      "bytes": 1645320,
+      "sha256": "f1da32183b3da19f75fa4ef0974a64895266b16d119bbb1da9fe63867dba0645"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/027.data",
+      "bytes": 921219,
+      "sha256": "6c1337aee2e4bf993299851c70b7db11faec785303cfca3a5c3eb5f329ba7023"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/028.data",
+      "bytes": 1336025,
+      "sha256": "ac3144c76617223a9be4aaa3e28a66b51bcab28141050c3af04cb06836f772c8"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/029.pe",
+      "bytes": 572928,
+      "sha256": "ea5476a86a06e6bdfac319caea04250ba32259a2ed9556c0bda0fd660eadb037"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/030.pe",
+      "bytes": 184320,
+      "sha256": "f217c3fcdb2db87f2c60428c223b87e483a9e84fd3e72cd69abdedf61dce024c"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/031.pe",
+      "bytes": 982720,
+      "sha256": "2ab2a74bcb5bfd8248d232eb3bc56698fb5173b9ff7fc0daf87d8120d0f448d7"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/032.pe",
+      "bytes": 639656,
+      "sha256": "1599657f775cbeedb9ebb1feb7aaa339f0598e446620b9d2131a54f58af8a628"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/033.pe",
+      "bytes": 3977496,
+      "sha256": "84167b7df7e97c63f0cc15c1d272cdc7bba942f6f36a8801aec9840825891d0d"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/034.pe",
+      "bytes": 335528,
+      "sha256": "cde0484475bcaeead8d68eaefc99992a0033950dfa2878f8f4bcfb90c6a7a401"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/035.pe",
+      "bytes": 19136,
+      "sha256": "bba068f29609630e8c6547f1e9219e11077426c4f1e4a93b712bfba11a149358"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/036.pe",
+      "bytes": 21184,
+      "sha256": "f4163cbc464a82fce47442447351265a287561c8d64ecc2f2f97f5e73bcb4347"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/037.pe",
+      "bytes": 24768,
+      "sha256": "01e3c0aa24ce9f8d62753702df5d7a827c390af5e2b76d1f1a5b96c777fd1a4e"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/038.pe",
+      "bytes": 24768,
+      "sha256": "293c76a26fbc0c86dcf5906dd9d9ddc77a5609ea8c191e88bdc907c03b80a3a5"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/039.pe",
+      "bytes": 23232,
+      "sha256": "bf55134f17b93d8ac4d8159a952bee17cb0c925f5256aa7f747c13e5f2d00661"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/040.pe",
+      "bytes": 19648,
+      "sha256": "b06b2d8c944bff73bd5a4aad1cad6a4d724633e7bd6c6b9e236e35a99b1d35f2"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/041.pe",
+      "bytes": 70848,
+      "sha256": "ccaf41e616b9a872d35c8083cbf8fdc14371fa3ef159fe699514643c26a4ebf3"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/042.pe",
+      "bytes": 26816,
+      "sha256": "d7e676b9f1e162957d0549ab0b91e2cd754643490b0654bf9a86aa1e77cb3c37"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/043.pe",
+      "bytes": 27840,
+      "sha256": "9b05a43fdc185497e8c2cea3c6b9eb0d74327bd70913a298a6e8af64514190e8"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/044.pe",
+      "bytes": 19136,
+      "sha256": "fab41a942f623590402e4150a29d0f6f918ee096dba1e8b320ade3ec286c7475"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/045.pe",
+      "bytes": 19648,
+      "sha256": "7050043b0362c928aa63dd7800e5b123c775425eba21a5c57cbc052ebc1b0ba2"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/046.pe",
+      "bytes": 20672,
+      "sha256": "6c86e40c956eb6a77313fa8dd9c46579c5421fa890043f724c004a66796d37a6"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/047.pe",
+      "bytes": 19136,
+      "sha256": "c4ed8f65c5a0dbf325482a69ab9f8cbd8c97d6120b87ce90ac4cba54ac7d377a"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/048.pe",
+      "bytes": 22720,
+      "sha256": "cd5256b2fb46deaa440950e4a68466b2b0ff61f28888383094182561738d10a9"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/049.pe",
+      "bytes": 19648,
+      "sha256": "3067981026fad83882f211bfe32210ce17f89c6a15916c13e62069e00d5a19e3"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/050.pe",
+      "bytes": 18624,
+      "sha256": "77b53d3970c7e3f68e0c31b7f3cd64b671a3003c5a771d4659c48339331f2994"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/051.pe",
+      "bytes": 18624,
+      "sha256": "7d4252ab1b79c5801b58a08ce16efd3b30d8235733028e5823f3709bd0a98bcf"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/052.pe",
+      "bytes": 19648,
+      "sha256": "2fa840523904c7b133ded29ec073a9c24184202e8847c9e731897fdd8473b367"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/053.pe",
+      "bytes": 19136,
+      "sha256": "0c5c4dfea72595fb7ae410f8fa8da983b53a83ce81aea144fa20cab613e641b7"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/054.pe",
+      "bytes": 20672,
+      "sha256": "59e86b54319f7a6872cd888582c75559b96ae6f67c0dfe554184538b0ed08cd7"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/055.pe",
+      "bytes": 18624,
+      "sha256": "ac18630de43781ac58f0a8a1aba4304292e0f73db93acbe606b1814fecea0822"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/056.pe",
+      "bytes": 19136,
+      "sha256": "ea04e9b6cf4646d36ab691ff93964f0c7b0b01fd194b8db37a96fb1513ae656a"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/057.pe",
+      "bytes": 18112,
+      "sha256": "753494588fa1c14146a9a3f7d0f02ddd0a6850ba6a719e2513a64cf9dbf1ae7d"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/058.pe",
+      "bytes": 19136,
+      "sha256": "ccb974c24ddfa7446278ca55fc8b236d0605d2caaf273db8390d1813fc70cd5b"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/059.pe",
+      "bytes": 20672,
+      "sha256": "bc5ddb364256a38e57b21b1a16b5736a8eacbae32b4c3760514cf51629066881"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/060.pe",
+      "bytes": 19648,
+      "sha256": "6088c2aa22ae8a579518c347163571e243d9a74d542176d63520f370040382e3"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/061.pe",
+      "bytes": 18624,
+      "sha256": "5ebd891df029e795372f8665db7f15b4964d434aa8d58eb2b50634bc58d74132"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/062.pe",
+      "bytes": 19136,
+      "sha256": "d699e0c0de1d2f12bb69b3d464faa7ad4734d18a3e725877d8a96aabf29c0542"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/063.pe",
+      "bytes": 21184,
+      "sha256": "b39a515b9e48fc6589703d45e14dcea2273a02d7fa6f2e1d17985c0228d32564"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/064.pe",
+      "bytes": 19136,
+      "sha256": "4a02983d6632c2fb92409d56269ca9a5bb0c31d33a8f2a89b0ab847d263c3f96"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/065.pe",
+      "bytes": 18624,
+      "sha256": "26f90d2086687edf6fc02be5dcfd7575faad2022c3d716cdd0b5ca3e70a3c022"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/066.pe",
+      "bytes": 19136,
+      "sha256": "6a803d6cbe4dcbb6e4c9e8b8945d92d7edbd1f51cfb875d3d6c312d83840dde2"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/067.pe",
+      "bytes": 18624,
+      "sha256": "8a52a26afaf4d7cd698cf79dcd339ec3f1b3ab3c0031a8ae9064d50f63462b99"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/068.pe",
+      "bytes": 18624,
+      "sha256": "355633a84db0816ab6a340a086fb41c65854c313bd08d427a17389c42a1e5b69"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/069.pe",
+      "bytes": 18624,
+      "sha256": "bd9e07bbc62ce82dbc30c23069a17fbfa17f1c26a9c19e50fe754d494e6cd0b1"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/070.pe",
+      "bytes": 22208,
+      "sha256": "72e79ce895ab6506d2c85bcd1709ef6a250b63c990c76c9df530ec4e5b5cbb6a"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/071.pe",
+      "bytes": 18624,
+      "sha256": "d71714c34fabf8a93ae316a0d8679bb8cdc843f6128c9afd42e18e0de70b1a91"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/072.pe",
+      "bytes": 18624,
+      "sha256": "d3b5273eccc758493c9cfac5cc43ea74f08216bb1c195609ab27e9b2a241d8b3"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/073.pe",
+      "bytes": 18624,
+      "sha256": "e353ecf9deb083da0f00f40f2fe99cc4eea4a904e7118a1cac4ef6e43f89b154"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/074.pe",
+      "bytes": 19136,
+      "sha256": "5c1cbd16acf9191f17525f5dd887d944b4eb0083c5ec1adb68ce1b82639182ae"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/075.pe",
+      "bytes": 89272,
+      "sha256": "f5caad204ffd557fcac4b4dcba468bf24e994a69582956d5a087f0ecd123f612"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/076.data",
+      "bytes": 987168,
+      "sha256": "3bfcaa5a72888c8c92b74c09dc9bd43cc55d7dbb8a668436c0393af0adba5c6c"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/077.data",
+      "bytes": 681856,
+      "sha256": "a01e22a3e00cb32e06dd1c41bd02e9d1e846677e3207b4f2847230150726f944"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/078.data",
+      "bytes": 29668,
+      "sha256": "c7aecb9419346bb2227cd4dd97b3eb50bdedf48a281ad9ad907baf2e85fb08bc"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/079.data",
+      "bytes": 11391,
+      "sha256": "25be100e5e4cfccdf478f83cfd6f95141c8a71b83803606a0923797bdd71aec3"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/080.data",
+      "bytes": 803964,
+      "sha256": "9c30650d33152928155f70ddc352e4f57fdf37417680c2d639307188386ad262"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/081.data",
+      "bytes": 255781,
+      "sha256": "96fc4ba402b358ad38121f03c66821952b439970c124a12eccb672cd7b222d26"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/082.data",
+      "bytes": 257661,
+      "sha256": "5b9b2c7c6548c094e4a646b92af63b78a01298e8562a7df9a0189b96cd32bcde"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/083.data",
+      "bytes": 231955,
+      "sha256": "f1ee317c8d81cb2659736e734843f52b1824e5763c0cfd3433a3910f8441072b"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/084.data",
+      "bytes": 685803,
+      "sha256": "cb7d8e82ff6891916ca5cb60b7fac56d0d6798e5243f5d668e13d83e7ab1bc8f"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/085.data",
+      "bytes": 716342,
+      "sha256": "0601df9f904f661e01baddaf1d9ddaa144b9af8b969353a3e4dae765a3d93bef"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/086.data",
+      "bytes": 764556,
+      "sha256": "4abb383512f690655235a29f1ddec1b9d64240920f3d1377aa68baf759539549"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/087.data",
+      "bytes": 11745,
+      "sha256": "6a62d96868400b77232185643781e3c2bdf5a2a4b269deed0bf8bfdc3f3c6169"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/088.data",
+      "bytes": 24864,
+      "sha256": "b6593837195f4516cca47bfd2a9875168eebbf2b281a4a834e65e8512b7b298f"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/089.data",
+      "bytes": 3852,
+      "sha256": "d2b543cd6bca2b5c923d8bb413ecdb81149a823da3c2699f3a42459165e6446f"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/090.data",
+      "bytes": 14465,
+      "sha256": "70f8bf587e27a16753d7df1218ab290b3780a00cd57d9e7a5e258a2cfeb646d1"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/091.data",
+      "bytes": 2410,
+      "sha256": "b78e13c04cad4e344c8f010c3a206f8d05271c55cc69d06680a154906fb50318"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/092.data",
+      "bytes": 2352,
+      "sha256": "180e282ea97f65089377b08b43e76eb950aa4c51ddad8938dd5c6148f34cfb2d"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/093.data",
+      "bytes": 2585,
+      "sha256": "650c3c4588c808175cfa0a0b8b103e111af92fe2f0c2097e98694d58dd182906"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/094.data",
+      "bytes": 79,
+      "sha256": "77e47088163e9bd041cc8ed34448501255c0f2b47f059de04d28ed5281fd69d6"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/095.data",
+      "bytes": 104,
+      "sha256": "bf4477609c86e30dd8a94cf20283119befda5b12466830652f027a82e19d5122"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/096.data",
+      "bytes": 82,
+      "sha256": "ee64a0ef3e79fbd78350e95b54d704a36fde5cb974b88a129ec5bbb26508a380"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/097.data",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/098.pe",
+      "bytes": 186464,
+      "sha256": "6ec5534abbf2d38f2fc46d597ad465563b2afec3109d84fca1edaffeba520a8a"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/099.data",
+      "bytes": 16882,
+      "sha256": "dc8ccfbb3bb24bfdf31632ccdbe1e18c288cd83cce10d93d08deb7804887903c"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/100.data",
+      "bytes": 778,
+      "sha256": "6019ad2b1a8d2aed13b1c607e46a65ff2e38a4325d1874a1ba091f1976d65b43"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams/101.data",
+      "bytes": 584,
+      "sha256": "16499c660e7973103e4e16861022a86bbe776655e4e39784e412c59f02f80fd2"
+    },
+    {
+      "case": "audioscore-demo-2026-11-11",
+      "relative_path": "wise-streams.json",
+      "bytes": 45745,
+      "sha256": "454966fcdebac80df43bff1de502802b676e56e2287c6029baba9d13815eeb95"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "7zip-list.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "7zip-list.txt",
+      "bytes": 5972,
+      "sha256": "a5af5caccf0f4d1ee1818b7ca715dac60d264c8944e8b865348d85c0a1428b5b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "app-imports.json",
+      "bytes": 221735,
+      "sha256": "395368c8a89ce297776f58935855041a6a3027783ab963efb271be58e9fa3fb3"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "app-inspect-managed-artifact.json",
+      "bytes": 2295,
+      "sha256": "87a73b5d706b3823b6b6ce1dd329a1184e350b20dded81018d1137a5e6996ce1"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "app-inspect-pe-resources.json",
+      "bytes": 6883,
+      "sha256": "9c4a562f06155184c91d4f47cdd2c827d64dfd9badba99df563fe51b8cbfadba"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "app-selected-literals.json",
+      "bytes": 153872,
+      "sha256": "596bf41ceca0a72255cc288ebe2e3ba0f81edabf0ee3ecc1da8b735e4a7c3b8c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "bootstrap-provenance.json",
+      "bytes": 2102,
+      "sha256": "0a8dfaeb20215b0bba53715187c5180627300ee6a08e35d6029046523d634a2a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "config-internal.ini",
+      "bytes": 30,
+      "sha256": "fa6d2ce6b8b699084d0b6f20e22a1ab603854a48249faf4e3c0a23c0f7abc3c5"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "core-archive-list.txt",
+      "bytes": 3451,
+      "sha256": "45f39c67193397c1d33a00973c4522920f9172e2165fb2bcc72377edfdb15f2a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "core-extraction.txt",
+      "bytes": 574,
+      "sha256": "487fd669fbc168784302fd4806f5402048ded7996b82a77c3cc5db63ae95e7f0"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "core-members.json",
+      "bytes": 4557,
+      "sha256": "aad5dcc0cfc869d01c8969864401cd9f9c3af038b64404db30592c7ae29050f2"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "download_packages.py",
+      "bytes": 3191,
+      "sha256": "371e6c7d0d780784c0cdb170326e724c0379f324b75efc12bc189621b32942f1"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "embedded-english-provenance.json",
+      "bytes": 269,
+      "sha256": "8c33537868ee3053dbb667b55177e4c917d5578dd78e745765ce6dfff5e61878"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "embedded-english.json",
+      "bytes": 30657,
+      "sha256": "3ca4950e5efcb7a8705392efe0bcb1801e4681ace57ea858dfc882db894928b4"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "embedded-models.json",
+      "bytes": 10732,
+      "sha256": "4660ada97df0b364971cde211789e48fb874eeed19fdcfbba94c63f6bd65316b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "embedded-resources.qrc",
+      "bytes": 222,
+      "sha256": "a583ed36dcb7565bf571d69564c16ae85757d91354f5d13165e1d3261ba72d17"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "embedded-Updates.xml",
+      "bytes": 144,
+      "sha256": "c6bb272204bab099bc87bbd17733ebdd82c70093ed358a0db66b8408c94c0c76"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "extract_packages.py",
+      "bytes": 2472,
+      "sha256": "318dcd8071e02f47be8ec527d7b3b668c07ca5fbdf0ee7ece0553b687905007c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "findings.json",
+      "bytes": 13758,
+      "sha256": "801f194576cdc5945475814a32cd01f7b4463ab9abc1d66363cb10df95647085"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect-artifact.json",
+      "bytes": 7241,
+      "sha256": "238bf965e154426a34b70ac90e90a2b391bdfdb335dc08bc77a79b1c32c7c387"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect-artifact.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect-managed-artifact.json",
+      "bytes": 2116,
+      "sha256": "62374e9ca5e7302c062ff825f0e3d3e94b616564df79705116916148409775d9"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect-managed-artifact.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect-pe-resources.json",
+      "bytes": 21266,
+      "sha256": "e0aaaeb86f3ad81072b80958b3504072e7773bebff72ee7d8f27ce0c33ce6eaa"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect-pe-resources.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect_app.py",
+      "bytes": 4302,
+      "sha256": "4b4f9ad0c066c2703400850cb20ca0182c1fd88bde9b08e51f8d7f61d23a4662"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect_embedded_models.py",
+      "bytes": 4492,
+      "sha256": "d08d7b09b030ef5ee3cbce1e815da08d326bf950b65f6f1a1d359a158631f00f"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspect_installer.py",
+      "bytes": 2172,
+      "sha256": "0811f3c4e29097bb6c49ef41a31021ae8f8cbe7d3a7711c1adcc6f0b3ef8609a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "inspection-runs.json",
+      "bytes": 8606,
+      "sha256": "e69cb283952cd28a3c1fad8ded98c9ce268c11f8edbd3458982e217e669cc9a7"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "installer-config.xml",
+      "bytes": 619,
+      "sha256": "eb8163fb9cfbdd74860472c61f1e1fdfad493ba21d8157e177bf7186fe257e7b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "installer-selected-literals.json",
+      "bytes": 52234,
+      "sha256": "40d0157fceff7d0dcd0885ca8a292a0924d0f03801771a769367bf229b84741d"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "metadata-archive-list.txt",
+      "bytes": 1659,
+      "sha256": "b0671a7042bfccf8f52a6f49f89ca15738f09bebbcef4db1ca7da36bcfb4428c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "metadata-extraction.txt",
+      "bytes": 566,
+      "sha256": "fe3c08b865434b4ce52f3c3a1a7f0e32d929f9d11ccf3542c4abb65e38e6a64b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "metadata-members.json",
+      "bytes": 1902,
+      "sha256": "51bec63809a345770e2f7e70d874c5c8d12e00f58786fe0e3ffe3209102ce91f"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "onnx-producer-candidates.json",
+      "bytes": 1667,
+      "sha256": "a6c880ce3c4ae8bbc17529a75f7373fc0314fe27658e15370d426a58b2b1d214"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "onnx-schema-reference.json",
+      "bytes": 275,
+      "sha256": "ceb9b1e5ca1938f7a6eda1f0901decd7af499a008c27efcebf9982546bf8aee4"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "package-downloads.json",
+      "bytes": 4801,
+      "sha256": "061699f1a492d5ea6c4bc6546408f3564bb70dd78950625bd8ad76269ac9da16"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "packages/6.3.100AS_resources.7z",
+      "bytes": 13819215,
+      "sha256": "c2193ad62518d1ff1ea291982ec7071f0b3d5a8e62d260701cf81a636b82a021"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "packages/6.3.100AS_resources.7z.provenance.json",
+      "bytes": 1570,
+      "sha256": "f5a9dd37c9b40943e89bf1b6e96449ac6686b05fa160b922d8ba45c8324787ff"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "packages/6.3.100content.7z",
+      "bytes": 47438827,
+      "sha256": "f3754e539cc04d6f2e88a4a6034eebaaded97df437150cc26b0e4e00c0b083c0"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "packages/6.3.100content.7z.provenance.json",
+      "bytes": 1557,
+      "sha256": "98eb90939b804b2d647a61831d9b104cc2543e225cd7831a9625c218de15a84d"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "packages/6.3.100meta.7z",
+      "bytes": 15009,
+      "sha256": "591e39dfb4b6e3a529ccd6d98a66be31d63e0c5f6053aed05c579e0bba221671"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "packages/6.3.100meta.7z.provenance.json",
+      "bytes": 1506,
+      "sha256": "7cd550d47b831f0061117a8cb264c2ad617f17c77f85fa6bb2829fa785e1859e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/AnthemScore.exe",
+      "bytes": 37151008,
+      "sha256": "2ee9695e302dc98ec182f54ef38c38f8c6d1ab84e08856e91050b181ab8e2716"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/avcodec_as-61.dll",
+      "bytes": 20269568,
+      "sha256": "807adcd998c5589f66f1752cb4cc0abcb9b5b2b08d95def9d623433300d19ebf"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/avfilter_as-10.dll",
+      "bytes": 6300160,
+      "sha256": "1a179750ca74dec1054c227770d75f2941ef0da585d8d5b0cdc817813ac565c0"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/avformat_as-61.dll",
+      "bytes": 4288512,
+      "sha256": "8cab0b4174a1b0c8ff5433d736a205cb7db6a4c370a4e543d2d0a573ee8c1f2f"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/avutil_as-59.dll",
+      "bytes": 2270720,
+      "sha256": "724d0776fbd0640d33688ee74ff825586d00dc608753ffbaf815441c36c10f12"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/fluidlite.dll",
+      "bytes": 826368,
+      "sha256": "1e840e0e23fc8287b31ef031f6278528fe963cf452678a0a2fe4c27e9e698e58"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/maintenancetool.exe",
+      "bytes": 33163040,
+      "sha256": "8e80477b26d5e9351f7dcfc559fadac004f4a096d1bfb976e1c4747e410da9d0"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/onnxruntime.dll",
+      "bytes": 9971744,
+      "sha256": "11b44104fdb643cddcdc1ff54a17d8e6e4d06671cf32cdf1b151ebff31ea6b5f"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/onnxruntime_providers_shared.dll",
+      "bytes": 22448,
+      "sha256": "27da853e1799e4cc2e2accae4682838f5bb3390325aaf8469788a5a96c57a79a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/swresample_as-5.dll",
+      "bytes": 834048,
+      "sha256": "f9b422a7c94fdd51a85b03b960e4c542934b8fb3541278c371b4a24577895c36"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/core/swscale_as-8.dll",
+      "bytes": 1760768,
+      "sha256": "7978fd7d2b40d1c76d9c315c3f4210275b00fa6c5ee5b40cdd861d9509f49f59"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/metadata/lunaverus.anthemscore.windows_x86_64/installscript.qs",
+      "bytes": 2082,
+      "sha256": "9a513d8907cee61b1535f1a76b99981a4649efd5b8fc306b8acd8290e22b084c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/metadata/lunaverus.anthemscore.windows_x86_64/launch_when_done.ui",
+      "bytes": 782,
+      "sha256": "d7a148035f8deca3fcfcab29df033935b8998b9124a8f5ea7cf82c260c249d05"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/metadata/lunaverus.anthemscore.windows_x86_64/license.txt",
+      "bytes": 48970,
+      "sha256": "a6f24214d9b4477159443cfb48e4c74acb5085ef5b0bc1478f632ee973d7920a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/FluidR3Mono_GM.sf3",
+      "bytes": 14563174,
+      "sha256": "cfcd66d89e8386823400eca64934b14fbea7bf48ba1f00d21189af1262794ec2"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_0.ogg",
+      "bytes": 16717,
+      "sha256": "dad8dbaca748768a3a88d82c9b7b2314b48d8121daabf35cf726bfe400b25518"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_1.ogg",
+      "bytes": 17036,
+      "sha256": "a0e83f5b83c247470d367e7ace8934a02b316b2e0eeecebd900b6cde1826367c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_10.ogg",
+      "bytes": 16026,
+      "sha256": "3e8ce411dae858732fbd1e24c51b67c182c0915ffa49c9efb11409c48bab00a5"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_11.ogg",
+      "bytes": 17159,
+      "sha256": "a80ed562f107c43bf6f6d2aa82c15bc10c1915e3dd4a567f49c9294ea3c40d84"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_12.ogg",
+      "bytes": 16378,
+      "sha256": "ef1f63ab50e28bd4fc68e44ff64f00dba6616a0e2fde8ce3e41bf78df14fe05b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_13.ogg",
+      "bytes": 15893,
+      "sha256": "8d9a0404ab5a8dddb33930602a56b1a35a7f9b29cf93e1d39480c328631f8750"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_14.ogg",
+      "bytes": 15003,
+      "sha256": "6f578c8c800e99a924b816a6ad5b204c2df8b7f85ad5a44d444c1d022bc35114"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_15.ogg",
+      "bytes": 15696,
+      "sha256": "988c6c61edaa6a30c85a4397ea41f20fd7252e052443308627a21181b8a6e393"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_16.ogg",
+      "bytes": 15647,
+      "sha256": "dd0ee9e1f61d83961c5acc536ddc76d45da040d9edd94172d1108e478081d691"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_17.ogg",
+      "bytes": 16796,
+      "sha256": "fc88cd77e9da2673c094e865527d4861143830d3f54e4c9b5082ea300d8a5e33"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_18.ogg",
+      "bytes": 17390,
+      "sha256": "005e45577e3f6867e39773f2dafb174ec57977c84fa1be6fc0e4c450c22a68c8"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_19.ogg",
+      "bytes": 16810,
+      "sha256": "15fdcaa1ad95f17cb62abcbf42ceb39c81614470c272490fba7fc5701241a8a4"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_2.ogg",
+      "bytes": 17112,
+      "sha256": "668db7b279d73ff290399d77232b2dcc4acd6e251139eb91c8698d121be9e17f"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_20.ogg",
+      "bytes": 16211,
+      "sha256": "c60249649e543d0ed67ee0c4cfa3a3ed517bcd9e41ac11fb9431211cee8ec51e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_21.ogg",
+      "bytes": 16220,
+      "sha256": "68f9f6bbe73d7da6c2d178840c7f5e67dcb3176749c129653f1d4fdafa610b43"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_22.ogg",
+      "bytes": 16523,
+      "sha256": "6224e2dd38f82cc2f87a274eb10cd2535e6250f47194ccf20c5d8518bf83753b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_23.ogg",
+      "bytes": 16286,
+      "sha256": "f23382d9f947eb85d6c992984eaa875b3ada2c605720effd82ac291923550a9b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_24.ogg",
+      "bytes": 15992,
+      "sha256": "7c77b0730d1e5b7a0705e36b7651f7fb2a22d26b19a7bcce330c49805039810e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_25.ogg",
+      "bytes": 15796,
+      "sha256": "625c0a182f8e2ed66670c65b51af276d7f3fbc2dd19aed472d555fc3f233a4ae"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_26.ogg",
+      "bytes": 15921,
+      "sha256": "1e38bf4122e8414e9967ef26ba945c1a19edc16f9e34b0633cc53c5b4a1cf933"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_27.ogg",
+      "bytes": 15664,
+      "sha256": "9653360141615575bc30dcdedbb20c0a11ac050677dc3be1f3ab46368ba74bc9"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_28.ogg",
+      "bytes": 15719,
+      "sha256": "206f27b2f934653a52d8fb63a3aff7ecae29f1a307a9188b688e718c77a465f8"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_29.ogg",
+      "bytes": 16007,
+      "sha256": "e6e2a3bd4523e426464b3e936fcd79f000df3dc5e32a9502a4eecbccd3cea78e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_3.ogg",
+      "bytes": 17237,
+      "sha256": "cbd400f6f36c27f5d04b9a6fad2a16e082702f0e666a5fb056b582f37be4fd5d"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_30.ogg",
+      "bytes": 16573,
+      "sha256": "8bab32676bf0dc5309dc35724436d89a1fb8e6c193f5b2b9c6efa79990906377"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_31.ogg",
+      "bytes": 16349,
+      "sha256": "7033fc2f8cb968b4c134a2b71bc7af3074eddcdaaa5cbc7e97c5ba5d10530f8e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_32.ogg",
+      "bytes": 15598,
+      "sha256": "543fdc442527d9f50d16204c1e076fa57831daf5950b41b8a1bbd92c368702d5"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_33.ogg",
+      "bytes": 16217,
+      "sha256": "3ae673355f3f03eca172fca1cc4b2fe463d0618cefdfd9f4efd8f3faca5f034a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_34.ogg",
+      "bytes": 15796,
+      "sha256": "600615851caa183a4405ef78bc0d29aef21c5e619235e0cc952986b51222430c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_35.ogg",
+      "bytes": 16098,
+      "sha256": "0aff8fb71fd22f0df00452df425f42b03eb0ac3897891b4087a719d999f6318c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_36.ogg",
+      "bytes": 15424,
+      "sha256": "428b304f9be3ec78385ce6e11b293bd01159e3c2696bbbc0e7ecd15ff72ff913"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_37.ogg",
+      "bytes": 15747,
+      "sha256": "e8b039706a592ccb43d806a089220cc1fb1cb6c4b6e32c9a72822c6e1e697862"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_38.ogg",
+      "bytes": 15896,
+      "sha256": "19c7de355612acd61b1ac72f4fe30fcdc39738e1497b6dfcffc357483c3f0007"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_39.ogg",
+      "bytes": 15454,
+      "sha256": "8c64e3749a776f4603e9663e88a33add27ea0496d3a15a10004a910537224f5d"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_4.ogg",
+      "bytes": 16876,
+      "sha256": "7b6bab8f65be7470b00b82dc1c64db9719bcfe10b253239487ecb03eae55a692"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_40.ogg",
+      "bytes": 16521,
+      "sha256": "404a0e7d18c50f8eed04b6feb17cc61d8a92bbffa99baa60caa7180a7e4ee764"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_41.ogg",
+      "bytes": 15373,
+      "sha256": "8a9ebad270019a1f1d4ad611bad5a78ea313bb1a1632f490acd7c3f047912aeb"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_42.ogg",
+      "bytes": 15505,
+      "sha256": "a7d0bba6f9d43ef36862476eb6d638eb58c4212a0c7aa07302dbc6a4e5fc32b5"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_43.ogg",
+      "bytes": 15552,
+      "sha256": "bf7374371677191fc04f4381f7db46c1820f28c3861b6130c521d50d09cf56bd"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_44.ogg",
+      "bytes": 15990,
+      "sha256": "908300d60379effbddfd1dd7e2e407edc44a14d8db3aa3678355d8d6f88c89e5"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_45.ogg",
+      "bytes": 15425,
+      "sha256": "60b81b2ba16cd2cc54ab137fd1d524a6e622247bb5449aa267d7a1ccb0da1020"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_46.ogg",
+      "bytes": 15619,
+      "sha256": "2c6d56ca28ca6d4829472aa726b46a6a5f354cb2daf616cc54d4eac343b09b6e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_47.ogg",
+      "bytes": 15264,
+      "sha256": "0b562cd6eab65caf4335b198a2e3abfb192e2ae24b5dfd2c29111c12ba47abce"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_48.ogg",
+      "bytes": 15147,
+      "sha256": "25cab8649e0d5b1b8cb1ec182e9e70a7877d6bfcf81df71f718f32dddcfed97b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_49.ogg",
+      "bytes": 14716,
+      "sha256": "e170b0e38fba70b3e9f9e2c1fcc07867701a68bcefeda8697f5ed462c0e74226"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_5.ogg",
+      "bytes": 16690,
+      "sha256": "b4e459754ce3b1b2b5cee9d766ca1e1603ac61d1f2d79b716cdacd8d8d26e3f6"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_50.ogg",
+      "bytes": 14668,
+      "sha256": "088f90ac4d034ab1bf8cd90379dbd3e75fda9a8753a8be71bb7aa88802d52610"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_51.ogg",
+      "bytes": 15271,
+      "sha256": "24bd619c2ec75788e284f55b5d91c77e6b58837c58b1d560219ca7f4037ec8ce"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_52.ogg",
+      "bytes": 14578,
+      "sha256": "9314651946eadc89f9bc27b53727825505281a7802cf10f25903f24d0672f34d"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_53.ogg",
+      "bytes": 15073,
+      "sha256": "7a9acab7fe3517395dd4d3198b86d6a933470455a24048c66993260b416b2815"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_54.ogg",
+      "bytes": 15435,
+      "sha256": "e8f6af6c8cfcd30c4e0c2e737ade2926683af10a2a520db613b5731792fed39e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_55.ogg",
+      "bytes": 15823,
+      "sha256": "1492b1beac9ed8d4bdd00e9292b250dc3f813eb985f4d4f7659ffc358bf35c1c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_56.ogg",
+      "bytes": 15163,
+      "sha256": "a52ab1e97b377b2683fb36fbcf2e624d3b4acd4debe25054bca5614502c58f22"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_57.ogg",
+      "bytes": 16176,
+      "sha256": "69228ddb55e085a6e67b6a1a99e36c4834400026869cdd2e34bd52d919ab7ea0"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_58.ogg",
+      "bytes": 15113,
+      "sha256": "8373a826474bf5c2317038a343cdefa818e91f37528b5bf56b447ce928a924f1"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_59.ogg",
+      "bytes": 14958,
+      "sha256": "e135b493adf4bc870f21c8e5b0c722b90978869f675847b3cb2791b761e7b78e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_6.ogg",
+      "bytes": 17264,
+      "sha256": "00278eb24de9165ca3d92a4d5d03ba374f9323f59fb1ddce7ee73b43dc38142a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_60.ogg",
+      "bytes": 15164,
+      "sha256": "f180850776b44da9da3678b86ba9a36444c4232e783a381516e1c08ab7e3143e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_61.ogg",
+      "bytes": 14828,
+      "sha256": "a8ddc7e11965177542e63b4c0949cbb7e755caca4208902541fd65c207ff34a6"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_62.ogg",
+      "bytes": 14424,
+      "sha256": "20ab2deb66bb1082adde0431b8dab99b2829db77b25d6d12e67fc25a1ce213d8"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_63.ogg",
+      "bytes": 15268,
+      "sha256": "f169f5cdd39bd5eeaadc9c813e988d146cfb087df6c259839b5615ef68d79d9e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_64.ogg",
+      "bytes": 15192,
+      "sha256": "6a594fae3f9fb8e832d8fb0c4180743ee724417eac9d4a594389c8114f6d80fb"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_65.ogg",
+      "bytes": 15218,
+      "sha256": "95756b2889a22f350d8c9d82da3bc316e02ae4115d8819ddd2b3d8d41a130576"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_66.ogg",
+      "bytes": 15873,
+      "sha256": "f9471e890a6ff263a79d5452678e0bf2cd4eb7413dbc6d4cc31cd34fe5162cc2"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_67.ogg",
+      "bytes": 15477,
+      "sha256": "87832d8e797dce7e2cbee85eb31afc967b6b83e223e196fbdc766bf60465ad2d"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_68.ogg",
+      "bytes": 15055,
+      "sha256": "e4af1d92f68042e6b1a1993e24a843a27848c9888c78caae18ad785bd6aec481"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_69.ogg",
+      "bytes": 16032,
+      "sha256": "10e45888607e8447edd9e1b4d40c1986d44cfeca62b8608a931bd675cfff980b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_7.ogg",
+      "bytes": 18410,
+      "sha256": "a83e4d367c914ec11873f9a9dc2faf8ddc528c709723e8df1914877a942cd28f"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_70.ogg",
+      "bytes": 15302,
+      "sha256": "3285c2dcda9689fe744eaef8fefb3e66cc3126f856f5950f933eccb432d5fb0e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_71.ogg",
+      "bytes": 15234,
+      "sha256": "c5a9820deddac85af0e1fe2511ec4d25786b8469a3ea3b27db7950d2dd838b2a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_72.ogg",
+      "bytes": 15862,
+      "sha256": "04409576a2fdf88c327f6b86354d0583ad64a20540c6ac9835e505d1b5a72018"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_73.ogg",
+      "bytes": 15696,
+      "sha256": "3b9f7f19ac30092958a6fddd5354f4f31503abca13782cd9149c6ff4af07ac58"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_74.ogg",
+      "bytes": 15335,
+      "sha256": "8a11a8d0ee1ef023a2e9fa44eb6a95cde197e3d6f4838ad9d5b24e9a2c51bb25"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_75.ogg",
+      "bytes": 15107,
+      "sha256": "7d05b96b4fe610d18684af5f428c0292803df17cc93fbb43fec4a8dc2601737e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_76.ogg",
+      "bytes": 15515,
+      "sha256": "ef3e069613279db9d6c440d009a756c2ea0815f1f22cd0be8de609eaba90c2a6"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_77.ogg",
+      "bytes": 15687,
+      "sha256": "ebf450a0bc831b3d2ea72c3c15b6cd0f2e94f67ab667e3d02f7d0950112ad550"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_78.ogg",
+      "bytes": 15776,
+      "sha256": "01299e3563192d0b386ed09dcf49b2b99530338651983479adc372331bf7c8b0"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_79.ogg",
+      "bytes": 14985,
+      "sha256": "b4167376020163578ba9c96fee607360ad0a0725e8c946d0a672d8722bdbd3d2"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_8.ogg",
+      "bytes": 18705,
+      "sha256": "5209f70ebd7b3eab630b1fd62ec89cef13f73761b656fb540129913846907351"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_80.ogg",
+      "bytes": 15116,
+      "sha256": "cb8fd12efe78bf463c9228f0667bf8ecb3750866ef490a7194a845511ea3dbef"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_81.ogg",
+      "bytes": 15403,
+      "sha256": "5e3eb6709bd846fe4b1dbcb23962bf02c96ec5fc36e213c1ec2c7245cb6bb302"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_82.ogg",
+      "bytes": 15531,
+      "sha256": "8a4c90dd6f7ae873406c726d5160a01a7bdc3b824395ae3aaa1f60be451fb747"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_83.ogg",
+      "bytes": 15034,
+      "sha256": "68951284e3f34e215ec887d1eb01b7c5f5263257c7e69b4cddd971241552d66b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_84.ogg",
+      "bytes": 16178,
+      "sha256": "7c2c8aa812cbf05bbb66516c39afbab65dc326c84db99af9d4980e3d76845d1b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_85.ogg",
+      "bytes": 16172,
+      "sha256": "ab906adf5dea2d6898914bfb23209147c87de293df2c9315350a5714102ea2b8"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_86.ogg",
+      "bytes": 16079,
+      "sha256": "6ca7102cc7ec5fc21c14a4a1ce2afa8c39e1b399ac4e420819ceb642fb6f0ead"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_87.ogg",
+      "bytes": 17782,
+      "sha256": "3c92b16a78cef1577c257450793207fee91c0454bc7a30647d157dddf4fd4ed1"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/piano_key_9.ogg",
+      "bytes": 17205,
+      "sha256": "6df78ab87e7decf8c7cb5c48ecbbd7787b024a3124626f3434129519b8ca264b"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/354.min.js",
+      "bytes": 201056,
+      "sha256": "d4e4dd64d0ea53b9437bacafee3918e40d8d2156f999ccbe9ffbb22094eae2fa"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/418.min.js",
+      "bytes": 22378,
+      "sha256": "43e9feca76fc25829f0c1a42478dbeb2f0b4e494bc0a04ce0f5d7ccecab5d09a"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/661.min.js",
+      "bytes": 156430,
+      "sha256": "d23357d82553a436d7a31474b9aaa4378082090691550af3765db8b51d5d7c96"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/demo.min.js",
+      "bytes": 2129475,
+      "sha256": "92bb95e1a7e19ab51dd2a05ba612eee9e58f3a35ca4dc2f478ef91577e8fb561"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/index.html",
+      "bytes": 2196,
+      "sha256": "46b6e652e7e6d98e23ea2b06646e9f047ea5bddbae4809b54ab4e09f0218686d"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/index_inline_script.html",
+      "bytes": 2139046,
+      "sha256": "a749f10b658d212ba70112a21492d077766528103110fc70a96ca1df3493b0d8"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/opensheetmusicdisplay.min.js",
+      "bytes": 1628450,
+      "sha256": "5c1afe2dffdb7743a6c562c467a5d15681ad2d5b9a0cd5a0837e8111c889003e"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/soundfonts/FluidR3_GM/percussion-mp3.js",
+      "bytes": 822698,
+      "sha256": "1611fef301af820d1f1864bc8b356d4f3d9298fb9d79734b7121705af26046a6"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/soundfonts/MusyngKite/acoustic_grand_piano-mp3.js",
+      "bytes": 2306794,
+      "sha256": "6055c90ffdb88bd14e61507176ad7b3ec3978e3fbe3e3d43e0ba8486475e9895"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/soundfonts/MusyngKite/woodblock-mp3.js",
+      "bytes": 1613487,
+      "sha256": "a4954db98612af8126b6a010afd380211ec226a3fa97a2a3ae3b120659d25bda"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "payload/resources/AS_resources/viewer/soundfonts/README.txt",
+      "bytes": 2697,
+      "sha256": "08ce960908eb1d2c0dcad256fb1558913d7f884591a63bbb2386838230336368"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "read_repository.py",
+      "bytes": 2673,
+      "sha256": "799d7ed859decbca4163886a18a04886de95c8c5608a7560de518576bcc263d9"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "repository-heads.json",
+      "bytes": 1189,
+      "sha256": "ea8f785b9df8d6ad790cba8b748277ae462eb0ff8f85ef869f18e5154b01b43c"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "repository-packages.json",
+      "bytes": 1704,
+      "sha256": "62a094bc7784f3eecc5e48274ca9103d1abd91d7e1c77a44a7b2b5166fcf0cd2"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "repository-Updates.xml",
+      "bytes": 2382,
+      "sha256": "6f01a358280a076ea1e73104be95c1c8295025f52e953065bcca0e7f7f0de9c0"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "resources-archive-list.txt",
+      "bytes": 29566,
+      "sha256": "6b62e40a5729b3bc71be1abc5f72624b715dd975faa089b792d68d8140eb1966"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "resources-extraction.txt",
+      "bytes": 597,
+      "sha256": "08aa76cbc7cb5a155e9cffb945d69c332b9cde2b7f7a979acf15771d80bad039"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "resources-members.json",
+      "bytes": 42246,
+      "sha256": "3da740f007fa0658b2aa8d1c0d0e61d0d4dcaca043f9c76c258f36bcbdd812bc"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "viewer-analysis-summary.json",
+      "bytes": 13339,
+      "sha256": "26b1de53cce487368697e94ac28aa69a4443abf355c3dfbd500c9d2e59e7fe58"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "viewer-analysis.stderr.txt",
+      "bytes": 2714,
+      "sha256": "0d036119b4b16b1a55e4e3d671b86b18586b349756af38683e8a3208657a6fef"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "viewer-evidence.bundle.json",
+      "bytes": 171912,
+      "sha256": "a1b2abb1d8f713d99a83c8cf67394a42fc6c0d8de69ce275a0b5a84ce1a42392"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "viewer-key-snippets.json",
+      "bytes": 6874,
+      "sha256": "0bf1db81b6538aed0b048cd70e76233a0792ed2c0c56c54ac640abc17d967f44"
+    },
+    {
+      "case": "anthemscore-installer-2026-11-11",
+      "relative_path": "workflow-literals.json",
+      "bytes": 8192,
+      "sha256": "8e1cb05b84de7cbe1660fd9876b259c788894b371bf98026235db2d5d4d05374"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "acquire_frontend.py",
+      "bytes": 1860,
+      "sha256": "bc1b25c3bd84a487d2a929ca5f876c7f9c4a620e1c07648c17c13aff11ba40e4"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "additional-source-context.json",
+      "bytes": 1618,
+      "sha256": "8f8f6caaa4ef2c23cdbd1e19d36959f667c83e19ada68d2e5684d656ec3bd01b"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "analysis-input/app-workflow.js",
+      "bytes": 31649,
+      "sha256": "eb3684d3d134eca0998c9427fc1fdecc9e753816bcbde95c0587642bec88158e"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "browser-observations.json",
+      "bytes": 972,
+      "sha256": "4064eca4e98efda8f313f22f3a9e5db7881a9b2822340e0fbc7c38d042452b38"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "declared-javascript-assets.json",
+      "bytes": 4350,
+      "sha256": "01c1042fcbfed058d4b324fbe13daad532f4f9d6db7e469dd2587b80602aef8a"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "declared-transcription-api.json",
+      "bytes": 5043,
+      "sha256": "fc662591ad70519818c569371b94bb590d8d4d0e392305277ef4505582e53bc1"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "findings.json",
+      "bytes": 13736,
+      "sha256": "986e5337aa5c279332edd029688a90627e11b9976a92d227daba91364ac68939"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "frontend/index-DIr4Mtaw.js",
+      "bytes": 4450311,
+      "sha256": "7e641e9db38279872fa665dd85c8897fd33f8cec5916b86ad290d2465c5b8142"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "frontend/page.html",
+      "bytes": 1658,
+      "sha256": "066d501c41b5f9a554b0f51773c2b72d2f888b0c48bd353ddba73caf219fefe9"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "frontend-acquisition.json",
+      "bytes": 1203,
+      "sha256": "7da3f48b95d292a1155eb7fb543d86a4a01323d14de0d08b92978e6dc1868a1a"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "initial-code-references.json",
+      "bytes": 4386,
+      "sha256": "5e51c8eee56866f1805089181ca66e761d3348da17833ddf02234864128650f0"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "rea-workflow-summary.json",
+      "bytes": 11124,
+      "sha256": "02fb7012392f17efd774496333a10ede86bbd69fb735556eb21e79682cf1be6d"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "rea-workflow.bundle.json",
+      "bytes": 9954542,
+      "sha256": "02553afb0872d88d8bda26a42cdd751fac6a81011906f3c6f18606f8e7c2fa67"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "rea-workflow.stderr.txt",
+      "bytes": 3025,
+      "sha256": "5ccbcacb3f6a66a2f7d28dd33c4a25b37564397ea58562a14b9e5b04787d8e78"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/aDt.js",
+      "bytes": 4628,
+      "sha256": "8284f8a936d902c1fb300c3bd7b935d031c7329143819623ff3cd26ca4dde958"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/At.js",
+      "bytes": 198,
+      "sha256": "1d0e120adc5eecc1bef4efb08b6ba140ee1f7e363593560bd8188886a378e681"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/cdollare.js",
+      "bytes": 2084,
+      "sha256": "5546f6154bb79addb7d4633d50ee03c36bc28e8337acdb77bb209dba187dabfa"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/ddollare.js",
+      "bytes": 1463,
+      "sha256": "c1f5c854814c60665d642bbd861a8eac2e444f7e8ee48f3e6f0b6bdd5cb17bbd"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/dollarM.js",
+      "bytes": 1644,
+      "sha256": "059cd5e7d157946969ff5039ffb3babef8f629d8ae0d84c9db7e24364a3bc13f"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/dollarr.js",
+      "bytes": 1113,
+      "sha256": "8132e17c0f79e27b2509f1944242876936026a4895898df04bea6f7a99501745"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/dollarze.js",
+      "bytes": 300,
+      "sha256": "c9de82584385ee705a9dac8ebbbd60e83238d17b3f8912952bf453f6006b2d0c"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Dt.js",
+      "bytes": 390,
+      "sha256": "597f62e084b718dd464ab172b8bdb54ac9ba279aff59859c77655f33e0607f64"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Gze.js",
+      "bytes": 285,
+      "sha256": "a72e0f72ca083897c0124e747d03bf6d506084eab381c71835fdfd8eb2e1d526"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Kze.js",
+      "bytes": 227,
+      "sha256": "eea87d35c3efdbd2789602868b00efc23c99ae4fc748b9f72d63adb7dd2bfc14"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/qn.js",
+      "bytes": 6376,
+      "sha256": "b5aaec06465fa14390bf9921ac9cd09f8edd565edbdc8b2467d8f27a49ef1df3"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/qze.js",
+      "bytes": 323,
+      "sha256": "09ff6f9e7bb91a0b5b370aec558b7a2a35c8afdd0091b1fa07e5353e8adbfcc5"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Re.js",
+      "bytes": 8,
+      "sha256": "1201d957334e11496fd568c585c08bbae091f9850ca6481494df499dbe916ce5"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Re_initialization.js",
+      "bytes": 165,
+      "sha256": "60ef358caa0b7ded735d14eab2ecfc5e89fb1f4dd572bdf0fec2c521ef6a0591"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/rh.js",
+      "bytes": 5002,
+      "sha256": "39b73737673e895b07fd0375d1894bb2ee197b21550881016e2fc9c2f7606f37"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Uze.js",
+      "bytes": 262,
+      "sha256": "18cc7bd1efad76502e0b93f4a9c6677008295c2d8fefd85f5344943d6253d2f9"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/V9e.js",
+      "bytes": 6351,
+      "sha256": "beebee53203261bdc632377d750e93ebac3d5292e7c958b38d1c7a5134cb6037"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Vu.js",
+      "bytes": 63,
+      "sha256": "74469e146791707d6c8e1d70fb82ffd9986ef4319bbbbb2c520f23fdc2af9c73"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/wdollar.js",
+      "bytes": 297,
+      "sha256": "4151d00ef526bc51f8b5f08cb175dff5e988f7d5ddd847d74f9c262c9e626e78"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Wt.js",
+      "bytes": 480,
+      "sha256": "707b705abf600f58eb5face8bf4afaff73b763f339df8cac84e4265a49b81b6d"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Wze.js",
+      "bytes": 313,
+      "sha256": "9f799da23c7e7f2d753649b6ff593cb76665d00fc147f6e34323ee51b7915f3b"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/XFe.js",
+      "bytes": 38,
+      "sha256": "08c971ff9b84033133bfa9cafdbae00e7d0cf7a280e11ee12fb549e561b7ec98"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Xt.js",
+      "bytes": 8,
+      "sha256": "59b9b75bc053fd2c1592fe665ab90367919016758127be15817df02a8c258486"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Xt_initialization.js",
+      "bytes": 125,
+      "sha256": "dad9b7a831e8e7b8da1952298c806fd3a198ac80be6f8c55a34dda897b6835b5"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Xze.js",
+      "bytes": 528,
+      "sha256": "fcf41d45eb5c26ff1e2853114398f4b4f95351bf314fc4f515e81d92b899cc7a"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/yme.js",
+      "bytes": 5014,
+      "sha256": "3b9f0226383990645b4279f1e6583086ac76e41849848438c4aceb74c8c8c8ad"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/Yze.js",
+      "bytes": 297,
+      "sha256": "2f76e529bf2487e9f29b94d7f9df9d0dc0dde144d44a16fbfd335ed27399c965"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow/ZFe.js",
+      "bytes": 95,
+      "sha256": "7a51c788e2adfee965154217456910c4b22ea8d8491e49940a42faf4327df004"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "selected-workflow-provenance.json",
+      "bytes": 14024,
+      "sha256": "060b790cf615cd759d11460f5bb27abd674f05f995312502041c2b63f14a7f4b"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "slice_frontend.cjs",
+      "bytes": 4412,
+      "sha256": "b873d354034f5df78d11d50238672aa5990dddf2212a89dae9619eeb52ab771a"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "source-map-acquisition.json",
+      "bytes": 607,
+      "sha256": "c0e7dfb0412c63ab9af0594ce16d55e7feb06774c97db2f26bced74b0b3de10d"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "top-level-declaration-index.json",
+      "bytes": 1198459,
+      "sha256": "d43c45b9a3c9bd56cfcb4f6a4ee183b158a559794d1b2d90a09a5cc2a568939f"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "unavailable-source-map-response.html",
+      "bytes": 1658,
+      "sha256": "066d501c41b5f9a554b0f51773c2b72d2f888b0c48bd353ddba73caf219fefe9"
+    },
+    {
+      "case": "klangio-studio-2026-11-11",
+      "relative_path": "workflow-declaration-inventory.json",
+      "bytes": 12185,
+      "sha256": "b20fc376c43af0e7a17c7568d53a5ab20ee5ffb403a5e2218b0dd878c5d7f854"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "findings.json",
+      "bytes": 41137,
+      "sha256": "4018c906438f03a6a0a97e4a196b56aced8bd0f37d98386047fbfd5ee8874e4b"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "repositories.json",
+      "bytes": 485380,
+      "sha256": "445df6953b6ac27c1f8fed1fcb1b8ddad836d26ef5ce9619d75acf94a30257fd"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "review.html",
+      "bytes": 37186,
+      "sha256": "9f866d2a2fee9a35ceeb021ee6e50e46098f7d7ff1e2083acc0809a023d48a99"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Anjok07__ultimatevocalremovergui/demucs/apply.py",
+      "bytes": 11296,
+      "sha256": "2164bf5590ef1322cca5bad5ea34e20b904cdfc8e67c46c0770c291e4ec3c3ec"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Anjok07__ultimatevocalremovergui/demucs/htdemucs.py",
+      "bytes": 26765,
+      "sha256": "7d3f6d052e1ad95e4b038e5f58398d889367bfbda25361e7dafef72fc91a097e"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Anjok07__ultimatevocalremovergui/lib_v5/tfc_tdf_v3.py",
+      "bytes": 7514,
+      "sha256": "0e7a460074070684f4f85245f1d415999e518548fda0038649931e4584fb7fad"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Anjok07__ultimatevocalremovergui/lib_v5/vr_network/nets_new.py",
+      "bytes": 4185,
+      "sha256": "a6a9d0e5d698fc432173a721be89ecaf16b20c2ec75c86a6711855bde6ada70e"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Anjok07__ultimatevocalremovergui/README.md",
+      "bytes": 13628,
+      "sha256": "09c5f944979bde05833c597592ec85c96bc21721c9d486d5883cd2dc3ea66eec"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Anjok07__ultimatevocalremovergui/requirements.txt",
+      "bytes": 695,
+      "sha256": "ab99e3fe74fa98d8e8c48fb6371ce287c800d629d03ac0d45c96dc3e95586df5"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Anjok07__ultimatevocalremovergui/separate.py",
+      "bytes": 72575,
+      "sha256": "652477bb89713557a52c2ff795b97628ed3e5d526fa6b60928fd64eef5d0e6d1"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/LICENSE",
+      "bytes": 1334,
+      "sha256": "fee8e128d4af9081b16c8e71af2e953556fa394512c63a35af98eae4d342732e"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/README.md",
+      "bytes": 11573,
+      "sha256": "dae6a05826f41ff8a61bafc724b1dd7ff80bdc04d43cc9dff6de577c57866cf0"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/assets/sheetsage.json",
+      "bytes": 4063,
+      "sha256": "80432d248e9b09eac775389179b4ac4e8b2e535ff2d98d15f4ac1fb889143fca"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/beat_track.py",
+      "bytes": 3256,
+      "sha256": "36857eba68f5202b198232e217ed1a704a9e4271409229199dae801435a1f2c6"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/infer.py",
+      "bytes": 30879,
+      "sha256": "9ca0a6e9639113cd6b70a4066869f7fd87e2da1d8df4664c9c3d129096660637"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/modules/modules.py",
+      "bytes": 12564,
+      "sha256": "2e87131b9b277ce04316f6db8a993d2ed5286c708bc1b2df1a1611cf1cad7a4d"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/representations/handcrafted.py",
+      "bytes": 1343,
+      "sha256": "05455819cfdcc48c267ad319c1d2e81d0d2bbd6db34580475865c882771a1ccf"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/representations/jukebox.py",
+      "bytes": 8951,
+      "sha256": "ddc61095aa15e9f9177514f7ff2f4affcc2269abf8b890a6b56accf4abcb87ac"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/theory/lead_sheet.py",
+      "bytes": 16390,
+      "sha256": "9c60f1f622090cac9a5fe13fac902306ab739de00fef43654bb408c8f8dc0e12"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/chrisdonahue__sheetsage/sheetsage/theory/utils.py",
+      "bytes": 3885,
+      "sha256": "7deac492d11ff4c403df553976ad3d7e44d06693f39896126e22b6bb60fce8e5"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__muscriptor.cpp/cpp/CMakeLists.txt",
+      "bytes": 18090,
+      "sha256": "20b5bed7d5f706027b1c6713768cd1f01aca1af18cfd15d00034e1e6f80e35ef"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__muscriptor.cpp/cpp/src/transcriber.cpp",
+      "bytes": 23200,
+      "sha256": "9d1c42b1b54325019359c9ad2e1e1a47391ca24416c00adaeeef33f06a47d2bc"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__muscriptor.cpp/docs/MODEL.md",
+      "bytes": 7058,
+      "sha256": "bf78f623897374ac2ba4bd23403c3595a878b240a306062f2d500737455a6335"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__muscriptor.cpp/docs/TOKENIZER.md",
+      "bytes": 10344,
+      "sha256": "59b7f344a4a6c18e97b67e75bd3ff172733f3016ea9d259385b035b228e18d21"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__muscriptor.cpp/README.md",
+      "bytes": 5330,
+      "sha256": "dccc93a350a8e73c95bfb44c1c7da432635ce07de594cc497f57d686bd5455be"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/.gitmodules",
+      "bytes": 224,
+      "sha256": "ebe8ca7de8f33674c0b982b8062e84764a1c84e5169e9dd3bea2d980f8b688a2"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/CMakeLists.txt",
+      "bytes": 10469,
+      "sha256": "c70e99864039c793eec7e3e165eb2032fcca8ada217c7bd7dfba7b255558dcdc"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/Lib/Model/ModelDownloader.cpp",
+      "bytes": 12204,
+      "sha256": "271712b926b2a6b952117f9211caaf4de036379fc0bf2cdbc876bfc379aaf77f"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/Lib/Model/ModelManifest.h",
+      "bytes": 1723,
+      "sha256": "4ab39c99fc804f2894440d21ca05b7860a114710b247327068b1fd05531114e8"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/Lib/Model/MuscriptorEngine.cpp",
+      "bytes": 12721,
+      "sha256": "f0c50e2a6760c4bd31539257e6cb270fa3d584248ff61a82854df31881c923c0"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/NeuralNote/Source/MidiFile/MidiFileWriter.cpp",
+      "bytes": 6537,
+      "sha256": "20d98400374ea2b0b8dcf0f950989acb60d6c11524f09fd9ba9879d34fa60772"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/NeuralNote/Source/SourceAudioManager.cpp",
+      "bytes": 17729,
+      "sha256": "bc3c90b3e18a2f09a256cabe5732bafde25b346c923522aa7d9abcd74c463681"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/NeuralNote/Source/TranscriptionManager.cpp",
+      "bytes": 22450,
+      "sha256": "da51b77e71e03ceaf92e868a632101745d55b72c60d7a3034e985497fa406a12"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/DamRsn__NeuralNote/README.md",
+      "bytes": 12710,
+      "sha256": "8982a3a9612ff130b1635e7c6cc0245288b285c5146fdf9319afddfe7a3ab18c"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/colab/music_transcription_with_transformers.ipynb",
+      "bytes": 21849,
+      "sha256": "1384cab3b4085dc3f3fe3b84741ba0c6df647085e2da5c4d1314fb19e4def36d"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/datasets.py",
+      "bytes": 14019,
+      "sha256": "b24b528d00ad3a7c07ee20cd63dd2197a0567c0c9d4130b17ba68f65ef55210a"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/gin/model.gin",
+      "bytes": 2090,
+      "sha256": "cfc95f830127ae0d9cd2c73e2f78157566fa6629c82d4232818d3d31c0f50a52"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/gin/mt3.gin",
+      "bytes": 252,
+      "sha256": "0432d5c20c712560fb189600949de392dd7ad0912db9160e67294b48d907a86e"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/inference.py",
+      "bytes": 4387,
+      "sha256": "e91b9f1db2f34b87e04eac3bf839267963f19cd9df57680c9888c9d353c7f1d2"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/network.py",
+      "bytes": 13913,
+      "sha256": "e3521c3f240c18887551f0515751f1bc9e33b706edb37dcd4e325b9bd15a530d"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/note_sequences.py",
+      "bytes": 17429,
+      "sha256": "8a25cc720f85c54f6b5b2c0bf5673a4e818e9680956e6a50dc7e41a86ce0f4c8"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/spectrograms.py",
+      "bytes": 2331,
+      "sha256": "dfc832905cf7ac1da5d404903e7a2b23908250a81c6143ca77d0cba6307cf75d"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/mt3/vocabularies.py",
+      "bytes": 9176,
+      "sha256": "7370d53f5fb6c57861b821d17b7b66e33de169dec834370f63521b4709388fc6"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/README.md",
+      "bytes": 999,
+      "sha256": "444c704056eb061ea0dc8042a0952a48e321fb248f321a654b18297e5694d537"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/magenta__mt3/setup.py",
+      "bytes": 2209,
+      "sha256": "2423dc683bd6c075f73299fba05848df0167599b0dffe20fcdcb1e34781fca1a"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/main.py",
+      "bytes": 20120,
+      "sha256": "147c8fe9b0131ea8e44f305b2ab226911741a2e686c2e432a913a28136b773b2"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/models/lm.py",
+      "bytes": 20243,
+      "sha256": "a2a48a29da4cde94ab85711819161b69d6feaee48d17e6b5622abe1424588b6c"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/modules/conditioners.py",
+      "bytes": 10694,
+      "sha256": "646539ce12191cf55223efbd2d5f6f7eee92eed5ba0901d6e1fdbe32f23d1aa5"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/modules/transformer.py",
+      "bytes": 7854,
+      "sha256": "ee0927917a06613d728c0b0c7b742dfde96cca87314a9c43543d00578886746e"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/server.py",
+      "bytes": 27171,
+      "sha256": "10da8b17e7732432ee188b09b984bbccd94264a14ac421cdec9b5f3cbcd4f243"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/tokenizer/mt3.py",
+      "bytes": 10570,
+      "sha256": "4e76a325c637a6ef5cb56432f274b10fc12d86f433911c05e807963f3c99dea9"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/tokenizer/notes.py",
+      "bytes": 14552,
+      "sha256": "26ed58a7b2481da8a67e3e1ae8557fbece9c504d6bfe195eaf3165be5fea4d84"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/transcription_model.py",
+      "bytes": 32738,
+      "sha256": "e9150a72fc9517c508cbf7e2895d93b8a53265734116f638b5328429cee0a15a"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/utils/beats.py",
+      "bytes": 16437,
+      "sha256": "29219c65b58e5a6d3249c6284a96d0ee2a451b7f3bd796bf66c846437b5b9367"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/utils/midi.py",
+      "bytes": 19160,
+      "sha256": "25f2ebec33fadf35aefac6f83841f6318c9aaab5d682f91e819332fa6db40c7c"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/muscriptor/utils/sheets.py",
+      "bytes": 17547,
+      "sha256": "381250b5d3718aeddbd77bde16ec45f04cc3f640c3b59be512a12f94f929d6f7"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/pyproject.toml",
+      "bytes": 2634,
+      "sha256": "0ecf3e42baad4a21f3df956c05b08b09d2f443d93bf77a526320983422c73978"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/muscriptor__muscriptor/README.md",
+      "bytes": 8165,
+      "sha256": "04f55b589244b399c0dd5645739c1f2386708b963b17482fc771f0316d161ac3"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/LICENSE.txt",
+      "bytes": 36494,
+      "sha256": "c29f2097671fbcbea4ebe9af05359c36f0e48ed9a1dc8dd9d1d9b92e75cdda44"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/README.md",
+      "bytes": 3748,
+      "sha256": "eb533f5fd35fa02f17a6a9a4aa9837c9f4bf57cfd0bdabcd8ef5d2c367db69df"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/src/importexport/audioexport/audioexportmodule.cpp",
+      "bytes": 2150,
+      "sha256": "f6d4af5c6a4c6f36f8d21396758729c138567a6726f6300da586500720ca4d9c"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/src/importexport/imagesexport/internal/pdfwriter.cpp",
+      "bytes": 5345,
+      "sha256": "d44d1f64d71bc926d12a7527015c15fc70c4d448f2892ac6b678bebba9202ff9"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/src/importexport/midi/internal/midiimport/importmidi.cpp",
+      "bytes": 45769,
+      "sha256": "b2ab1976fea9bd7792f54e2cf6e7e0de76b2b86f6b81c91771c4764a7608d1a6"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/src/importexport/midi/internal/midiimport/importmidi_quant.cpp",
+      "bytes": 54151,
+      "sha256": "54d5cbe1d3aaa813adff1e487b97de4b19c060d028b632b23b495c6589d2aa0f"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/src/importexport/midi/internal/notationmidireader.cpp",
+      "bytes": 1219,
+      "sha256": "45a3557a21153e82cdd34cf3b1fbf382400867ca7f61965a7deb4fad46a2f0df"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/MuseScore__MuseScore/src/importexport/musicxml/internal/musicxmlwriter.cpp",
+      "bytes": 2022,
+      "sha256": "3a34dc1cfe70af7c4c45213f5796558fc6abd68aaf0f8d8c14021abcb2a588c9"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/beat/app.py",
+      "bytes": 15508,
+      "sha256": "184bb0c6f1ae9f685a3b8dafa0dd8bd2c2077fe4fe0b10cae40d74f196a782cd"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/checkpoints/music/music_pop/configurations.yaml",
+      "bytes": 1619,
+      "sha256": "31d4f7cfb7bbb4a9f805e332f8f986c76db575ea3cf76af2ba24b26d5f0fd51f"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/chord/app.py",
+      "bytes": 13379,
+      "sha256": "a6e52a48f6168f014209c9f31bcb837507430a9fbe1d288ebe8a8171b432a387"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/cli/transcribe.py",
+      "bytes": 685,
+      "sha256": "cd9d85b66f41f21fefc9483883a709c5b32829ee7dfac3c71b13eca1722eed9c"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/defaults/music.yaml",
+      "bytes": 6433,
+      "sha256": "cd786086950afd5d6d611050cbaa44772143354bffcde686517c361473e878ea"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/drum/app.py",
+      "bytes": 15913,
+      "sha256": "aa0aa8fd7ba04d81ecc1c0ab309f403ad5c2935fd90845819f677da1555461ea"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/feature/hcfp.py",
+      "bytes": 1973,
+      "sha256": "52c4edf5ea77153214bfef095286f94124cc63f408fe71f809ec30fa78fbf682"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/feature/wrapper_func.py",
+      "bytes": 3894,
+      "sha256": "8ee843b19fd36a4b6aab38cbfc8824406c70e7a58ab890194d96039c5048e38d"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/models/u_net.py",
+      "bytes": 12257,
+      "sha256": "52f0e8fa0906be3d7b67fbb3a441b52aebdd6fa9c25c1f3e3abb4d1ec71e3b58"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/music/app.py",
+      "bytes": 22272,
+      "sha256": "ed701387f280a6d7506f9562b6bd2a84162848b3c24b6a70b64906b2080c4754"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/music/inference.py",
+      "bytes": 16302,
+      "sha256": "7852adff8bbb9a113d3c2a50c7f6142a738e453003471a297c815568f7a57b0e"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/transcribe_all.py",
+      "bytes": 226,
+      "sha256": "0435cb56c63f8f7709c014f0eaab297cd300888876009faf96a4723c0ec4dda7"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/omnizart/vocal/app.py",
+      "bytes": 22158,
+      "sha256": "11e58c118c2ca1e0218785b53e0936e97eddae075f0c1e0eb2df85378a86cc36"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/pyproject.toml",
+      "bytes": 2230,
+      "sha256": "8418dadcd01b58c00c270e15662f741255fbe9a3f97f0c68b16f4842d73fa928"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/Music-and-Culture-Technology-Lab__omnizart/README.md",
+      "bytes": 4593,
+      "sha256": "ad67a4884cab355d93dd3cb1096d497298d68d8e14d62f00dc6df8aee824240b"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/spotify__basic-pitch/basic_pitch/constants.py",
+      "bytes": 2416,
+      "sha256": "9bc2f39a288dccad644434a0a33d8b20c0bd3bcb39eef31008714f96b23ef7aa"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/spotify__basic-pitch/basic_pitch/inference.py",
+      "bytes": 23347,
+      "sha256": "272a19cb1f6e5a68215cd18588a4832ef39d30992b2ce1c3e8dbff383c2a3054"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/spotify__basic-pitch/basic_pitch/models.py",
+      "bytes": 10624,
+      "sha256": "69b9407fc60fb9ce74030a304f176e5dba4fd9b0883b5b9971cabf1cf7b83431"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/spotify__basic-pitch/basic_pitch/note_creation.py",
+      "bytes": 19122,
+      "sha256": "b6f92ec996e70a3d5f3b8571e8ec647d7ac6d45743ae745e754e07ae4a33b9dd"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/spotify__basic-pitch/README.md",
+      "bytes": 10298,
+      "sha256": "607502e6c1ed3e61971aeb1370baa3f66a4f83f5a27eb5cf9b4141c0ed2e2dea"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "snapshots/spotify__basic-pitch/setup.py",
+      "bytes": 687,
+      "sha256": "89db852e20bbbbf9fd9cf9017fd013032699d6f8535932a25b32df3da147bd48"
+    },
+    {
+      "case": "github-repos-2026-11-11",
+      "relative_path": "source-manifest.json",
+      "bytes": 49795,
+      "sha256": "c6205766b93844386f81bbfb109bf6ce6fffca7a737ad715fadc431798c339e1"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "XFe",
+    "type": "VariableDeclarator",
+    "start": 746789,
+    "end": 746820,
+    "prefix": "var ",
+    "suffix": ";",
+    "file": "XFe.js",
+    "raw_sha256": "2672c8f9aaf2aad720f5e85576f542b5d5b24d729890e7453c5470351a570a12",
+    "derived_sha256": "e8fae3df6b41e7df81acea4788768f811e50840c5456907f2a7c15fb55fa34d2",
+    "evidence_type": "Exact static source context; outside the REA-selected aggregate"
+  },
+  {
+    "name": "Vu",
+    "type": "FunctionDeclaration",
+    "start": 652549,
+    "end": 652610,
+    "prefix": "",
+    "suffix": "",
+    "file": "Vu.js",
+    "raw_sha256": "bdfdd18db0d5bfc12b6044b5126f9f2940c8c64031f3faea61def891758c4d38",
+    "derived_sha256": "0084946865fecb18e36a759e1f8ca60c9e50cdeeaced63296bab5b77bd361352",
+    "evidence_type": "Exact static source context; outside the REA-selected aggregate"
+  },
+  {
+    "name": "V9e",
+    "type": "ClassDeclaration",
+    "start": 3759991,
+    "end": 3766340,
+    "prefix": "",
+    "suffix": "",
+    "file": "V9e.js",
+    "raw_sha256": "7b9f0c499b56b98cd169666dbf3aed24beedea5ea710299654a96ee21bd953af",
+    "derived_sha256": "357f08e65339d9cdb42a9a581afeda2c63530029f1b11eb1ac30b712a6d3788b",
+    "evidence_type": "Exact static source context; outside the REA-selected aggregate"
+  }
+]

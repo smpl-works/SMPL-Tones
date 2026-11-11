@@ -1,0 +1,45 @@
+{
+  "input_sha256": "a1da9aec1e702e180a563ba95470f20fb78d23dd90909c82d8d7c951987c79e9",
+  "qresource_version": 1,
+  "embedded_resources": [
+    {
+      "file": "embedded-Updates.xml",
+      "offset": 33172504,
+      "bytes": 144,
+      "sha256": "c6bb272204bab099bc87bbd17733ebdd82c70093ed358a0db66b8408c94c0c76"
+    },
+    {
+      "file": "embedded-resources.qrc",
+      "offset": 33172652,
+      "bytes": 222,
+      "sha256": "a583ed36dcb7565bf571d69564c16ae85757d91354f5d13165e1d3261ba72d17"
+    },
+    {
+      "file": "installer-config.xml",
+      "offset": 33172878,
+      "bytes": 619,
+      "sha256": "eb8163fb9cfbdd74860472c61f1e1fdfad493ba21d8157e177bf7186fe257e7b"
+    },
+    {
+      "file": "config-internal.ini",
+      "offset": 33173501,
+      "bytes": 30,
+      "sha256": "fa6d2ce6b8b699084d0b6f20e22a1ab603854a48249faf4e3c0a23c0f7abc3c5"
+    }
+  ],
+  "repository_metadata": {
+    "requested_url": "https://lunaverus.com/static/AnthemScore_repository_windows_x86_64/Updates.xml",
+    "resolved_url": "https://sfo2.digitaloceanspaces.com/lunaverus/static/AnthemScore_repository_windows_x86_64/Updates.xml",
+    "status": 200,
+    "retrieved_utc": "2026-11-11T12:28:04.315818+00:00",
+    "headers": {
+      "content-length": "2382",
+      "accept-ranges": "bytes",
+      "last-modified": "Wed, 30 Sep 2026 18:53:39 GMT",
+      "etag": "\"a43f8e96aadb5b757dad1a922b60e3ed\"",
+      "content-type": "text/html",
+      "date": "Wed, 11 Nov 2026 12:28:04 GMT"
+    },
+    "sha256": "6f01a358280a076ea1e73104be95c1c8295025f52e953065bcca0e7f7f0de9c0"
+  }
+}

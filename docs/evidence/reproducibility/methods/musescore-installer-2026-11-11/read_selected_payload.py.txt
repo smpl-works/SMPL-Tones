@@ -1,0 +1,58 @@
+# ARCHIVED RESEARCH METHOD — reference text, not a ready-to-run utility.
+# SPDX-License-Identifier: GPL-3.0-only
+# Personal/tool-install paths were replaced by placeholders. No target code was run during this preservation audit.
+
+"""Decode selected ZIP/XZ members, retaining CRC/SHA-256 provenance."""
+from pathlib import Path
+import binascii
+import hashlib
+import json
+import lzma
+import struct
+import zipfile
+
+ROOT = Path(__file__).resolve().parent
+archive_path = ROOT / 'payload.zip'
+archive_bytes = archive_path.read_bytes()
+selected = ['.manifest', 'Assets/Strings/en-US/Localizable.strings',
+            'MuseHub.exe', 'MuseHub.Updater.exe', 'MuseAuthService.exe', 'ServiceCore.dll']
+destination = ROOT / 'selected-payload'
+destination.mkdir(exist_ok=True)
+records = []
+with zipfile.ZipFile(archive_path) as archive:
+    for name in selected:
+        item = archive.getinfo(name)
+        assert item.compress_type == 95 and not item.flag_bits & 1
+        header = item.header_offset
+        assert archive_bytes[header:header + 4] == b'PK\x03\x04'
+        filename_length, extra_length = struct.unpack_from('<HH', archive_bytes, header + 26)
+        start = header + 30 + filename_length + extra_length
+        compressed = archive_bytes[start:start + item.compress_size]
+        content = lzma.decompress(compressed, format=lzma.FORMAT_XZ)
+        assert len(content) == item.file_size
+        assert binascii.crc32(content) & 0xffffffff == item.CRC
+        path = destination / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if path.exists():
+            assert path.read_bytes() == content, f'Existing derived file differs: {path}'
+        else:
+            with path.open('xb') as output:
+                output.write(content)
+        records.append({'member': name, 'path': str(path), 'compression_method': 95,
+                        'compressed_range': {'offset': start, 'bytes': item.compress_size},
+                        'bytes': len(content), 'sha256': hashlib.sha256(content).hexdigest(),
+                        'crc32_verified': True, 'extraction_tool': 'Python stdlib ZIP header + XZ decoder'})
+(ROOT / 'selected-payload-provenance.json').write_text(json.dumps(records, indent=2))
+manifest = {}
+for line in (destination / '.manifest').read_text(encoding='utf-8-sig').splitlines():
+    digest, name = line.split(' ', 1)
+    manifest[name.replace('\\', '/')] = digest.lower()
+for record in records:
+    if record['member'] != '.manifest':
+        assert manifest[record['member']] == record['sha256']
+        record['package_manifest_sha256_verified'] = True
+(ROOT / 'selected-payload-provenance.json').write_text(json.dumps(records, indent=2))
+print(json.dumps({'extracted_files': len(records),
+                  'all_selected_crc32_verified': all(r['crc32_verified'] for r in records),
+                  'non_manifest_files_sha256_verified': sum(r.get('package_manifest_sha256_verified', False) for r in records),
+                  'bytes_materialized': sum(r['bytes'] for r in records)}, indent=2))

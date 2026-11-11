@@ -1,0 +1,362 @@
+[
+  {
+    "line": 141,
+    "destination": "%TEMP%\\%READMEFILE%"
+  },
+  {
+    "line": 1599,
+    "destination": "%MAINDIR%\\lame_enc.ini"
+  },
+  {
+    "line": 1604,
+    "destination": "%MAINDIR%\\Neuratron AudioScore.exe.manifest"
+  },
+  {
+    "line": 1609,
+    "destination": "%MAINDIR%\\libmpg123-0.dll"
+  },
+  {
+    "line": 1624,
+    "destination": "%MAINDIR%\\Neuratron AudioScore.exe"
+  },
+  {
+    "line": 1629,
+    "destination": "%MAINDIR%\\StreamToFile.dll"
+  },
+  {
+    "line": 1634,
+    "destination": "%MAINDIR%\\lame_enc.dll"
+  },
+  {
+    "line": 1639,
+    "destination": "%MAINDIR%\\msvcr71.dll"
+  },
+  {
+    "line": 1644,
+    "destination": "%MAINDIR%\\msvcp71.dll"
+  },
+  {
+    "line": 1654,
+    "destination": "%MAINDIR%\\gdiplus.dll"
+  },
+  {
+    "line": 1664,
+    "destination": "%MAINDIR%\\mpg123-1.25.10.tar.bz2"
+  },
+  {
+    "line": 1669,
+    "destination": "%MAINDIR%\\lame-3.98.4.tar.gz.gz"
+  },
+  {
+    "line": 1674,
+    "destination": "%MAINDIR%\\HitnMixLibCLR.x64.dll"
+  },
+  {
+    "line": 1679,
+    "destination": "%MAINDIR%\\Infinity Ripper.exe"
+  },
+  {
+    "line": 1684,
+    "destination": "%MAINDIR%\\ucrtbase.dll"
+  },
+  {
+    "line": 1689,
+    "destination": "%MAINDIR%\\msvcp140.dll"
+  },
+  {
+    "line": 1694,
+    "destination": "%MAINDIR%\\d3dx9_31.dll"
+  },
+  {
+    "line": 1699,
+    "destination": "%MAINDIR%\\concrt140.dll"
+  },
+  {
+    "line": 1704,
+    "destination": "%MAINDIR%\\api-ms-win-crt-utility-l1-1-0.dll"
+  },
+  {
+    "line": 1709,
+    "destination": "%MAINDIR%\\api-ms-win-crt-time-l1-1-0.dll"
+  },
+  {
+    "line": 1714,
+    "destination": "%MAINDIR%\\api-ms-win-crt-string-l1-1-0.dll"
+  },
+  {
+    "line": 1719,
+    "destination": "%MAINDIR%\\api-ms-win-crt-stdio-l1-1-0.dll"
+  },
+  {
+    "line": 1724,
+    "destination": "%MAINDIR%\\api-ms-win-crt-runtime-l1-1-0.dll"
+  },
+  {
+    "line": 1729,
+    "destination": "%MAINDIR%\\api-ms-win-crt-process-l1-1-0.dll"
+  },
+  {
+    "line": 1734,
+    "destination": "%MAINDIR%\\api-ms-win-crt-private-l1-1-0.dll"
+  },
+  {
+    "line": 1739,
+    "destination": "%MAINDIR%\\api-ms-win-crt-multibyte-l1-1-0.dll"
+  },
+  {
+    "line": 1744,
+    "destination": "%MAINDIR%\\api-ms-win-crt-math-l1-1-0.dll"
+  },
+  {
+    "line": 1749,
+    "destination": "%MAINDIR%\\api-ms-win-crt-locale-l1-1-0.dll"
+  },
+  {
+    "line": 1754,
+    "destination": "%MAINDIR%\\api-ms-win-crt-heap-l1-1-0.dll"
+  },
+  {
+    "line": 1759,
+    "destination": "%MAINDIR%\\api-ms-win-crt-filesystem-l1-1-0.dll"
+  },
+  {
+    "line": 1764,
+    "destination": "%MAINDIR%\\api-ms-win-crt-environment-l1-1-0.dll"
+  },
+  {
+    "line": 1769,
+    "destination": "%MAINDIR%\\api-ms-win-crt-convert-l1-1-0.dll"
+  },
+  {
+    "line": 1774,
+    "destination": "%MAINDIR%\\api-ms-win-crt-conio-l1-1-0.dll"
+  },
+  {
+    "line": 1779,
+    "destination": "%MAINDIR%\\api-ms-win-core-util-l1-1-0.dll"
+  },
+  {
+    "line": 1784,
+    "destination": "%MAINDIR%\\api-ms-win-core-timezone-l1-1-0.dll"
+  },
+  {
+    "line": 1789,
+    "destination": "%MAINDIR%\\api-ms-win-core-sysinfo-l1-1-0.dll"
+  },
+  {
+    "line": 1794,
+    "destination": "%MAINDIR%\\api-ms-win-core-synch-l1-2-0.dll"
+  },
+  {
+    "line": 1799,
+    "destination": "%MAINDIR%\\api-ms-win-core-synch-l1-1-0.dll"
+  },
+  {
+    "line": 1804,
+    "destination": "%MAINDIR%\\api-ms-win-core-string-l1-1-0.dll"
+  },
+  {
+    "line": 1809,
+    "destination": "%MAINDIR%\\api-ms-win-core-rtlsupport-l1-1-0.dll"
+  },
+  {
+    "line": 1814,
+    "destination": "%MAINDIR%\\api-ms-win-core-profile-l1-1-0.dll"
+  },
+  {
+    "line": 1819,
+    "destination": "%MAINDIR%\\api-ms-win-core-processthreads-l1-1-1.dll"
+  },
+  {
+    "line": 1824,
+    "destination": "%MAINDIR%\\api-ms-win-core-processthreads-l1-1-0.dll"
+  },
+  {
+    "line": 1829,
+    "destination": "%MAINDIR%\\api-ms-win-core-processenvironment-l1-1-0.dll"
+  },
+  {
+    "line": 1834,
+    "destination": "%MAINDIR%\\api-ms-win-core-namedpipe-l1-1-0.dll"
+  },
+  {
+    "line": 1839,
+    "destination": "%MAINDIR%\\api-ms-win-core-memory-l1-1-0.dll"
+  },
+  {
+    "line": 1844,
+    "destination": "%MAINDIR%\\api-ms-win-core-localization-l1-2-0.dll"
+  },
+  {
+    "line": 1849,
+    "destination": "%MAINDIR%\\api-ms-win-core-libraryloader-l1-1-0.dll"
+  },
+  {
+    "line": 1854,
+    "destination": "%MAINDIR%\\api-ms-win-core-interlocked-l1-1-0.dll"
+  },
+  {
+    "line": 1859,
+    "destination": "%MAINDIR%\\api-ms-win-core-heap-l1-1-0.dll"
+  },
+  {
+    "line": 1864,
+    "destination": "%MAINDIR%\\api-ms-win-core-handle-l1-1-0.dll"
+  },
+  {
+    "line": 1869,
+    "destination": "%MAINDIR%\\api-ms-win-core-file-l2-1-0.dll"
+  },
+  {
+    "line": 1874,
+    "destination": "%MAINDIR%\\api-ms-win-core-file-l1-2-0.dll"
+  },
+  {
+    "line": 1879,
+    "destination": "%MAINDIR%\\api-ms-win-core-file-l1-1-0.dll"
+  },
+  {
+    "line": 1884,
+    "destination": "%MAINDIR%\\api-ms-win-core-errorhandling-l1-1-0.dll"
+  },
+  {
+    "line": 1889,
+    "destination": "%MAINDIR%\\api-ms-win-core-debug-l1-1-0.dll"
+  },
+  {
+    "line": 1894,
+    "destination": "%MAINDIR%\\api-ms-win-core-datetime-l1-1-0.dll"
+  },
+  {
+    "line": 1899,
+    "destination": "%MAINDIR%\\api-ms-win-core-console-l1-1-0.dll"
+  },
+  {
+    "line": 1904,
+    "destination": "%MAINDIR%\\vcruntime140.dll"
+  },
+  {
+    "line": 1914,
+    "destination": "%MAINDIR%\\Neuratron AudioScore.exe"
+  },
+  {
+    "line": 1919,
+    "destination": "%MAINDIR%\\libmpg123-0.dll"
+  },
+  {
+    "line": 1924,
+    "destination": "%MAINDIR%\\StreamToFile.dll"
+  },
+  {
+    "line": 1929,
+    "destination": "%MAINDIR%\\lame_enc.dll"
+  },
+  {
+    "line": 1934,
+    "destination": "%MAINDIR%\\msvcr71.dll"
+  },
+  {
+    "line": 1939,
+    "destination": "%MAINDIR%\\msvcp71.dll"
+  },
+  {
+    "line": 1949,
+    "destination": "%MAINDIR%\\gdiplus.dll"
+  },
+  {
+    "line": 1958,
+    "destination": "%MAINDIR%\\Resources\\EBGaramond12-Regular.ttf"
+  },
+  {
+    "line": 1963,
+    "destination": "%MAINDIR%\\Resources\\EBGaramond12-Italic.ttf"
+  },
+  {
+    "line": 1968,
+    "destination": "%MAINDIR%\\Resources\\PHOTSCNM.ttf"
+  },
+  {
+    "line": 1973,
+    "destination": "%MAINDIR%\\Resources\\GeneralMIDI.txt"
+  },
+  {
+    "line": 1978,
+    "destination": "%MAINDIR%\\Resources\\idat"
+  },
+  {
+    "line": 1983,
+    "destination": "%MAINDIR%\\Resources\\NAS QuickGuide.pdf"
+  },
+  {
+    "line": 1988,
+    "destination": "%MAINDIR%\\Resources\\NAS QuickGuide_D.pdf"
+  },
+  {
+    "line": 1993,
+    "destination": "%MAINDIR%\\Resources\\NAS QuickGuide_F.pdf"
+  },
+  {
+    "line": 1998,
+    "destination": "%MAINDIR%\\Resources\\NAS Help.pdf"
+  },
+  {
+    "line": 2003,
+    "destination": "%MAINDIR%\\Resources\\NAS Help_D.pdf"
+  },
+  {
+    "line": 2008,
+    "destination": "%MAINDIR%\\Resources\\NAS Help_F.pdf"
+  },
+  {
+    "line": 2013,
+    "destination": "%MAINDIR%\\Resources\\ASInst.dat"
+  },
+  {
+    "line": 2022,
+    "destination": "%FONTS%\\PHOTSE__.TTF"
+  },
+  {
+    "line": 2033,
+    "destination": "%MAINDIR%\\Resources\\neuratron.gif"
+  },
+  {
+    "line": 2038,
+    "destination": "%MAINDIR%\\Resources\\asbanner.jpg"
+  },
+  {
+    "line": 2046,
+    "destination": "%MAINDIR%\\Resources\\instrtext"
+  },
+  {
+    "line": 2051,
+    "destination": "%MAINDIR%\\Resources\\instrtextD"
+  },
+  {
+    "line": 2056,
+    "destination": "%MAINDIR%\\Resources\\instrtextI"
+  },
+  {
+    "line": 2061,
+    "destination": "%MAINDIR%\\Resources\\insttypetext"
+  },
+  {
+    "line": 2066,
+    "destination": "%MAINDIR%\\Resources\\insttypetextD"
+  },
+  {
+    "line": 2071,
+    "destination": "%MAINDIR%\\Resources\\insttypetextI"
+  },
+  {
+    "line": 2076,
+    "destination": "%MAINDIR%\\Resources\\SystemL"
+  },
+  {
+    "line": 2164,
+    "destination": "%CGROUPDIR%\\%CGROUP_SAVE%\\AudioScore Ultimate Demo.lnk"
+  },
+  {
+    "line": 2171,
+    "destination": "%CDESKTOPDIR%\\AudioScore Ultimate Demo.lnk"
+  }
+]
