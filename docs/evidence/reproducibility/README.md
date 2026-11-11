@@ -13,6 +13,8 @@ The extra metadata retains MuseHub resource/ZIP ranges, selected-member CRC/hash
 
 The `methods` directory contains original analysis/extraction/acquisition/parsing scripts authored during the investigation, saved as `.txt` reference material. Machine-specific paths were replaced by explicit placeholders, and the Babel parser reference was normalized. Original file hashes and transformed-text hashes are both retained. These are **not ready-to-run tools**: adapting inputs, output directories and dependencies is necessary. No archived script, extractor, download routine, vendor executable or model was run during this audit.
 
+`original_sha256` identifies the unmodified original local file bytes. `archived_sha256` identifies canonical UTF-8 text with LF line endings, matching the committed Git blob. A Windows checkout may use CRLF; normalize those line endings before comparing an archived-text digest.
+
 HTTP headers were reduced to public identity-related fields such as ETag, content length/type and modification time. Personal absolute paths, tool-install prefixes, cookies/authorization headers and verbose embedded output previews were excluded. The original knowledge/evidence labels and limitations still apply.
 
 ## Can the local folders be removed?
